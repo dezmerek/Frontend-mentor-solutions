@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    background-color: hsl(225, 100%, 94%);
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 1.5rem;
+}
+
+.order {
+    border-radius: 1rem;
+    background-color: hsl(225, 100%, 98%);
+    overflow: hidden;
+}
+
+img {
+    width: 100%;
+}
+
+.order__content {
+    padding: 1.5rem;
+}
+
+h2 {
+    color: hsl(223, 47%, 23%);
+    font-weight: 900;
+    text-align: center;
+}
+
+p {
+    font-size: 16px;
+    color: hsl(224, 23%, 55%);
+    text-align: center;
+    font-weight: 500;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.order__plan {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: hsla(225, 100%, 94%, 0.445);
+}
+
+.order__icon {
+    width: 3rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.order__item-title {
+    font-weight: 900;
+    color: hsl(223, 47%, 23%);
+}
+
+.order__item-price {
+    font-size: 1rem;
+    padding-top: 0.3rem;
+    color: hsl(224, 23%, 55%);
+    font-weight: 500;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.order__item {
+    padding-left: 1.5rem;
+}
+
+.order__change {
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-left: auto;
+}
+
+.order__change :hover {
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.order__btn {
+    padding-top: 0.5rem;
+}
+
+.order__btn-payment {
+    padding: 1rem;
+    background-color: hsl(245, 75%, 52%);
+    border-radius: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 10px 10px 5px hsla(245, 75%, 52%, 0.1);
+}
+
+.order__btn-payment:hover {
+    opacity: 0.8;
+}
+
+.order__btn-cancel {
+    font-weight: 900;
+    color: hsl(224, 23%, 55%);
+    text-align: center;
+    cursor: pointer;
+}
+
+.order__btn-cancel:hover {
+    color: hsl(223, 47%, 23%);
+}
+
+@media (min-width: 375px) {
+    .order {
+        width: 400px;
+    }
+
+    body {
+        background-image: url(./images/pattern-background-desktop.svg);
+
+    }
+}
