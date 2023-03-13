@@ -106,4 +106,47 @@ p {
     border-radius: 0.5rem;
     padding: 2rem;
     border-top: 0.3rem solid var(--Blue);
+    margin-bottom: 1.5rem;
+}
+
+@media (min-width: 1100px) {
+    .container {
+        max-width: 1400px;
+    }
+
+    .header h2 {
+        font-size: 2rem;
+    }
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header p {
+        max-width: 600px;
+    }
+
+    .component {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .cos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .component__supervisor,
+    .component__team,
+    .component__karma,
+    .component__calc {
+        width: 17rem;
+        height: 10rem;
+        margin: 1rem;
+    }
 }
