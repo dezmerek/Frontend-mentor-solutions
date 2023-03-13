@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+:root {
+    --Cyan: hsl(179, 62%, 43%);
+    --Bright-Yellow: hsl(71, 73%, 54%);
+    --Light-Gray: hsl(204, 43%, 93%);
+    --Grayish-Blue: hsl(218, 22%, 67%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--Light-Gray);
+    font-size: 16px;
+}
+
+.container {
+    max-width: 375px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.component {
+    -webkit-box-shadow: 0px 0px 24px -15px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 0px 0px 24px -15px rgba(66, 68, 90, 1);
+    box-shadow: 0px 0px 24px -15px rgba(66, 68, 90, 1);
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.community {
+    background-color: white;
+    padding: 2rem;
+    color: var(--Grayish-Blue);
+}
+
+.community h3 {
+    color: var(--Cyan);
+}
+
+.community h4 {
+    color: var(--Bright-Yellow);
+    padding: 1.5rem 0 1.5rem 0;
+}
+
+.community p {
+    font-size: 0.9rem;
+    line-height: 1.7rem;
+}
+
+.subs {
+    background-color: var(--Cyan);
+    color: white;
+    padding: 2rem;
+}
+
+.dollar {
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.text {
+    opacity: 0.5;
+    padding-left: 1rem;
+}
+
+.per {
+    opacity: 0.5;
+}
+
+.button-signup {
+    background-color: var(--Bright-Yellow);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    -webkit-box-shadow: 0px 0px 24px -15px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 0px 0px 24px -15px rgba(66, 68, 90, 1);
+    box-shadow: 0px 0px 24px -15px rgba(66, 68, 90, 1);
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.whyus {
+    background-color: var(--Cyan);
+    opacity: 0.8;
+    color: white;
+    padding: 2rem;
+}
+
+.whyus h4 {
+    padding-bottom: 1rem;
+}
+
+.whyus p {
+    font-size: 0.9rem;
+}
