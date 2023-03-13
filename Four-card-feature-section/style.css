@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+:root {
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    --Very-Dark-Blue: hsl(234, 12%, 34%);
+    --Grayish-Blue: hsl(229, 6%, 66%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--Very-Light-Gray);
+}
+
+.container {
+    max-width: 375px;
+    margin: auto;
+    height: 100vh;
+    color: var(--Very-Dark-Blue);
+}
+
+.header {
+    text-align: center;
+    padding: 1rem;
+}
+
+.first {
+    font-weight: 200;
+}
+
+p {
+    color: var(--Grayish-Blue);
+    padding-top: 1rem;
+}
+
+.component {
+    padding: 2rem;
+}
+
+.component p {
+    font-size: 0.8rem;
+    padding-top: 0.5rem;
+}
+
+.component img {
+    padding-top: 1rem;
+}
+
+.component__supervisor {
+    -webkit-box-shadow: 0px 0px 23px -11px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 0px 0px 23px -11px rgba(66, 68, 90, 1);
+    box-shadow: 0px 0px 23px -11px rgba(66, 68, 90, 1);
+    border-radius: 0.5rem;
+    padding: 2rem;
+    border-top: 0.3rem solid var(--Cyan);
+    margin-bottom: 1.5rem;
+}
+
+.component__img {
+    display: flex;
+    justify-content: right;
+    padding-top: 1rem;
+}
+
+.component__team {
+    -webkit-box-shadow: 0px 0px 23px -11px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 0px 0px 23px -11px rgba(66, 68, 90, 1);
+    box-shadow: 0px 0px 23px -11px rgba(66, 68, 90, 1);
+    border-radius: 0.5rem;
+    padding: 2rem;
+    border-top: 0.3rem solid var(--Red);
+    margin-bottom: 1.5rem;
+}
+
+.component__karma {
+    -webkit-box-shadow: 0px 0px 23px -11px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 0px 0px 23px -11px rgba(66, 68, 90, 1);
+    box-shadow: 0px 0px 23px -11px rgba(66, 68, 90, 1);
+    border-radius: 0.5rem;
+    padding: 2rem;
+    border-top: 0.3rem solid var(--Orange);
+    margin-bottom: 1.5rem;
+}
+
+.component__calc {
+    -webkit-box-shadow: 0px 0px 23px -11px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 0px 0px 23px -11px rgba(66, 68, 90, 1);
+    box-shadow: 0px 0px 23px -11px rgba(66, 68, 90, 1);
+    border-radius: 0.5rem;
+    padding: 2rem;
+    border-top: 0.3rem solid var(--Blue);
+}
