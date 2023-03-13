@@ -109,3 +109,28 @@ body {
 .whyus p {
     font-size: 0.9rem;
 }
+
+@media (min-width:768px) {
+    .container {
+        max-width: 700px;
+    }
+
+    .component {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .community p {
+        width: 35rem;
+    }
+
+    .community {
+        width: 100%;
+    }
+
+    .subs,
+    .whyus {
+        display: inline-block;
+        width: 286px;
+    }
+}
