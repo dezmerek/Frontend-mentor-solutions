@@ -5,6 +5,7 @@
   font-size: 11px;
   text-align: center;
 }
+
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
@@ -109,5 +110,13 @@ p {
 @media (min-width: 600px) {
   .product {
     display: flex;
+  }
+
+  .product__content {
+    color: hsl(228, 12%, 48%);
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
+    width: 35rem;
   }
 }
