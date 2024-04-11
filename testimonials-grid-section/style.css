@@ -90,29 +90,41 @@ h2 {
   background-image: url(./images/bg-pattern-quotation.svg);
   background-repeat: no-repeat;
   background-position: 85% 0;
-  grid-column: span 2;
 }
 
 .card__2 {
-  background-color: var(--dark-grayish-blue);
   color: var(--white);
+  background-color: var(--dark-grayish-blue);
 }
 
 .card__3 {
   background-color: var(--white);
-  grid-row: span 2;
 }
 .card__4 {
-  background-color: var(--dark-blackish-blue);
-  color: var(--white);
+  background-color: var(--white);
 }
 .card__5 {
-  background-color: var(--white);
-  grid-column: span 2;
+  background-color: var(--dark-blackish-blue);
+  color: var(--white);
 }
 
 @media (max-width: 767px) {
   .cards {
     flex-direction: column;
+  }
+}
+
+@media (min-width: 768px) {
+  .card__1 {
+    grid-column: 1 / span 2;
+  }
+
+  .card__3 {
+    grid-column: 4 / span 1;
+    grid-row: 1 / span 2;
+  }
+
+  .card__5 {
+    grid-column: 2 / span 2;
   }
 }
