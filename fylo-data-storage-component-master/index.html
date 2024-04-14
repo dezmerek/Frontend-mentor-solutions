@@ -1,31 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Fylo data storage component</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="fylo">
+        <div class="fylo__header">
+          <div class="fylo__header__logo">
+            <img src="./images/logo.svg" alt="" />
+          </div>
+          <div class="fylo__icons">
+            <div class="fylo__icon">
+              <img src="./images/icon-document.svg" alt="" />
+            </div>
+            <div class="fylo__icon">
+              <img src="./images/icon-folder.svg" alt="" />
+            </div>
+            <div class="fylo__icon">
+              <img src="./images/icon-upload.svg" alt="" />
+            </div>
+          </div>
+        </div>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Fylo data storage component</title>
+        <div class="fylo__storage">
+          <p>You've used <b>815 GB</b> of your storage</p>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+          <div class="fylo__storage__bar">
+            <div class="fylo__storage__bar--belt">
+              <div class="fylo__storage__bar--color">
+                <div class="fylo__storage__bar__circle"></div>
+              </div>
+            </div>
+            <div class="fylo__storage__bar--date">
+              <p>0 GB</p>
+              <p>1000 GB</p>
+            </div>
+          </div>
 
-  You’ve used 815 GB of your storage
+          <div class="fylo__storage__transfer">
+            <p>185</p>
+            <span>GB LEFT</span>
+          </div>
+        </div>
+      </div>
 
-  185 GB Left
-  
-  0 GB
-  1000 GB
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Mateusz S.</a>.
+      </div>
+    </div>
+  </body>
 </html>

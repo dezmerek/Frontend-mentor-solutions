@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+:root {
+  --gradient-start: hsl(6, 100%, 80%);
+  --gradient-end: hsl(335, 100%, 65%);
+  --pale-blue: hsl(243, 100%, 93%);
+  --grayish-blue: hsl(229, 7%, 55%);
+  --dark-blue: hsl(228, 56%, 26%);
+  --very-dark-blue: hsl(229, 57%, 11%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(./images/bg-mobile.png);
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  background-attachment: fixed;
+  background-size: cover;
+  color: var(--pale-blue);
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+
+.fylo {
+  padding: 1rem;
+  gap: 1rem;
+  display: flex;
+  max-width: 1400px;
+  flex-direction: column;
+}
+
+.fylo__header {
+  padding: 2rem;
+  background-color: var(--dark-blue);
+  border-radius: 1rem 5rem 1rem 1rem;
+}
+
+.fylo__icons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding-top: 2rem;
+}
+
+.fylo__icon {
+  background-color: var(--very-dark-blue);
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fylo__storage {
+  background-color: var(--dark-blue);
+  padding: 2rem;
+  border-radius: 1rem;
+  gap: 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.fylo__storage__bar {
+  padding-top: 1rem;
+  width: 100%;
+}
+
+.fylo__storage__transfer {
+  background-color: white;
+  color: var(--very-dark-blue);
+  font-weight: 700;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  border-radius: 1rem;
+  margin-top: 12rem;
+  display: flex;
+  align-items: center;
+  position: absolute;
+}
+
+.fylo__storage__transfer p {
+  font-size: 3rem;
+}
+
+.fylo__storage__transfer span {
+  font-size: 1rem;
+  color: var(--grayish-blue);
+}
+
+.fylo__storage__bar--belt {
+  background-color: var(--very-dark-blue);
+  padding: 0.2rem;
+  border-radius: 1rem;
+}
+
+.fylo__storage__bar--date {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  padding-top: 0.5rem;
+}
+
+.fylo__storage__bar--color {
+  background-image: linear-gradient(
+    to right,
+    var(--gradient-start),
+    var(--gradient-end)
+  );
+  border-radius: 1rem;
+  width: 75%;
+  padding: 0.1rem;
+  display: flex;
+  justify-content: end;
+}
+
+.fylo__storage__bar__circle {
+  background-color: var(--pale-blue);
+  border-radius: 50%;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  body {
+    background-image: url(./images/bg-desktop.png);
+    background-color: var(--very-dark-blue);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+  }
+
+  .fylo {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+  }
+
+  .fylo__header {
+    width: 30%;
+  }
+
+  .fylo__storage {
+    width: 50%;
+  }
+
+  .fylo {
+    display: flex;
+    justify-content: center;
+  }
+
+  .fylo__storage__transfer {
+    margin-top: -12rem;
+    margin-right: -10rem;
+  }
+
+  .fylo__storage__transfer ::after {
+    position: absolute;
+    content: '';
+    width: 2rem;
+    height: 1.8rem;
+    bottom: -1rem;
+    right: 0;
+    clip-path: polygon(100% 0, 100% 100%, 0 0);
+    background-color: white;
+  }
+}
