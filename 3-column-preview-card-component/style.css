@@ -1,30 +1,38 @@
-@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
   background-color: #f2f2f2;
 }
 
 main {
-  padding: 50px 15px 50px 15px;
-  font-family: "Lexend Deca", sans-serif;
+  font-family: 'Lexend Deca', sans-serif;
   font-weight: 400;
   font-size: 15px;
   color: #f2f2f2;
   display: flex;
   flex-direction: row;
   justify-content: center;
-	align-items: center;
+  align-items: center;
   flex-wrap: wrap;
+  height: 100vh;
 }
 
 img {
   padding: 40px 0 0 30px;
+  margin-bottom: 20px;
 }
 
 article {
-  max-width: 278px;
+  max-width: 285px;
   height: 450px;
+  padding: 1rem;
 }
 
 /* BOX 1*/
@@ -63,50 +71,45 @@ button {
   width: 146px;
   padding: 14px;
   border: 2px solid;
-  margin: 40px 0 40px 30px;
-  font-family: "Lexend Deca", sans-serif;
+  margin: 70px 0 40px 30px;
+  font-family: 'Lexend Deca', sans-serif;
   font-size: 15px;
 }
 
 h1 {
-  font-family: "Big Shoulders Display", sans-serif;
+  font-family: 'Big Shoulders Display', sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   font-size: 36px;
   padding: 0 0 0 30px;
+  margin-bottom: 1rem;
 }
 
 p {
   padding: 0 30px 0 30px;
   font-size: 13.8px;
   line-height: 1.5rem;
-  
 }
 
 @media only screen and (max-width: 600px) {
   main {
     flex-direction: row;
     overflow: scroll;
+    padding: 50px 15px 50px 15px;
     flex-wrap: wrap;
   }
   article {
     flex-direction: column;
+    padding: 0.5rem;
   }
-  .sedans{
+  .sedans {
     border-radius: 7px 7px 0 0;
   }
   .luxury {
     border-radius: 0 0 7px 7px;
   }
-}
 
-/* NO DELETE */
-
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
-
-.attribution a {
-  color: hsl(228, 45%, 44%);
+  button {
+    margin: 30px 0 40px 30px;
+  }
 }
