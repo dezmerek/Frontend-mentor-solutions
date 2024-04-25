@@ -188,8 +188,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: var(--pale-blue);
     height: 100vh;
   }
+
+  .result {
+    background-color: var(--white);
+    border-radius: 2rem;
+  }
+
   .result {
     max-width: 735px;
     height: 512px;
