@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Results summary component</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <title>Frontend Mentor | Results summary component</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-  <div class="container">
+  <body>
     <div class="result">
       <div class="result__your">
         <h3>Your Result</h3>
@@ -21,47 +24,44 @@
             <p>of 100</p>
           </div>
         </div>
-        <h2>Great</h2>
-        <p>You scored higher than 65% of the people who have taken these tests.</p>
+        <div class="result__your__content">
+          <h2>Great</h2>
+          <p>
+            You scored higher than 65% of the people who have taken these tests.
+          </p>
+        </div>
       </div>
 
       <div class="result__content">
         <h3>Summary</h3>
         <div class="result__summary">
           <div class="result__summary-reaction">
-            <li><img src="./assets/images/icon-reaction.svg" alt="">Reaction</li>
-            <p><span>80</span> / 100</p>
+            <li>
+              <img src="./assets/images/icon-reaction.svg" alt="" />Reaction
+            </li>
+            <p>80 <span>/ 100</span></p>
           </div>
         </div>
         <div class="result__summary">
           <div class="result__summary-memory">
-            <li><img src="./assets/images/icon-memory.svg" alt="">Memory</li>
-            <p><span>92</span> / 100</p>
+            <li><img src="./assets/images/icon-memory.svg" alt="" />Memory</li>
+            <p>92 <span>/ 100</span></p>
           </div>
         </div>
         <div class="result__summary">
           <div class="result__summary-verbal">
-            <li><img src="./assets/images/icon-verbal.svg" alt="">Verbal</li>
-            <p><span>61</span> / 100</p>
+            <li><img src="./assets/images/icon-verbal.svg" alt="" />Verbal</li>
+            <p>61 <span>/ 100</span></p>
           </div>
         </div>
         <div class="result__summary">
           <div class="result__summary-visual">
-            <li><img src="./assets/images/icon-visual.svg" alt="">Visual</li>
-            <p><span>72</span> / 100</p>
+            <li><img src="./assets/images/icon-visual.svg" alt="" />Visual</li>
+            <p>72 <span>/ 100</span></p>
           </div>
         </div>
         <div class="result__sumary-button">Continue</div>
       </div>
     </div>
-  </div>
-
-
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Mateusz Szymański</a>.
-  </div>
-</body>
-
+  </body>
 </html>
