@@ -1,139 +1,156 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
 
 .attribution {
-    font-size: 11px;
-    text-align: center;
+  font-size: 11px;
+  text-align: center;
 }
 
 .attribution a {
-    color: hsl(228, 45%, 44%);
+  color: hsl(228, 45%, 44%);
 }
 
 * {
-    margin: 0;
+  margin: 0;
 }
 
 body {
-    background-color: hsl(217, 54%, 11%);
-    font-family: 'Outfit', sans-serif;
+  background-color: hsl(217, 54%, 11%);
+  font-family: 'Outfit', sans-serif;
 }
 
 .container {
-    display: flex;
-    height: 100vh;
-    align-items: center;
-    justify-content: center;
-    padding: 1.5rem;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
 }
 
 .card {
-    background-color: hsl(216, 50%, 16%);
-    padding: 1.5rem;
-    border-radius: 1rem;
-    width: 300px;
+  background-color: hsl(216, 50%, 16%);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  width: 300px;
 }
 
 .card__image {
-    position: relative;
+  position: relative;
 }
 
 .card__image img {
-    border-radius: 1rem;
-    width: 100%;
+  border-radius: 1rem;
+  width: 100%;
 }
 
 .card__image :hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .card__image-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 1rem;
-    background-color: rgb(0, 255, 247, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  background-color: rgb(0, 255, 247, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
 }
 
 .card__image-overlay img {
-    width: 3rem;
+  width: 3rem;
 }
 
 .card__image-overlay:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
-
 .card__content h2 {
-    color: white;
-    padding: 1rem 0 1rem 0;
+  color: white;
+  padding: 1rem 0 1rem 0;
+  margin-top: 0.3rem;
+  font-size: 22px;
 }
 
 .card__content p {
-    color: hsl(215, 51%, 70%);
-    font-weight: 300;
+  color: hsl(215, 51%, 70%);
+  font-weight: 300;
+  line-height: 1.5;
 }
 
 .card__create-avatar img {
-    width: 2rem;
+  width: 2rem;
 }
 
 .card__nft {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 0 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0 1rem 0;
 }
 
 .card__nft-amount {
-    display: flex;
+  display: flex;
 }
 
 .card__nft-amount p {
-    padding-left: 0.5rem;
-    color: hsl(178, 100%, 50%);
-    font-weight: 400;
+  padding-left: 0.5rem;
+  color: hsl(178, 100%, 50%);
+  font-weight: 400;
 }
 
 .card__nft-time {
-    color: hsl(215, 51%, 70%);
-    font-weight: 300;
-    display: flex;
+  color: hsl(215, 51%, 70%);
+  font-weight: 300;
+  display: flex;
 }
 
 .card__nft-time p {
-    padding-left: 0.5rem;
+  padding-left: 0.5rem;
 }
 
 hr {
-    background-color: hsl(215, 32%, 27%);
-    border: none;
-    height: 1px;
+  background-color: hsl(215, 32%, 27%);
+  border: none;
+  height: 1px;
 }
 
 .card__create {
-    display: flex;
-    align-items: center;
-    font-weight: 300;
-    padding-top: 1rem;
+  display: flex;
+  align-items: center;
+  font-weight: 300;
+  padding-top: 0.5rem;
 }
 
 .card__create p {
-    color: hsl(215, 51%, 70%);
-    padding-left: 1rem;
+  color: hsl(215, 51%, 70%);
+  padding-left: 1rem;
+  font-size: 15px;
 }
 
 .card__create span {
-    color: white;
+  color: white;
 }
 
 .card__create-avatar img {
-    background-color: white;
-    border-radius: 50%;
-    padding: 0.05rem;
+  background-color: white;
+  border-radius: 50%;
+  padding: 0.05rem;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 0;
+  }
+
+  .card__nft {
+    padding: 1.5rem 0 1rem 0;
+  }
+
+  .card__create {
+    padding-top: 1.5rem;
+  }
 }
