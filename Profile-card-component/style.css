@@ -1,102 +1,111 @@
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
 
-.attribution {
-    font-size: 11px;
-    text-align: center;
-}
-
-.attribution a {
-    color: hsl(228, 45%, 44%);
-}
-
-body {
-    font-family: 'Kumbh Sans', sans-serif;
-    background-color: hsl(185, 75%, 39%);
+:root {
+  --dark-cyan: hsl(185, 75%, 39%);
+  --very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --dark-grayish-blue: hsl(227, 10%, 46%);
+  --dark-gray: hsl(0, 0%, 59%);
+  --white: hsl(0, 0%, 100%);
 }
 
 * {
-    margin: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    padding: 1.5rem;
+body {
+  font-family: 'KumbhSans', sans-serif;
+  background-color: var(--dark-cyan);
+  background-image: url(./images/bg-pattern-top.svg),
+    url(./images/bg-pattern-bottom.svg);
+  background-position: right 35vw bottom 50vh, left 40vw top 40vh;
+  background-repeat: no-repeat, no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .profile {
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    border-radius: 1rem;
-    overflow: hidden;
+  background-color: var(--white);
+  border-radius: 1rem;
+  margin: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.profile__background img {
+  width: 100%;
+  min-height: 100%;
+  border-radius: 1rem 1rem 0 0;
 }
 
 .profile__picture {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
+  margin-top: -3.5rem;
 }
 
-.profile__picture-image {
-    border-radius: 50%;
-    margin-top: -3.4rem;
-    background-color: white;
-    padding: 0.3rem;
+.profile__picture img {
+  border-radius: 50%;
+  border: 0.25rem solid var(--white);
 }
 
 .profile__details {
-    display: flex;
-    justify-content: center;
-    padding-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
 }
 
 .profile__details-name {
-    font-weight: 700;
-    font-size: 1.1rem;
-    padding-right: 0.5rem;
-    color: hsl(229, 23%, 23%);
+  color: var(--very-dark-desaturated-blue);
+  font-size: 18px;
+  font-weight: 700;
 }
 
 .profile__details-age {
-    color: hsl(227, 10%, 46%);
-    font-size: 1.1rem;
+  color: var(--dark-grayish-blue);
+  font-size: 18px;
 }
 
 .profile__city {
-    text-align: center;
-    color: hsl(227, 10%, 46%);
-    font-size: 0.9rem;
-    padding-top: 0.5rem;
-    padding-bottom: 1.5rem;
+  color: var(--dark-gray);
+  text-align: center;
+  font-size: 15px;
+  margin-top: 0.5rem;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--dark-gray);
+  opacity: 0.25;
+  margin: 1.5rem 0;
 }
 
 .profile__stats {
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    padding-left: 3rem;
-    padding-right: 3rem;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  gap: 2.6rem;
 }
 
 .profile__box-number {
-    font-weight: 700;
-    font-size: 1.3rem;
-    color: hsl(229, 23%, 23%);
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 .profile__box-name {
-    color: hsl(0, 0%, 59%);
-    font-size: 0.7rem;
-    padding-top: 0.2rem;
+  font-size: 10px;
+  color: var(--dark-grayish-blue);
+  letter-spacing: 2px;
+  padding-top: 0.5rem;
 }
 
-@media (max-width: 375px) {
-    .container {
-        height: 375px;
-        width: 375px;
-    }
+@media screen and (min-width: 768px) {
+  body {
+    background-position: right 52vw bottom 35vh, left 48vw top 52vh;
+  }
 }
