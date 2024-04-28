@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+$green: hsl(75, 94%, 57%);
+$white: hsl(0, 0%, 100%);
+$grey: hsl(0, 0%, 20%);
+$dark-grey: hsl(0, 0%, 12%);
+$off-black: hsl(0, 0%, 8%);
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: $off-black;
+    color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    //height: 100vh;
+    margin-top: 8rem;
+}
+
+.card {
+    background-color: $dark-grey;
+    border-radius: 1rem;
+
+    &__profile {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 1.5rem 2.2rem 0 2.2rem;
+
+        @media (min-width: 768px) {
+            padding: 2.5rem 4rem 0 4rem;
+        }
+
+        img {
+            border-radius: 50%;
+            width: 5.5rem;
+            margin-bottom: 1.7rem;
+        }
+
+        h2 {
+            margin-bottom: 0.5rem;
+        }
+
+        h5 {
+            color: $green;
+            font-size: 14px;
+            margin-bottom: 2rem;
+        }
+
+        p {
+            font-size: 14px;
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    &__socials {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 0 1.5rem 1.5rem 1.5rem;
+
+        @media (min-width: 768px) {
+            padding: 0 2.5rem 2.5rem 2.5rem;
+        }
+
+        button {
+            border: none;
+            background-color: $grey;
+            padding: 0.9rem;
+            font-weight: 700;
+            color: $white;
+            border-radius: 0.5rem;
+            font-size: 14px;
+
+            &:hover {
+                background-color: $green;
+                color: $off-black;
+                cursor: pointer;
+            }
+        }
+    }
+}
