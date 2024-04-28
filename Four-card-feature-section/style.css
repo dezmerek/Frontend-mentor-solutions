@@ -1,152 +1,135 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
-
-.attribution {
-    font-size: 11px;
-    text-align: center;
-}
-
-.attribution a {
-    color: hsl(228, 45%, 44%);
-}
-
-:root {
-    --Red: hsl(0, 78%, 62%);
-    --Cyan: hsl(180, 62%, 55%);
-    --Orange: hsl(34, 97%, 64%);
-    --Blue: hsl(212, 86%, 64%);
-    --Very-Dark-Blue: hsl(234, 12%, 34%);
-    --Grayish-Blue: hsl(229, 6%, 66%);
-    --Very-Light-Gray: hsl(0, 0%, 98%);
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--Very-Light-Gray);
-}
-
-.container {
-    max-width: 375px;
-    margin: auto;
-    height: 100vh;
-    color: var(--Very-Dark-Blue);
+  font-family: "Poppins", sans-serif;
+  background-color: hsl(0, 0%, 98%);
+  color: hsl(234, 12%, 34%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .header {
-    text-align: center;
-    padding: 1rem;
+  text-align: center;
+  margin-top: 5.3rem;
+  padding: 0 2rem;
+}
+@media (min-width: 1024px) {
+  .header {
+    margin-top: 0;
+    max-width: 36rem;
+  }
+}
+.header h2 {
+  font-weight: 200;
+}
+@media (min-width: 1024px) {
+  .header h2 {
+    font-size: 36.5px;
+  }
+}
+.header h1 {
+  font-size: 24px;
+}
+@media (min-width: 1024px) {
+  .header h1 {
+    font-size: 36.5px;
+  }
+}
+.header p {
+  font-size: 15px;
+  margin-top: 1.2rem;
+  line-height: 1.6;
+  color: hsl(229, 6%, 66%);
+}
+@media (min-width: 1024px) {
+  .header p {
+    margin-top: 0.9rem;
+  }
 }
 
-.first {
-    font-weight: 200;
+.cards {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2.75rem;
+}
+@media (min-width: 1024px) {
+  .cards {
+    display: grid;
+    place-items: center;
+    grid-template-areas: "supervisor team calculator" "supervisor karma calculator";
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+}
+.cards h1 {
+  font-size: 20px;
+}
+.cards p {
+  font-size: 13.4px;
+  margin-top: 0.35rem;
+  color: hsl(229, 6%, 66%);
+}
+.cards__card {
+  padding: 1.4rem 1.7rem;
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  max-width: 380px;
+  height: 220px;
+}
+@media (min-width: 1024px) {
+  .cards__card {
+    max-width: 350px;
+    height: 250px;
+  }
+}
+.cards__card img {
+  width: 3.5rem;
+  height: auto;
+  margin-top: 2.2rem;
+}
+@media (min-width: 1024px) {
+  .cards__card img {
+    width: 4rem;
+    margin-top: 3rem;
+  }
+}
+.cards__card.supervisor {
+  border-top: 0.25rem solid hsl(180, 62%, 55%);
+}
+@media (min-width: 1024px) {
+  .cards__card.supervisor {
+    grid-area: supervisor;
+  }
+}
+.cards__card.team-builder {
+  border-top: 0.25rem solid hsl(0, 78%, 62%);
+}
+.cards__card.karma {
+  border-top: 0.25rem solid hsl(34, 97%, 64%);
+}
+.cards__card.calculator {
+  border-top: 0.25rem solid hsl(212, 86%, 64%);
+}
+@media (min-width: 1024px) {
+  .cards__card.calculator {
+    grid-area: calculator;
+  }
 }
 
-p {
-    color: var(--Grayish-Blue);
-    padding-top: 1rem;
-}
-
-.component {
-    padding: 2rem;
-}
-
-.component p {
-    font-size: 0.8rem;
-    padding-top: 0.5rem;
-}
-
-.component img {
-    padding-top: 1rem;
-}
-
-.component__supervisor {
-    -webkit-box-shadow: 0px 0px 23px -11px rgba(66, 68, 90, 1);
-    -moz-box-shadow: 0px 0px 23px -11px rgba(66, 68, 90, 1);
-    box-shadow: 0px 0px 23px -11px rgba(66, 68, 90, 1);
-    border-radius: 0.5rem;
-    padding: 2rem;
-    border-top: 0.3rem solid var(--Cyan);
-    margin-bottom: 1.5rem;
-}
-
-.component__img {
-    display: flex;
-    justify-content: right;
-    padding-top: 1rem;
-}
-
-.component__team {
-    -webkit-box-shadow: 0px 0px 23px -11px rgba(66, 68, 90, 1);
-    -moz-box-shadow: 0px 0px 23px -11px rgba(66, 68, 90, 1);
-    box-shadow: 0px 0px 23px -11px rgba(66, 68, 90, 1);
-    border-radius: 0.5rem;
-    padding: 2rem;
-    border-top: 0.3rem solid var(--Red);
-    margin-bottom: 1.5rem;
-}
-
-.component__karma {
-    -webkit-box-shadow: 0px 0px 23px -11px rgba(66, 68, 90, 1);
-    -moz-box-shadow: 0px 0px 23px -11px rgba(66, 68, 90, 1);
-    box-shadow: 0px 0px 23px -11px rgba(66, 68, 90, 1);
-    border-radius: 0.5rem;
-    padding: 2rem;
-    border-top: 0.3rem solid var(--Orange);
-    margin-bottom: 1.5rem;
-}
-
-.component__calc {
-    -webkit-box-shadow: 0px 0px 23px -11px rgba(66, 68, 90, 1);
-    -moz-box-shadow: 0px 0px 23px -11px rgba(66, 68, 90, 1);
-    box-shadow: 0px 0px 23px -11px rgba(66, 68, 90, 1);
-    border-radius: 0.5rem;
-    padding: 2rem;
-    border-top: 0.3rem solid var(--Blue);
-    margin-bottom: 1.5rem;
-}
-
-@media (min-width: 1100px) {
-    .container {
-        max-width: 1400px;
-    }
-
-    .header h2 {
-        font-size: 2rem;
-    }
-
-    .header {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .header p {
-        max-width: 600px;
-    }
-
-    .component {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .cos {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .component__supervisor,
-    .component__team,
-    .component__karma,
-    .component__calc {
-        width: 17rem;
-        height: 10rem;
-        margin: 1rem;
-    }
-}
+/*# sourceMappingURL=style.css.map */
