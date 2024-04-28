@@ -144,6 +144,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+}
+.social__icon:hover {
+  filter: brightness(0) saturate(100%) invert(73%) sepia(75%) saturate(880%) hue-rotate(232deg) brightness(89%) contrast(104%);
 }
 @media (min-width: 1024px) {
   .social__icon {
