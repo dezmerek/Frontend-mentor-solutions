@@ -1,0 +1,496 @@
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+$strong-cyan: hsl(171, 66%, 44%);
+$light-blue: hsl(233, 100%, 69%);
+$dark-grayish-blue: hsla(210, 10%, 33%, 1);
+$grayish-blue: hsla(201, 11%, 66%, 1);
+$white: hsl(0, 0%, 100%);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Bai Jamjuree", sans-serif;
+    color: $dark-grayish-blue;
+    background-image: url(./images/bg-header-mobile.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top center;
+
+    @media (min-width: 768px) {
+        background-image: url(./images/bg-header-desktop.png);
+    }
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 7.6rem;
+    padding: 0 1.5rem;
+
+    @media (min-width: 768px) {
+        margin-top: 8.2rem;
+    }
+
+    h1 {
+        margin-top: 4rem;
+        margin-bottom: 1.4rem;
+        font-size: 31px;
+
+        @media (min-width: 768px) {
+            font-size: 43.5px;
+            margin-top: 3.5rem;
+            margin-bottom: 1.2rem;
+        }
+    }
+
+    p {
+        color: $grayish-blue;
+        padding: 0 0.6rem;
+        line-height: 1.6;
+        font-size: 16px;
+
+        @media (min-width: 768px) {
+            font-size: 19.5px;
+            max-width: 725px;
+            line-height: 1.5;
+            letter-spacing: 0.4px;
+        }
+    }
+
+    &__cta {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-top: 3rem;
+
+        @media (min-width: 768px) {
+            flex-direction: row;
+            gap: 1rem;
+            margin-top: 3.1rem;
+        }
+
+        button {
+            cursor: pointer;
+            font-weight: 600;
+            border: none;
+            padding: 1rem 4.9rem;
+            color: $white;
+            border-radius: 2rem;
+            font-size: 18px;
+            border-bottom: 3px solid hsla(0, 0%, 25%, 20%);
+
+            @media (min-width: 768px) {
+                padding: 1rem 2.3rem;
+            }
+        }
+
+        button:first-child {
+            background-color: $strong-cyan;
+            box-shadow: 0px 10px 27px -12px $strong-cyan;
+
+            &:hover {
+                background: hsl(171, 66%, 54%);
+            }
+        }
+
+        button:last-child {
+            background-color: $light-blue;
+            box-shadow: 0px 10px 27px -12px $light-blue;
+
+            &:hover {
+                background: hsl(233, 100%, 74%);
+            }
+        }
+    }
+}
+
+.snippet {
+    margin-top: 10rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    @media (min-width: 768px) {
+        margin-top: 9.5rem;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 26px;
+        padding: 0 1.5rem;
+        margin-bottom: 1.2rem;
+
+        @media (min-width: 768px) {
+            font-size: 34px;
+        }
+    }
+
+    p {
+        text-align: center;
+        color: $grayish-blue;
+        padding: 0 2rem;
+        line-height: 1.6;
+        font-size: 16px;
+        text-align: center;
+
+        @media (min-width: 768px) {
+            font-size: 17px;
+            max-width: 700px;
+            line-height: 1.8;
+            letter-spacing: 0.6px;
+            padding: 0;
+        }
+    }
+
+    &__content {
+        @media (min-width: 768px) {
+            display: flex;
+            gap: 4.8rem;
+        }
+
+        img {
+            max-width: 100%;
+            padding: 2rem;
+            margin-top: 2rem;
+
+            @media (min-width: 768px) {
+                margin-top: 2.85rem;
+                margin-left: -19.7rem;
+            }
+        }
+
+        p {
+            @media (min-width: 768px) {
+                text-align: left;
+                font-size: 15px;
+                max-width: 360px;
+                line-height: 1.9;
+                letter-spacing: 0.6px;
+                padding: 0;
+            }
+        }
+
+        &__features {
+            margin-top: 1.5rem;
+            text-align: center;
+
+            @media (min-width: 768px) {
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                text-align: left;
+                max-width: 370px;
+                margin-top: 10.6rem;
+                gap: 2rem;
+            }
+
+            div {
+                margin-bottom: 3.05rem;
+                padding: 0 0.5rem;
+
+                @media (min-width: 768px) {
+                    padding: 0;
+                    margin-top: -1.5rem;
+                }
+            }
+
+            h3 {
+                font-size: 23px;
+            }
+
+            p {
+                margin-top: 0.7rem;
+            }
+        }
+    }
+}
+
+.access {
+    margin-top: 8.8rem;
+    padding: 0 1rem;
+    text-align: center;
+
+    @media (min-width: 768px) {
+        margin-top: 7.5rem;
+    }
+
+    h2 {
+        padding: 0 1.5rem;
+        font-size: 27px;
+        margin-bottom: 1.1rem;
+
+        @media (min-width: 768px) {
+            font-size: 34px;
+        }
+    }
+
+    p {
+        padding: 0 1rem;
+        line-height: 1.6;
+    }
+
+    img {
+        max-width: 100%;
+        margin-top: 3.8rem;
+
+        @media (min-width: 768px) {
+            margin-top: 8.5rem;
+        }
+    }
+}
+
+.workflow {
+    text-align: center;
+    margin-top: 5.8rem;
+    padding: 0 1rem;
+
+    @media (min-width: 768px) {
+        margin-top: 4.3rem;
+    }
+
+    h2 {
+        font-size: 27px;
+        margin-bottom: 1rem;
+
+        @media (min-width: 768px) {
+            font-size: 34.5px;
+            margin-bottom: 1.2rem;
+        }
+    }
+
+    p {
+        color: $grayish-blue;
+        padding: 0 1rem;
+        line-height: 1.6;
+
+        @media (min-width: 768px) {
+            font-size: 17px;
+            line-height: 1.8;
+            letter-spacing: 0.6px;
+        }
+    }
+
+    &__features {
+        margin-top: 5.2rem;
+
+        @media (min-width: 768px) {
+            display: flex;
+            justify-content: center;
+            margin-top: 0.8rem;
+        }
+
+        &--image {
+            margin: 0 auto;
+            width: 3rem;
+            height: 3rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 3.2rem;
+
+            img {
+                max-width: 100%;
+            }
+        }
+
+        div {
+            @media (min-width: 768px) {
+                max-width: 382px;
+                margin-bottom: 2.4rem;
+            }
+
+            h3 {
+                font-size: 23px;
+                margin-top: 2.2rem;
+            }
+
+            p {
+                margin-top: 1.2rem;
+
+                @media (min-width: 768px) {
+                    font-size: 15px;
+                    margin-top: 1.2rem;
+                    line-height: 1.9;
+                }
+            }
+        }
+    }
+}
+
+.partners {
+    display: flex;
+    flex-direction: column;
+    gap: 3.4rem;
+    align-items: center;
+    margin-top: 8.2rem;
+
+    @media (min-width: 768px) {
+        flex-direction: row;
+        justify-content: center;
+        gap: 6rem;
+        margin-top: 7.6rem;
+    }
+}
+
+.clipboard {
+    margin-top: 10.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (min-width: 768px) {
+        margin-top: 10rem;
+    }
+
+    h2 {
+        padding: 0 1.5rem;
+        font-size: 27px;
+
+        @media (min-width: 768px) {
+            font-size: 34px;
+        }
+    }
+
+    p {
+        margin-top: 1.2rem;
+        padding: 0 2.2rem;
+        line-height: 1.6;
+        color: $grayish-blue;
+
+        @media (min-width: 768px) {
+            font-size: 17px;
+            max-width: 700px;
+            line-height: 1.8;
+            letter-spacing: 0.6px;
+            padding: 0;
+        }
+    }
+
+    &__cta {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-top: 3rem;
+
+        @media (min-width: 768px) {
+            flex-direction: row;
+            gap: 1rem;
+            margin-top: 2.9rem;
+        }
+
+        button {
+            cursor: pointer;
+            font-weight: 600;
+            border: none;
+            padding: 1rem 4.9rem;
+            color: $white;
+            border-radius: 2rem;
+            font-size: 18px;
+            border-bottom: 3px solid hsla(0, 0%, 25%, 20%);
+
+            @media (min-width: 768px) {
+                padding: 1rem 2.3rem;
+            }
+        }
+
+        button:first-child {
+            background-color: $strong-cyan;
+            box-shadow: 0px 10px 27px -12px $strong-cyan;
+
+            &:hover {
+                background: hsl(171, 66%, 54%);
+            }
+        }
+
+        button:last-child {
+            background-color: $light-blue;
+            box-shadow: 0px 10px 27px -12px $light-blue;
+
+            &:hover {
+                background: hsl(233, 100%, 74%);
+            }
+        }
+    }
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba($grayish-blue, 0.1);
+    margin-top: 10.5rem;
+
+    @media (min-width: 768px) {
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 9.4rem;
+        padding: 0 10.3rem;
+        padding-bottom: 2rem;
+    }
+
+    img {
+        width: 3.5rem;
+        height: 3.5rem;
+        margin-top: 3.2rem;
+
+        @media (min-width: 768px) {
+            margin-top: 2rem;
+        }
+    }
+
+    &__links {
+        padding-top: 2.8rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 1.7rem;
+
+        @media (min-width: 768px) {
+            flex-direction: row;
+            text-align: left;
+            gap: 1.4rem;
+            padding-right: 6.5rem;
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            gap: 1.7rem;
+
+            @media (min-width: 768px) {
+                padding-right: 4rem;
+                gap: 1rem;
+            }
+
+            a {
+                color: $dark-grayish-blue;
+                text-decoration: none;
+                font-size: 18px;
+            }
+        }
+    }
+
+    &__social {
+        display: flex;
+        gap: 2.5rem;
+        padding-bottom: 2.5rem;
+
+        @media (min-width: 768px) {
+            padding-top: 1rem;
+            padding-bottom: 0;
+            gap: 1.5rem;
+        }
+
+        img {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+    }
+}
