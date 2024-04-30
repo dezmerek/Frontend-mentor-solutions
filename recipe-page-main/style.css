@@ -1,14 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap');
 
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
-.attribution a {
-  color: hsl(228, 45%, 44%);
-}
-
 :root {
   --nutmeg: #854632;
   --dark-raspberry: #7b284f;
@@ -49,6 +41,7 @@ h1 {
   font-weight: 400;
   color: var(--dark-charcoal);
   line-height: 1.1;
+  font-size: 36px;
 }
 
 h3 {
@@ -67,13 +60,14 @@ img {
 }
 .recipe__title p {
   line-height: 1.5;
+  margin-top: -0.25rem;
 }
 
 .recipe__preparation {
   background-color: var(--rose-white);
-  padding: 1rem 1rem 0.5rem 1rem;
+  padding: 1rem 1.5rem 0.5rem 1.5rem;
   border-radius: 1rem;
-  margin-top: 2rem;
+  margin-top: 2.4rem;
   margin-bottom: 2rem;
 }
 
@@ -82,17 +76,30 @@ img {
 }
 
 .recipe__preparation ul {
-  line-height: 2;
   margin-left: -1rem;
+  margin-top: 0.7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  line-height: 1.5;
 }
 
 .recipe__preparation li::marker {
   color: var(--dark-raspberry);
 }
 
+.recipe__ingredients h2 {
+  font-size: 28px;
+}
+
 .recipe__ingredients ul {
   line-height: 2;
   margin-left: -1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  line-height: 1.5;
+  margin-top: -0.5rem;
 }
 
 .recipe__ingredients li {
@@ -101,6 +108,12 @@ img {
 
 .recipe__ingredients li::marker {
   color: var(--nutmeg);
+}
+
+.recipe__instructions h2 {
+  font-size: 28px;
+  margin-top: -0.5rem;
+  margin-bottom: 1.2rem;
 }
 
 .recipe__instructions ol {
@@ -131,6 +144,11 @@ hr {
 
 .recipe__nutrition {
   padding-bottom: 1rem;
+  margin-top: -1rem;
+}
+
+.recipe__nutrition h2 {
+  font-size: 28px;
 }
 
 table {
@@ -155,6 +173,6 @@ tr.no-border td {
   }
 
   body {
-    margin: 5rem auto;
+    margin: 8rem auto;
   }
 }
