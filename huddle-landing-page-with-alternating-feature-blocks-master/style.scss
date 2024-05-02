@@ -1,0 +1,444 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+$pink: hsl(322, 100%, 66%);
+$very-pale-cyan: hsl(193, 100%, 96%);
+$very-dark-cyan: hsl(192, 100%, 9%);
+$grayish-blue: hsl(208, 11%, 55%);
+$white: hsl(0, 0%, 100%);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    background-image: url(./images/bg-hero-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top center;
+    background-color: $very-pale-cyan;
+    color: $very-dark-cyan;
+
+    @media (min-width: 1024px) {
+        background-image: url(./images/bg-hero-desktop.svg);
+    }
+}
+
+.huddle {
+    padding: 0 1rem;
+    padding-top: 1.4rem;
+
+    @media (min-width: 1024px) {
+        padding: 0;
+        padding-top: 3rem;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media (min-width: 1024px) {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        img {
+            width: 105px;
+
+            @media (min-width: 1024px) {
+                width: 200px;
+            }
+        }
+
+        button {
+            border: none;
+            background-color: $white;
+            padding: 0.5rem 1.4rem;
+            font-weight: 700;
+            font-size: 11px;
+            border-radius: 1rem;
+            box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.2);
+
+            @media (min-width: 1024px) {
+                padding: 1rem 4.1rem;
+                font-size: 12px;
+                border-radius: 1.5rem;
+                font-size: 14px;
+            }
+        }
+    }
+
+    &__content {
+        margin-top: 5rem;
+        text-align: center;
+
+        @media (min-width: 1024px) {
+            display: flex;
+            justify-content: space-between;
+            text-align: left;
+            gap: 4.5rem;
+            max-width: 1285px;
+            margin: 0 auto;
+            margin-top: 1rem;
+            padding-bottom: 1.8rem;
+        }
+
+        &__left {
+            @media (min-width: 1024px) {
+                display: flex;
+                flex-direction: column;
+                margin-top: 9rem;
+            }
+
+            h1 {
+                font-size: 24px;
+                padding: 0 2.5rem;
+                line-height: 1.5;
+
+                @media (min-width: 1024px) {
+                    font-size: 40px;
+                    padding: 0;
+                }
+            }
+
+            p {
+                margin-top: 1.4rem;
+                padding: 0 1.25rem;
+                line-height: 1.5;
+
+                @media (min-width: 1024px) {
+                    padding: 0;
+                    margin-top: 1.8rem;
+                    font-size: 18px;
+                }
+            }
+
+            button {
+                margin-top: 2rem;
+                padding: 0.8rem 3.8rem;
+                font-size: 12px;
+                font-weight: 700;
+                border: none;
+                border-radius: 1rem;
+                background-color: $pink;
+                color: $white;
+                box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.2);
+                cursor: pointer;
+
+                @media (min-width: 1024px) {
+                    padding: 1.2rem 0;
+                    font-size: 15px;
+                    border-radius: 1.5rem;
+                    width: 17.5rem;
+                }
+
+                &:hover {
+                    background-color: hsla(322, 100%, 60%, 0.5);
+                }
+            }
+        }
+
+        img {
+            max-width: 100%;
+            margin-top: 3.2rem;
+            padding: 0 1.25rem;
+
+            @media (min-width: 1024px) {
+                max-width: 54.5%;
+                padding: 0;
+            }
+        }
+    }
+}
+
+.container__box {
+    background-color: $white;
+    margin-top: 1.8rem;
+    padding: 3.8rem 1.2rem;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20.35rem;
+    gap: 2.5rem;
+
+    @media (min-width: 1024px) {
+        gap: 2.5rem;
+        padding-top: 10rem;
+        padding-bottom: 27.55rem;
+    }
+
+    .box {
+        padding: 3.5rem 3.2rem 2rem 3.2rem;
+        border-radius: 1rem;
+        box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.2);
+
+        @media (min-width: 1024px) {
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1230px;
+            padding: 3.5rem 2rem 3.5rem 2rem;
+            gap: 12rem;
+
+            &:nth-child(1) {
+                flex-direction: row-reverse;
+            }
+
+            &:nth-child(2) {
+                padding-left: 7.6rem;
+                padding-top: 5rem;
+                padding-bottom: 4.8rem;
+                gap: 5.8rem;
+            }
+
+            &:nth-child(3) {
+                flex-direction: row-reverse;
+            }
+        }
+
+        img {
+            height: 100%;
+            max-width: 100%;
+
+            @media (min-width: 1024px) {
+                max-width: 400px;
+            }
+        }
+
+        div {
+            text-align: center;
+            margin-top: 3.7rem;
+
+            @media (min-width: 1024px) {
+                padding-left: 5.4rem;
+                margin-top: 5.5rem;
+            }
+
+            h2 {
+                font-size: 20px;
+                margin-top: -0.4rem;
+                margin-bottom: 1rem;
+
+                @media (min-width: 1024px) {
+                    font-size: 28.5px;
+                    margin-top: -5.2rem;
+                }
+            }
+
+            p {
+                font-size: 14px;
+                color: $grayish-blue;
+                line-height: 1.5;
+                margin: 0 -1rem;
+
+                @media (min-width: 1024px) {
+                    font-size: 18px;
+                    margin: 0;
+                }
+            }
+
+            @media (min-width: 1024px) {
+                text-align: left;
+            }
+        }
+    }
+}
+
+.build {
+    display: flex;
+    justify-content: center;
+    margin-top: -13rem;
+    background-color: $white;
+    padding-bottom: 7rem;
+
+    @media (min-width: 1024px) {
+        margin-top: -17.5rem;
+        padding-bottom: 11.5rem;
+    }
+
+    &__container {
+        padding: 2.8rem 1.4rem;
+        background-color: $white;
+        box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.2);
+        margin: 0 1rem;
+        border-radius: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        align-items: center;
+
+        @media (min-width: 1024px) {
+            margin: 0;
+            padding: 3.5rem 8.2rem 3rem 8.2rem;
+            gap: 1rem;
+            justify-content: space-between;
+            margin: 0 auto;
+        }
+
+        h3 {
+            font-size: 18px;
+            text-align: center;
+
+            @media (min-width: 1024px) {
+                font-size: 32.5px;
+                margin-top: 0.5rem;
+            }
+        }
+
+        button {
+            margin-top: 1.7rem;
+            padding: 0.8rem 2.5rem;
+            font-size: 12px;
+            font-weight: 700;
+            border: none;
+            border-radius: 1rem;
+            background-color: $pink;
+            color: $white;
+            box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+
+            @media (min-width: 1024px) {
+                font-size: 18px;
+                border-radius: 2.5rem;
+                width: 25rem;
+                padding: 1.8rem 2.5rem;
+            }
+
+            &:hover {
+                background-color: hsla(322, 100%, 60%, 0.5);
+            }
+        }
+    }
+}
+
+.footer {
+    background-color: $very-dark-cyan;
+    color: $white;
+    padding: 8.6rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+    padding-bottom: 3rem;
+
+    @media (min-width: 1024px) {
+        flex-direction: row;
+        padding: 0 7.5rem;
+        padding-top: 12rem;
+        gap: 6.8rem;
+        padding-bottom: 4rem;
+        justify-content: space-between;
+    }
+
+    img {
+        width: 165px;
+
+        @media (min-width: 1024px) {
+            width: 240px;
+        }
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 1.8rem;
+
+        @media (min-width: 1024px) {
+            gap: 0.9rem;
+        }
+
+        &__link {
+            display: flex;
+            gap: 1.8rem;
+
+            @media (min-width: 1024px) {
+                margin-top: 0.9rem;
+                max-width: 400px;
+            }
+
+            img {
+                width: 1rem;
+                height: 1rem;
+            }
+
+            p {
+                margin-top: -0.5rem;
+                line-height: 1.5;
+            }
+        }
+    }
+
+    &__menu {
+        display: flex;
+        flex-direction: column;
+        font-size: 18px;
+        gap: 1.2rem;
+
+        @media (min-width: 1024px) {
+            flex-direction: row;
+            margin-top: 5rem;
+            gap: 7.5rem;
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+
+            a {
+                text-decoration: none;
+                color: $white;
+            }
+        }
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__social {
+        display: flex;
+        gap: 0.7rem;
+        justify-content: center;
+
+        @media (min-width: 1024px) {
+            margin-top: 5rem;
+            flex-wrap: wrap;
+            padding-right: 3.5rem;
+        }
+
+        &--svg {
+            border-radius: 50%;
+            border: 1px solid $white;
+            width: 2rem;
+            height: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            svg {
+                width: 1rem;
+                height: 1rem;
+                fill: $white;
+            }
+        }
+    }
+
+    &__copy {
+        font-size: 11.5px;
+        display: flex;
+        justify-content: center;
+        margin-top: 1.35rem;
+
+        @media (min-width: 1024px) {
+            margin-top: 11rem;
+            font-size: 12.5px;
+            margin-right: -3rem;
+        }
+    }
+}
