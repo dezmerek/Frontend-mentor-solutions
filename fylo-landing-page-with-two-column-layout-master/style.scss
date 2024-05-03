@@ -16,7 +16,6 @@ $white: hsl(0, 0%, 100%);
 
 body {
   font-family: "Open Sans", sans-serif;
-  background-color: $light-grayish-blue;
   margin-top: 1.5rem;
 }
 
@@ -108,10 +107,16 @@ body {
 .productive {
   display: flex;
   flex-direction: column;
+  background-color: $light-grayish-blue;
   padding-top: 2.5rem;
+  padding-bottom: 5.5rem;
 
-  img {
-    padding: 0 2rem;
+  &__image {
+    display: flex;
+    img {
+      padding: 0 2rem;
+      max-width: 100%;
+    }
   }
 
   &__content {
@@ -211,7 +216,6 @@ body {
   display: flex;
   flex-direction: column;
   background-color: $desaturated-blue;
-  margin-top: 5.5rem;
   padding-top: 3.5rem;
   color: $white;
   padding-bottom: 4.2rem;

@@ -7,7 +7,6 @@
 
 body {
   font-family: "Open Sans", sans-serif;
-  background-color: hsl(240, 75%, 98%);
   margin-top: 1.5rem;
 }
 
@@ -89,10 +88,16 @@ body {
 .productive {
   display: flex;
   flex-direction: column;
+  background-color: hsl(240, 75%, 98%);
   padding-top: 2.5rem;
+  padding-bottom: 5.5rem;
 }
-.productive img {
+.productive__image {
+  display: flex;
+}
+.productive__image img {
   padding: 0 2rem;
+  max-width: 100%;
 }
 .productive__content {
   margin-top: 6rem;
@@ -176,7 +181,6 @@ body {
   display: flex;
   flex-direction: column;
   background-color: hsl(238, 22%, 44%);
-  margin-top: 5.5rem;
   padding-top: 3.5rem;
   color: hsl(0, 0%, 100%);
   padding-bottom: 4.2rem;
