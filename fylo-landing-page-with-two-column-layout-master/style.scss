@@ -1,0 +1,344 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Open+Sans:wght@400&display=swap");
+
+$very-dark-blue: hsl(243, 87%, 12%);
+$desaturated-blue: hsl(238, 22%, 44%);
+$bright-blue: hsl(224, 93%, 58%);
+$moderate-cyan: hsl(170, 45%, 43%);
+$light-grayish-blue: hsl(240, 75%, 98%);
+$light-gray: hsl(0, 0%, 75%);
+$white: hsl(0, 0%, 100%);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: $light-grayish-blue;
+  margin-top: 1.5rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  align-items: center;
+
+  img {
+    width: 80px;
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: row;
+    gap: 1.55rem;
+
+    a {
+      text-decoration: none;
+      font-size: 12px;
+      color: $very-dark-blue;
+      font-family: "Raleway", sans-serif;
+    }
+  }
+}
+
+.accessible {
+  display: flex;
+  flex-direction: column;
+  margin-top: 6rem;
+  padding: 0 2rem;
+  background-image: url(./images/bg-curve-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center bottom;
+  padding-bottom: 9rem;
+
+  &__selection {
+    text-align: center;
+    margin-top: 2.4rem;
+
+    h1 {
+      font-size: 24px;
+      line-height: 1.5;
+      font-family: "Raleway", sans-serif;
+    }
+
+    p {
+      margin-top: 1.5rem;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    &__input {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    input {
+      padding: 0.6rem 0;
+      border-radius: 0.2rem;
+      border: none;
+      border: 1px solid $very-dark-blue;
+
+      &::placeholder {
+        opacity: 0.5;
+        padding-left: 1.5rem;
+      }
+    }
+
+    button {
+      border: none;
+      background-color: $bright-blue;
+      padding: 0.75rem 0;
+      color: $white;
+      font-weight: 700;
+      font-size: 14px;
+      font-family: "Raleway", sans-serif;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      border-radius: 0.2rem;
+      cursor: pointer;
+    }
+  }
+}
+
+.productive {
+  display: flex;
+  flex-direction: column;
+  padding-top: 2.5rem;
+
+  img {
+    padding: 0 2rem;
+  }
+
+  &__content {
+    margin-top: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__text {
+      h3 {
+        font-size: 16px;
+        text-align: center;
+        margin-bottom: 1.65rem;
+        font-family: "Raleway", sans-serif;
+      }
+
+      p {
+        font-size: 14px;
+        text-align: left;
+        padding: 0 1.4rem;
+        line-height: 1.5;
+        margin-top: 1rem;
+      }
+
+      div {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        margin-top: 2.2rem;
+        a {
+          font-size: 12px;
+          text-decoration: none;
+          color: $moderate-cyan;
+          border-bottom: 1px solid $moderate-cyan;
+          padding-right: 0.5rem;
+          padding-bottom: 0.4rem;
+        }
+
+        img {
+          border-bottom: 1px solid $moderate-cyan;
+          padding: 0;
+          padding-bottom: 0.4rem;
+        }
+      }
+    }
+
+    &__quote {
+      background-color: $white;
+      padding: 1rem 0.8rem 1rem 1.65rem;
+      width: 280px;
+      margin-top: 2.5rem;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 0.5rem;
+
+      img {
+        padding: 0;
+      }
+
+      p {
+        margin-top: 0.1rem;
+        font-size: 10.5px;
+        line-height: 1.7;
+        letter-spacing: 0.1px;
+      }
+
+      &__author {
+        display: flex;
+        gap: 0.5rem;
+        margin-top: 0.8rem;
+
+        img {
+          border-radius: 50%;
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+
+        div {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          h4 {
+            font-size: 10px;
+            font-family: "Raleway", sans-serif;
+          }
+
+          p {
+            font-size: 6.3px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.up-footer {
+  display: flex;
+  flex-direction: column;
+  background-color: $desaturated-blue;
+  margin-top: 5.5rem;
+  padding-top: 3.5rem;
+  color: $white;
+  padding-bottom: 4.2rem;
+
+  &__text {
+    text-align: center;
+
+    h2 {
+      font-size: 18px;
+      font-family: "Raleway", sans-serif;
+    }
+
+    p {
+      font-size: 14px;
+      padding: 0 3rem;
+      margin-top: 1.2rem;
+      line-height: 1.5;
+      font-family: "Raleway", sans-serif;
+      letter-spacing: 0.1px;
+    }
+  }
+
+  &__input {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1.3rem;
+    padding: 0 4rem;
+  }
+
+  input {
+    padding: 0.6rem 0;
+    border-radius: 0.2rem;
+    border: none;
+    border: 1px solid $white;
+    font-size: 10.5px;
+
+    &::placeholder {
+      opacity: 0.5;
+      padding-left: 0.5rem;
+    }
+  }
+
+  button {
+    border: none;
+    background-color: $bright-blue;
+    padding: 0.75rem 0;
+    color: $white;
+    font-weight: 700;
+    font-size: 10px;
+    font-family: "Raleway", sans-serif;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 0.2rem;
+    cursor: pointer;
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: $very-dark-blue;
+  gap: 2.8rem;
+  padding: 4rem 2.5rem;
+  padding-bottom: 3rem;
+  color: $white;
+
+  img {
+    width: 175px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+
+    &__contact {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+
+      div {
+        display: flex;
+        gap: 1.5rem;
+
+        img {
+          width: 1rem;
+          height: 1rem;
+        }
+      }
+    }
+    &__nav {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      margin-top: 3.5rem;
+
+      div {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        a {
+          color: $white;
+          text-decoration: none;
+        }
+      }
+    }
+    &__social {
+      display: flex;
+      justify-content: center;
+      gap: 0.8rem;
+      margin-top: 3.1rem;
+
+      &--icon {
+        border-radius: 50%;
+        border: 1px solid $white;
+        width: 1.6rem;
+        height: 1.6rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        svg {
+          fill: $white;
+          width: 0.8rem;
+          height: 0.8rem;
+        }
+      }
+    }
+  }
+}
