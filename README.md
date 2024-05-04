@@ -71,3 +71,39 @@
 ![desktop-preview (14)](https://github.com/dezmerek/Frontend-mentor-solutions/assets/18598456/53af4e07-1661-441a-87fd-56511a811bc4)
 
 [Live](https://dezmerek.github.io/Frontend-mentor-solutions/social-links-profile/) | [Repo](https://github.com/dezmerek/Frontend-mentor-solutions/tree/main/social-links-profile) | [Try Out](https://www.frontendmentor.io/challenges/social-links-profile-UG32l9m6dQ)
+
+### Testimonials grid section
+![desktop-design](https://github.com/dezmerek/Frontend-mentor-solutions/assets/18598456/90fced31-14ec-45c2-9cec-a1b195e8e4dc)
+
+[Live](https://dezmerek.github.io/Frontend-mentor-solutions/testimonials-grid-section/) | [Repo](https://github.com/dezmerek/Frontend-mentor-solutions/tree/main/testimonials-grid-section) | [Try Out](https://www.frontendmentor.io/challenges/testimonials-grid-section-Nnw6J7Un7)
+
+### Recipe page 
+![desktop-preview (27)](https://github.com/dezmerek/Frontend-mentor-solutions/assets/18598456/311da795-f792-4ae4-abca-7a87ca4ab900)
+
+[Live](https://dezmerek.github.io/Frontend-mentor-solutions/recipe-page-main/) | [Repo](https://github.com/dezmerek/Frontend-mentor-solutions/tree/main/recipe-page-main) | [Try Out](https://www.frontendmentor.io/challenges/recipe-page-KiTsR8QQKm)
+
+### Clipboard landing page
+![desktop-preview (26)](https://github.com/dezmerek/Frontend-mentor-solutions/assets/18598456/95afeb18-ca29-4fee-a508-405c71337cb5)
+
+[Live](https://dezmerek.github.io/Frontend-mentor-solutions/clipboard-landing-page-master/) | [Repo](https://github.com/dezmerek/Frontend-mentor-solutions/tree/main/clipboard-landing-page-master) | [Try Out](https://www.frontendmentor.io/challenges/clipboard-landing-page-5cc9bccd6c4c91111378ecb9)
+
+### Fylo data storage component
+![desktop-preview (28)](https://github.com/dezmerek/Frontend-mentor-solutions/assets/18598456/df9f2cc7-312e-4842-80af-fea7683b79fe)
+
+[Live](https://dezmerek.github.io/Frontend-mentor-solutions/fylo-data-storage-component-master/) | [Repo](https://github.com/dezmerek/Frontend-mentor-solutions/tree/main/fylo-data-storage-component-master) | [Try Out](https://www.frontendmentor.io/challenges/fylo-data-storage-component-1dZPRbV5n)
+
+### Huddle landing page with alternating feature blocks
+![desktop-preview (29)](https://github.com/dezmerek/Frontend-mentor-solutions/assets/18598456/441840a2-0edc-421c-a0b3-0b34e1d22022)
+
+[Live](https://dezmerek.github.io/Frontend-mentor-solutions/huddle-landing-page-with-alternating-feature-blocks-master/) | [Repo](https://github.com/dezmerek/Frontend-mentor-solutions/tree/main/huddle-landing-page-with-alternating-feature-blocks-master) | [Try Out](https://www.frontendmentor.io/challenges/huddle-landing-page-with-alternating-feature-blocks-5ca5f5981e82137ec91a5100)
+
+### Fylo landing page with two column layout
+![desktop-preview (30)](https://github.com/dezmerek/Frontend-mentor-solutions/assets/18598456/2d042af3-0aa9-4d8d-a31b-1f1bd921d942)
+
+[Live](https://dezmerek.github.io/Frontend-mentor-solutions/fylo-landing-page-with-two-column-layout-master/) | [Repo](https://github.com/dezmerek/Frontend-mentor-solutions/tree/main/fylo-landing-page-with-two-column-layout-master) | [Try Out](https://www.frontendmentor.io/challenges/fylo-landing-page-with-two-column-layout-5ca5ef041e82137ec91a50f5)
+
+### Huddle landing page with curved sections
+![desktop-preview (31)](https://github.com/dezmerek/Frontend-mentor-solutions/assets/18598456/609240b2-033b-45a2-928b-99eee5745f40)
+
+[Live](https://dezmerek.github.io/Frontend-mentor-solutions/huddle-landing-page-with-curved-sections-master/) | [Repo](https://github.com/dezmerek/Frontend-mentor-solutions/tree/main/huddle-landing-page-with-curved-sections-master) | [Try Out](https://www.frontendmentor.io/challenges/huddle-landing-page-with-curved-sections-5ca5ecd01e82137ec91a50f2)
+
