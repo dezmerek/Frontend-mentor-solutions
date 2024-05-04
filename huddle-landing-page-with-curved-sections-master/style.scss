@@ -1,0 +1,329 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Open+Sans:wght@400;600;700&display=swap");
+
+$pink: hsl(322, 100%, 66%);
+$light-pink: hsl(321, 100%, 78%);
+$light-red: hsl(0, 100%, 63%);
+$very-dark-cyan: hsl(192, 100%, 9%);
+$very-pale-blue: hsl(207, 100%, 98%);
+$white: hsl(0, 0%, 100%);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: $very-dark-cyan;
+  margin-top: 1.5rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem;
+
+  img {
+    width: 95px;
+  }
+
+  button {
+    background-color: $pink;
+    color: $pink;
+    border: none;
+    cursor: pointer;
+    padding: 0.4rem 1rem;
+    color: $white;
+    font-size: 10px;
+    border-radius: 1rem;
+  }
+}
+
+.build {
+  margin-top: 7.2rem;
+
+  img {
+    max-width: 100%;
+    padding: 0 2.2rem;
+    margin-top: 6.4rem;
+  }
+
+  &__text {
+    text-align: center;
+
+    h1 {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 1.5;
+      font-family: "Poppins", sans-serif;
+      padding: 0 2rem;
+    }
+
+    p {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.5;
+      padding: 0 2rem;
+      margin-top: 1.4rem;
+    }
+
+    button {
+      background-color: $pink;
+      color: $pink;
+      border: none;
+      cursor: pointer;
+      padding: 0.7rem 2.5rem;
+      color: $white;
+      font-size: 10px;
+      border-radius: 2rem;
+      margin-top: 3rem;
+      font-size: 13px;
+    }
+  }
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-top: 7.1rem;
+  align-items: center;
+  gap: 6rem;
+
+  &__card {
+    border-radius: 0.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    &:nth-child(1) {
+      img {
+        height: 1.6rem;
+      }
+
+      h2 {
+        font-size: 60px;
+        font-weight: 700;
+        line-height: 1.5;
+      }
+
+      p {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.5;
+        opacity: 0.7;
+      }
+    }
+
+    &:nth-child(2) {
+      img {
+        height: 1.2rem;
+      }
+
+      h2 {
+        font-size: 54px;
+        font-weight: 700;
+        line-height: 1.5;
+      }
+
+      p {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.5;
+        opacity: 0.7;
+
+        span {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+
+    &:nth-child(2) {
+      background-color: $very-pale-blue;
+      padding-top: 5rem;
+      padding-bottom: 3.3rem;
+    }
+
+    &:nth-child(4) {
+      margin-top: 1rem;
+      padding-top: 8.5rem;
+      padding-bottom: 7.6rem;
+    }
+
+    &:nth-child(6) {
+      background-color: $very-pale-blue;
+      padding-top: 1.2rem;
+      padding-bottom: 7.5rem;
+    }
+
+    img {
+      max-width: 100%;
+      padding: 0 3.7rem;
+    }
+
+    &__text {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding: 0 1.7rem;
+
+      h2 {
+        font-size: 20px;
+      }
+
+      p {
+        font-size: 14px;
+        line-height: 1.5;
+      }
+    }
+  }
+}
+
+.ready {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-image: url("./images/bg-footer-top-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left bottom;
+  margin-top: 4.4rem;
+  padding-bottom: 19rem;
+
+  h1 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.5;
+    font-family: "Poppins", sans-serif;
+    padding: 0 2rem;
+  }
+
+  button {
+    background-color: $pink;
+    color: $white;
+    border: none;
+    cursor: pointer;
+    padding: 0.7rem 2.5rem;
+    font-size: 10px;
+    border-radius: 2rem;
+    margin-top: 2.5rem;
+    font-size: 13px;
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: $very-dark-cyan;
+  color: $white;
+  padding: 3.5rem 1.8rem;
+  padding-bottom: 2.5rem;
+
+  &__news {
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+      font-size: 20px;
+      text-transform: uppercase;
+      font-weight: 700;
+      line-height: 1.5;
+      font-family: "Poppins", sans-serif;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 1.7;
+      margin-top: 1rem;
+      letter-spacing: 0.2px;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 0.8rem;
+
+      input {
+        width: 100%;
+        padding: 1rem 1rem;
+        border-radius: 0.5rem;
+        margin-top: 2rem;
+      }
+
+      button {
+        background-color: $pink;
+        color: $white;
+        border: none;
+        cursor: pointer;
+        padding: 1rem 2.8rem;
+        border-radius: 0.5rem;
+        font-size: 14px;
+        font-weight: 700;
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    margin-top: 3.5rem;
+
+    &__logo {
+      margin-top: 3rem;
+
+      img {
+        width: 200px;
+      }
+
+      p {
+        margin-top: 0.7rem;
+        font-size: 14px;
+        line-height: 1.7;
+      }
+    }
+
+    &__contact {
+      display: flex;
+      flex-direction: column;
+      gap: 1.4rem;
+
+      div {
+        display: flex;
+        gap: 1.2rem;
+
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+
+    &__social {
+      display: flex;
+      gap: 1rem;
+      margin-top: 0.5rem;
+
+      svg {
+        width: 1.5rem;
+        fill: $white;
+      }
+    }
+  }
+}
