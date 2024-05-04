@@ -42,12 +42,12 @@ body {
   }
 
   button {
-    background-color: $pink;
+    background-color: $white;
     color: $pink;
     border: none;
     cursor: pointer;
     padding: 0.4rem 1rem;
-    color: $white;
+    border: 1px solid $pink;
     font-size: 10px;
     border-radius: 1rem;
 
@@ -410,6 +410,7 @@ body {
     flex-direction: row-reverse;
     align-items: self-start;
     padding: 7.5rem 7.5rem;
+    padding-bottom: 6rem;
     gap: 14.5rem;
   }
 
