@@ -10,14 +10,56 @@ body {
   background-color: hsl(270, 20%, 96%);
 }
 
+.bg {
+  width: 100%;
+  max-width: 500px;
+  height: 100vh;
+  position: fixed;
+  z-index: -1000;
+}
+.bg__dark {
+  background: linear-gradient(to right, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+  top: 0;
+  left: 0;
+  border-bottom-right-radius: 50% 30%;
+  border-bottom-left-radius: 50% 30%;
+  transform: translateX(-60%) translateY(-50%);
+}
+@media (min-width: 768px) {
+  .bg__dark {
+    transform: translateX(-16%) translateY(-13%);
+  }
+}
+.bg__light {
+  background-color: hsl(276, 23%, 91%);
+  bottom: 0;
+  right: 0;
+  border-top-left-radius: 50% 30%;
+  border-top-right-radius: 50% 30%;
+  transform: translateX(60%) translateY(50%);
+}
+@media (min-width: 768px) {
+  .bg__light {
+    transform: translateX(35%) translateY(15%);
+  }
+}
+
 .container {
-  margin: 0 auto;
   display: flex;
-  justify-content: center;
+  height: 100vh;
   align-items: center;
-  min-height: 100vh;
   flex-direction: column;
   margin-top: 4rem;
+}
+@media (min-width: 768px) {
+  .container {
+    margin: 0 auto;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    margin: 0 auto;
+  }
 }
 
 .phone {
@@ -27,6 +69,12 @@ body {
   height: 31.5rem;
   background-color: hsl(270, 20%, 96%);
   box-shadow: 0.2rem 1rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+@media (min-width: 768px) {
+  .phone {
+    position: absolute;
+    margin-right: 29rem;
+  }
 }
 .phone__head {
   display: flex;
@@ -210,10 +258,26 @@ body {
   gap: 1rem;
   padding-bottom: 4rem;
 }
+@media (min-width: 768px) {
+  .content {
+    margin: 0;
+    align-items: start;
+    max-width: 450px;
+    margin-top: 6rem;
+    gap: 1rem;
+    margin-left: 28rem;
+  }
+}
 .content h1 {
   font-weight: 500;
   font-size: 40px;
   color: hsl(271, 36%, 24%);
+}
+@media (min-width: 768px) {
+  .content h1 {
+    padding: 0;
+    margin: 0;
+  }
 }
 .content p {
   font-size: 16px;
@@ -221,6 +285,12 @@ body {
   padding: 0 2rem;
   margin-top: 0.5rem;
   line-height: 1.75;
+}
+@media (min-width: 768px) {
+  .content p {
+    padding: 0;
+    text-align: left;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

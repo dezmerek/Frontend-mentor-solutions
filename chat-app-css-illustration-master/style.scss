@@ -24,14 +24,54 @@ body {
   background-color: $light-grayish-violet;
 }
 
+.bg {
+  width: 100%;
+  max-width: 500px;
+  height: 100vh;
+  position: fixed;
+  z-index: -1000;
+
+  &__dark {
+    background: linear-gradient(to right, $light-violet, $light-magenta);
+    top: 0;
+    left: 0;
+    border-bottom-right-radius: 50% 30%;
+    border-bottom-left-radius: 50% 30%;
+    transform: translateX(-60%) translateY(-50%);
+
+    @media (min-width: 768px) {
+      transform: translateX(-16%) translateY(-13%);
+    }
+  }
+
+  &__light {
+    background-color: $light-violet-new;
+    bottom: 0;
+    right: 0;
+    border-top-left-radius: 50% 30%;
+    border-top-right-radius: 50% 30%;
+    transform: translateX(60%) translateY(50%);
+    @media (min-width: 768px) {
+      transform: translateX(35%) translateY(15%);
+    }
+  }
+}
+
 .container {
-  margin: 0 auto;
   display: flex;
-  justify-content: center;
+  height: 100vh;
   align-items: center;
-  min-height: 100vh;
   flex-direction: column;
   margin-top: 4rem;
+
+  @media (min-width: 768px) {
+    margin: 0 auto;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    margin: 0 auto;
+  }
 }
 
 .phone {
@@ -41,6 +81,11 @@ body {
   height: 31.5rem;
   background-color: $light-grayish-violet;
   box-shadow: 0.2rem 1rem 0.5rem rgba(0, 0, 0, 0.1);
+
+  @media (min-width: 768px) {
+    position: absolute;
+    margin-right: 29rem;
+  }
 
   &__head {
     display: flex;
@@ -251,10 +296,24 @@ body {
   gap: 1rem;
   padding-bottom: 4rem;
 
+  @media (min-width: 768px) {
+    margin: 0;
+    align-items: start;
+    max-width: 450px;
+    margin-top: 6rem;
+    gap: 1rem;
+    margin-left: 28rem;
+  }
+
   h1 {
     font-weight: 500;
     font-size: 40px;
     color: $very-dark-desaturated-violet;
+
+    @media (min-width: 768px) {
+      padding: 0;
+      margin: 0;
+    }
   }
 
   p {
@@ -263,5 +322,10 @@ body {
     padding: 0 2rem;
     margin-top: 0.5rem;
     line-height: 1.75;
+
+    @media (min-width: 768px) {
+      padding: 0;
+      text-align: left;
+    }
   }
 }
