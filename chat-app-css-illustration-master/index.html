@@ -1,51 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | [Challenge Name Here]</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="phone">
+        <div class="phone__head">
+          <div class="phone__head__camera"></div>
+          <div class="phone__head__profile">
+            <div class="phone__head__profile__left">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                <path
+                  d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"
+                />
+              </svg>
+              <img src="./images/avatar.jpg" alt="" />
+              <div>
+                <h5>Samuel Green</h5>
+                <p>Available to Walk</p>
+              </div>
+            </div>
+            <div class="phone__head__profile__right">.</div>
+          </div>
+        </div>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | [Challenge Name Here]</title>
+        <div class="phone__body">
+          <div class="phone__body__chat">
+            That sounds great. I’d be happy with that.
+          </div>
+          <div class="phone__body__chat">
+            Could you send over some pictures of your dog, please?
+          </div>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+          <div class="phone__body__chat__right">
+            <div class="phone__body__chat__right__image">
+              <img src="./images/dog-image-1.jpg" alt="" />
+              <img src="./images/dog-image-2.jpg" alt="" />
+              <img src="./images/dog-image-3.jpg" alt="" />
+            </div>
+            <div class="phone__body__chat__right__text">
+              <div>Here are a few pictures. She’s a happy girl!</div>
+              <div>Can you make it?</div>
+            </div>
+          </div>
 
-  Samuel Green
-  Available to Walk
+          <div class="phone__body__chat">
+            She looks so happy! The time we discussed works. How long shall I
+            take her out for?
+          </div>
 
-  That sounds great. I’d be happy with that.
+          <div class="phone__body__price">
+            <div class="phone__body__price__order">
+              <div>
+                <div class="phone__body__price__order--border"></div>
+                30 minute walk
+              </div>
+              <p>$29</p>
+            </div>
+            <div class="phone__body__price__order">
+              <div>
+                <div class="phone__body__price__order--border"></div>
+                1 hour walk
+              </div>
+              <p>$49</p>
+            </div>
+          </div>
 
-  Could you send over some pictures of your dog, please?
+          <div class="phone__body__input">
+            <input type="text" placeholder="Type a message..." />
+            <button>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                <path
+                  d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
 
-  Here are a few pictures. She’s a happy girl!
-
-  Can you make it?
-
-  She looks so happy! The time we discussed works. How long shall I take her out for?
-
-  30 minute walk
-  $29
-
-  1 hour walk
-  $49
-
-  Type a message…
-
-  Simple booking
-
-  Stay in touch with our dog walkers through the chat interface. This makes it easy to 
-  discuss arrangements and make bookings. Once the walk has been completed you can rate 
-  your walker and book again all through the chat.
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+      <div class="content">
+        <h1>Simple booking</h1>
+        <p>
+          Stay in touch with our dog walkers through the chat interface. This
+          makes it easy to discuss arrangements and make bookings. Once the walk
+          has been completed you can rate your walker and book again all through
+          the chat.
+        </p>
+      </div>
+    </div>
+  </body>
 </html>
