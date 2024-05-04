@@ -10,6 +10,11 @@ body {
   color: hsl(192, 100%, 9%);
   margin-top: 1.5rem;
 }
+@media (min-width: 768px) {
+  body {
+    margin-top: 5rem;
+  }
+}
 
 .header {
   display: flex;
@@ -17,8 +22,18 @@ body {
   align-items: center;
   padding: 0 1.5rem;
 }
+@media (min-width: 768px) {
+  .header {
+    padding: 0 4rem 0 5rem;
+  }
+}
 .header img {
   width: 95px;
+}
+@media (min-width: 768px) {
+  .header img {
+    width: 240px;
+  }
 }
 .header button {
   background-color: hsl(322, 100%, 66%);
@@ -30,9 +45,23 @@ body {
   font-size: 10px;
   border-radius: 1rem;
 }
+@media (min-width: 768px) {
+  .header button {
+    padding: 0.7rem 1.8rem;
+    font-size: 16px;
+  }
+}
 
 .build {
   margin-top: 7.2rem;
+}
+@media (min-width: 768px) {
+  .build {
+    margin-top: 14.3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .build img {
   max-width: 100%;
@@ -42,6 +71,13 @@ body {
 .build__text {
   text-align: center;
 }
+@media (min-width: 768px) {
+  .build__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .build__text h1 {
   font-size: 24px;
   font-weight: 700;
@@ -49,12 +85,23 @@ body {
   font-family: "Poppins", sans-serif;
   padding: 0 2rem;
 }
+@media (min-width: 768px) {
+  .build__text h1 {
+    font-size: 48px;
+  }
+}
 .build__text p {
   font-size: 14px;
   font-weight: 400;
   line-height: 1.5;
   padding: 0 2rem;
   margin-top: 1.4rem;
+}
+@media (min-width: 768px) {
+  .build__text p {
+    font-size: 20px;
+    max-width: 46%;
+  }
 }
 .build__text button {
   background-color: hsl(322, 100%, 66%);
@@ -68,6 +115,15 @@ body {
   margin-top: 3rem;
   font-size: 13px;
 }
+@media (min-width: 768px) {
+  .build__text button {
+    margin-top: 2.9rem;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 1.8rem 6.5rem;
+    border-radius: 3rem;
+  }
+}
 
 .stats {
   display: flex;
@@ -76,6 +132,15 @@ body {
   margin-top: 7.1rem;
   align-items: center;
   gap: 6rem;
+}
+@media (min-width: 768px) {
+  .stats {
+    flex-direction: row;
+    justify-content: center;
+    gap: 20rem;
+    margin-top: 7.9rem;
+    padding-bottom: 7.5rem;
+  }
 }
 .stats__card {
   border-radius: 0.5rem;
@@ -87,10 +152,20 @@ body {
 .stats__card:nth-child(1) img {
   height: 1.6rem;
 }
+@media (min-width: 768px) {
+  .stats__card:nth-child(1) img {
+    height: 2.5rem;
+  }
+}
 .stats__card:nth-child(1) h2 {
   font-size: 60px;
   font-weight: 700;
   line-height: 1.5;
+}
+@media (min-width: 768px) {
+  .stats__card:nth-child(1) h2 {
+    font-size: 100px;
+  }
 }
 .stats__card:nth-child(1) p {
   font-size: 14px;
@@ -98,13 +173,28 @@ body {
   line-height: 1.5;
   opacity: 0.7;
 }
+@media (min-width: 768px) {
+  .stats__card:nth-child(1) p {
+    font-size: 24px;
+  }
+}
 .stats__card:nth-child(2) img {
   height: 1.2rem;
+}
+@media (min-width: 768px) {
+  .stats__card:nth-child(2) img {
+    height: 2rem;
+  }
 }
 .stats__card:nth-child(2) h2 {
   font-size: 54px;
   font-weight: 700;
   line-height: 1.5;
+}
+@media (min-width: 768px) {
+  .stats__card:nth-child(2) h2 {
+    font-size: 100px;
+  }
 }
 .stats__card:nth-child(2) p {
   font-size: 14px;
@@ -112,37 +202,100 @@ body {
   line-height: 1.5;
   opacity: 0.7;
 }
+@media (min-width: 768px) {
+  .stats__card:nth-child(2) p {
+    font-size: 24px;
+  }
+}
 .stats__card:nth-child(2) p span {
   display: block;
+}
+@media (min-width: 768px) {
+  .stats__card:nth-child(2) p span {
+    display: inline;
+  }
 }
 
 .section {
   display: flex;
   flex-direction: column;
 }
+.section .top-desktop {
+  display: none;
+}
+.section .bottom-desktop {
+  display: none;
+}
+@media (min-width: 768px) {
+  .section .top-mobile {
+    display: none;
+  }
+  .section .top-desktop {
+    display: block;
+  }
+  .section .bottom-mobile {
+    display: none;
+  }
+  .section .bottom-desktop {
+    display: block;
+  }
+}
 .section__card {
   display: flex;
   flex-direction: column;
   gap: 5rem;
 }
-.section__card:nth-child(2) {
+@media (min-width: 768px) {
+  .section__card {
+    align-items: center;
+    justify-content: center;
+    padding: 0 8rem;
+  }
+}
+.section__card:nth-child(3) {
   background-color: hsl(207, 100%, 98%);
   padding-top: 5rem;
   padding-bottom: 3.3rem;
 }
-.section__card:nth-child(4) {
+@media (min-width: 768px) {
+  .section__card:nth-child(3) {
+    flex-direction: row-reverse;
+    padding-bottom: 2.4rem;
+  }
+}
+.section__card:nth-child(6) {
   margin-top: 1rem;
   padding-top: 8.5rem;
   padding-bottom: 7.6rem;
 }
-.section__card:nth-child(6) {
+@media (min-width: 768px) {
+  .section__card:nth-child(6) {
+    flex-direction: row;
+    padding-top: 12rem;
+    padding-bottom: 7rem;
+  }
+}
+.section__card:nth-child(9) {
   background-color: hsl(207, 100%, 98%);
   padding-top: 1.2rem;
   padding-bottom: 7.5rem;
 }
+@media (min-width: 768px) {
+  .section__card:nth-child(9) {
+    flex-direction: row-reverse;
+    padding-top: 3.8rem;
+  }
+}
 .section__card img {
   max-width: 100%;
   padding: 0 3.7rem;
+}
+@media (min-width: 768px) {
+  .section__card img {
+    padding: 0;
+    max-width: 45%;
+    margin-top: -1rem;
+  }
 }
 .section__card__text {
   text-align: center;
@@ -151,12 +304,31 @@ body {
   gap: 1rem;
   padding: 0 1.7rem;
 }
+@media (min-width: 768px) {
+  .section__card__text {
+    text-align: left;
+    padding: 0;
+    gap: 1.5rem;
+  }
+}
 .section__card__text h2 {
   font-size: 20px;
+}
+@media (min-width: 768px) {
+  .section__card__text h2 {
+    font-size: 41px;
+    margin-top: -1rem;
+  }
 }
 .section__card__text p {
   font-size: 14px;
   line-height: 1.5;
+}
+@media (min-width: 768px) {
+  .section__card__text p {
+    font-size: 16px;
+    width: 90%;
+  }
 }
 
 .ready {
@@ -171,12 +343,24 @@ body {
   margin-top: 4.4rem;
   padding-bottom: 19rem;
 }
+@media (min-width: 768px) {
+  .ready {
+    margin-top: 5rem;
+    padding-bottom: 20.8rem;
+    background-image: url("./images/bg-footer-top-desktop.svg");
+  }
+}
 .ready h1 {
   font-size: 24px;
   font-weight: 700;
   line-height: 1.5;
   font-family: "Poppins", sans-serif;
   padding: 0 2rem;
+}
+@media (min-width: 768px) {
+  .ready h1 {
+    font-size: 40px;
+  }
 }
 .ready button {
   background-color: hsl(322, 100%, 66%);
@@ -189,6 +373,15 @@ body {
   margin-top: 2.5rem;
   font-size: 13px;
 }
+@media (min-width: 768px) {
+  .ready button {
+    margin-top: 2.5rem;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 1.8rem 6.5rem;
+    border-radius: 3rem;
+  }
+}
 
 .footer {
   display: flex;
@@ -197,6 +390,14 @@ body {
   color: hsl(0, 0%, 100%);
   padding: 3.5rem 1.8rem;
   padding-bottom: 2.5rem;
+}
+@media (min-width: 768px) {
+  .footer {
+    flex-direction: row-reverse;
+    align-items: self-start;
+    padding: 7.5rem 7.5rem;
+    gap: 14.5rem;
+  }
 }
 .footer__news {
   display: flex;
@@ -209,17 +410,31 @@ body {
   line-height: 1.5;
   font-family: "Poppins", sans-serif;
 }
+@media (min-width: 768px) {
+  .footer__news h2 {
+    font-size: 24px;
+    padding-top: 0.2rem;
+  }
+}
 .footer__news p {
   font-size: 14px;
   line-height: 1.7;
   margin-top: 1rem;
   letter-spacing: 0.2px;
+  max-width: 65%;
 }
 .footer__news div {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   gap: 0.8rem;
+}
+@media (min-width: 768px) {
+  .footer__news div {
+    flex-direction: row;
+    margin-top: 0.5rem;
+    gap: 2.5rem;
+  }
 }
 .footer__news div input {
   width: 100%;
@@ -243,16 +458,34 @@ body {
   gap: 2.5rem;
   margin-top: 3.5rem;
 }
+@media (min-width: 768px) {
+  .footer__content {
+    margin-top: 0;
+    gap: 1.5rem;
+  }
+}
 .footer__content__logo {
   margin-top: 3rem;
 }
+@media (min-width: 768px) {
+  .footer__content__logo {
+    margin-top: 0;
+  }
+}
 .footer__content__logo img {
   width: 200px;
+}
+@media (min-width: 768px) {
+  .footer__content__logo img {
+    width: 240px;
+    margin-bottom: 0.8rem;
+  }
 }
 .footer__content__logo p {
   margin-top: 0.7rem;
   font-size: 14px;
   line-height: 1.7;
+  max-width: 70%;
 }
 .footer__content__contact {
   display: flex;
@@ -271,9 +504,20 @@ body {
   gap: 1rem;
   margin-top: 0.5rem;
 }
+@media (min-width: 768px) {
+  .footer__content__social {
+    gap: 1.5rem;
+    margin-top: 3.6rem;
+  }
+}
 .footer__content__social svg {
   width: 1.5rem;
   fill: hsl(0, 0%, 100%);
+}
+@media (min-width: 768px) {
+  .footer__content__social svg {
+    width: 2rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
