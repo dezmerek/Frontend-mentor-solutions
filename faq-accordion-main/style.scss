@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap");
+
+$white: hsl(0, 0%, 100%);
+$light-pink: hsl(275, 100%, 97%);
+$grayish-purple: hsl(292, 16%, 49%);
+$dark-purple: hsl(292, 42%, 14%);
+$pink: hsl(281, 83%, 54%);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+  background-color: $light-pink;
+  color: $dark-purple;
+  background-image: url("./assets/images/background-pattern-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: 768px) {
+    background-image: url("./assets/images/background-pattern-desktop.svg");
+  }
+}
+
+.faq {
+  background-color: $white;
+  margin: 1.5rem;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+
+  @media (min-width: 768px) {
+    max-width: 600px;
+    padding: 2.5rem;
+  }
+
+  hr {
+    margin-top: 1.2rem;
+    border: none;
+    border-top: 1px solid $grayish-purple;
+    opacity: 0.1;
+    margin-bottom: 1.2rem;
+
+    @media (min-width: 768px) {
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__header {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+
+    @media (min-width: 768px) {
+      font-size: 56px;
+      margin-bottom: 2rem;
+    }
+
+    img {
+      width: 1.5rem;
+
+      @media (min-width: 768px) {
+        width: 2.5rem;
+      }
+    }
+  }
+
+  &__item {
+    p {
+      font-size: 14px;
+      margin-top: 1.6rem;
+      line-height: 1.5;
+      color: $grayish-purple;
+      display: none;
+
+      @media (min-width: 768px) {
+        font-size: 16px;
+        margin-top: 1.4rem;
+      }
+    }
+
+    &--active {
+      p {
+        display: block;
+      }
+
+      .faq__item__question--icon {
+        background-image: url(./assets/images/icon-minus.svg);
+      }
+    }
+
+    &__question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      gap: 1rem;
+
+      &:hover {
+        color: $pink;
+      }
+
+      h4 {
+        @media (min-width: 768px) {
+          font-size: 18px;
+        }
+      }
+
+      &--icon {
+        background-image: url(./assets/images/icon-plus.svg);
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+  }
+}

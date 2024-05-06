@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+  background-color: hsl(275, 100%, 97%);
+  color: hsl(292, 42%, 14%);
+  background-image: url("./assets/images/background-pattern-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  body {
+    background-image: url("./assets/images/background-pattern-desktop.svg");
+  }
+}
+
+.faq {
+  background-color: hsl(0, 0%, 100%);
+  margin: 1.5rem;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+@media (min-width: 768px) {
+  .faq {
+    max-width: 600px;
+    padding: 2.5rem;
+  }
+}
+.faq hr {
+  margin-top: 1.2rem;
+  border: none;
+  border-top: 1px solid hsl(292, 16%, 49%);
+  opacity: 0.1;
+  margin-bottom: 1.2rem;
+}
+@media (min-width: 768px) {
+  .faq hr {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+.faq__header {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+@media (min-width: 768px) {
+  .faq__header {
+    font-size: 56px;
+    margin-bottom: 2rem;
+  }
+}
+.faq__header img {
+  width: 1.5rem;
+}
+@media (min-width: 768px) {
+  .faq__header img {
+    width: 2.5rem;
+  }
+}
+.faq__item p {
+  font-size: 14px;
+  margin-top: 1.6rem;
+  line-height: 1.5;
+  color: hsl(292, 16%, 49%);
+  display: none;
+}
+@media (min-width: 768px) {
+  .faq__item p {
+    font-size: 16px;
+    margin-top: 1.4rem;
+  }
+}
+.faq__item--active p {
+  display: block;
+}
+.faq__item--active .faq__item__question--icon {
+  background-image: url(./assets/images/icon-minus.svg);
+}
+.faq__item__question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  gap: 1rem;
+}
+.faq__item__question:hover {
+  color: hsl(281, 83%, 54%);
+}
+@media (min-width: 768px) {
+  .faq__item__question h4 {
+    font-size: 18px;
+  }
+}
+.faq__item__question--icon {
+  background-image: url(./assets/images/icon-plus.svg);
+  width: 2rem;
+  height: 2rem;
+}
+
+/*# sourceMappingURL=style.css.map */
