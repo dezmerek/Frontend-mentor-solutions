@@ -1,4 +1,5 @@
 let questions = document.querySelectorAll(".faq__item");
+let buttons = document.querySelectorAll(".card__rating button");
 
 let toggleActiveQuestion = () => {
   questions.forEach((question) => {
