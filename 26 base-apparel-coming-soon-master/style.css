@@ -92,7 +92,7 @@ body {
     grid-column: 1;
     text-align: left;
     grid-row: 2;
-    margin-top: -3.5rem;
+    margin-top: -2rem;
     margin-left: 20%;
   }
 }
@@ -136,6 +136,15 @@ body {
     line-height: 1.7;
   }
 }
+.content--error {
+  text-align: left;
+  color: hsl(0, 93%, 68%);
+  font-size: 13px !important;
+  font-weight: 600;
+  margin-left: 2rem;
+  margin-top: 0.5rem !important;
+  display: none;
+}
 .content__input {
   display: flex;
   align-items: center;
@@ -150,23 +159,42 @@ body {
     margin-top: 2.5rem;
   }
 }
-.content__input input {
+.content__input__input-container {
+  position: relative;
+  width: 425px;
+}
+.content__input__input-container input {
   color: hsl(0, 6%, 24%);
   font-weight: 600;
   height: 3rem;
   padding-left: 1.5rem;
-  width: 425px;
+  padding-right: 3rem;
+  width: 100%;
   border-radius: 2rem;
   border: none;
   border: 1px solid hsl(0, 36%, 70%);
 }
-.content__input input::placeholder {
+.content__input__input-container input::placeholder {
   color: hsl(0, 36%, 70%);
   opacity: 0.25;
 }
 @media (min-width: 768px) {
-  .content__input input {
+  .content__input__input-container input {
     height: 3.6rem;
+  }
+}
+.content__input__input-container .error-icon {
+  position: absolute;
+  right: 4rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.5rem;
+  height: 1.5rem;
+  display: none;
+}
+@media (min-width: 768px) {
+  .content__input__input-container .error-icon {
+    right: 7rem;
   }
 }
 .content__input button {
@@ -176,6 +204,7 @@ body {
   cursor: pointer;
   margin-left: -3rem;
   border: none;
+  z-index: 2;
 }
 .content__input button:hover {
   background: hsl(0, 80%, 86%);

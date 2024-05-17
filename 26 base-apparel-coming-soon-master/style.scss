@@ -93,7 +93,7 @@ body {
     grid-column: 1;
     text-align: left;
     grid-row: 2;
-    margin-top: -3.5rem;
+    margin-top: -2rem;
     margin-left: 20%;
   }
 
@@ -137,6 +137,16 @@ body {
     }
   }
 
+  &--error {
+    text-align: left;
+    color: $soft-red;
+    font-size: 13px !important;
+    font-weight: 600;
+    margin-left: 2rem;
+    margin-top: 0.5rem !important;
+    display: none;
+  }
+
   &__input {
     display: flex;
     align-items: center;
@@ -150,24 +160,43 @@ body {
       margin-top: 2.5rem;
     }
 
-    input {
-      color: $dark-grayish-red;
-      font-weight: 600;
-      //   margin: 1rem 3.65rem;
-      height: 3rem;
-      padding-left: 1.5rem;
+    &__input-container {
+      position: relative;
       width: 425px;
-      border-radius: 2rem;
-      border: none;
-      border: 1px solid $desaturated-red;
 
-      &::placeholder {
-        color: $desaturated-red;
-        opacity: 0.25;
+      input {
+        color: $dark-grayish-red;
+        font-weight: 600;
+        height: 3rem;
+        padding-left: 1.5rem;
+        padding-right: 3rem;
+        width: 100%;
+        border-radius: 2rem;
+        border: none;
+        border: 1px solid $desaturated-red;
+
+        &::placeholder {
+          color: $desaturated-red;
+          opacity: 0.25;
+        }
+
+        @media (min-width: 768px) {
+          height: 3.6rem;
+        }
       }
 
-      @media (min-width: 768px) {
-        height: 3.6rem;
+      .error-icon {
+        position: absolute;
+        right: 4rem;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 1.5rem;
+        height: 1.5rem;
+        display: none;
+
+        @media (min-width: 768px) {
+          right: 7rem;
+        }
       }
     }
 
@@ -178,6 +207,7 @@ body {
       cursor: pointer;
       margin-left: -3rem;
       border: none;
+      z-index: 2;
 
       &:hover {
         background: $color-start-2;
