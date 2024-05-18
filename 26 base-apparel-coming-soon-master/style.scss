@@ -17,6 +17,14 @@ $color-end-2: hsl(0, 74%, 74%);
 body {
   font-family: "Josefin Sans", sans-serif;
   color: $desaturated-red;
+
+  @media (min-width: 768px) {
+    background: url("images/bg-pattern-desktop.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
 }
 
 .container {
@@ -26,7 +34,7 @@ body {
 
   @media (min-width: 768px) {
     display: grid;
-    grid-template-columns: 1.36fr 1fr; /* Pierwsza kolumna będzie dopasowana do szerokości zawartości, druga zajmie dostępną przestrzeń */
+    grid-template-columns: 1.36fr 1fr;
   }
 }
 
@@ -144,7 +152,6 @@ body {
     font-weight: 600;
     margin-left: 2rem;
     margin-top: 0.5rem !important;
-    display: none;
   }
 
   &__input {
@@ -178,6 +185,10 @@ body {
         &::placeholder {
           color: $desaturated-red;
           opacity: 0.25;
+        }
+
+        &:focus {
+          outline: none;
         }
 
         @media (min-width: 768px) {
