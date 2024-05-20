@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  background-image: url("./images/bg-intro-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: hsl(0, 100%, 74%);
+  color: hsl(0, 0%, 100%);
+  margin: 0 auto;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+@media (min-width: 768px) {
+  body {
+    background-image: url("./images/bg-intro-desktop.png");
+  }
+}
+
+.learn {
+  display: flex;
+  flex-direction: column;
+  padding: 0 6.5%;
+}
+@media (min-width: 768px) {
+  .learn {
+    flex-direction: row;
+    align-items: center;
+    padding: 0 11.5%;
+    justify-content: space-between;
+  }
+}
+.learn__content {
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .learn__content {
+    text-align: left;
+    width: 50%;
+  }
+}
+.learn__content h1 {
+  font-size: 27.5px;
+  line-height: 1.3;
+}
+@media (min-width: 768px) {
+  .learn__content h1 {
+    font-size: 49px;
+    line-height: 1.1;
+  }
+}
+.learn__content p {
+  margin-top: 1.4rem;
+  line-height: 1.65;
+}
+@media (min-width: 768px) {
+  .learn__content p {
+    margin-top: 1.8rem;
+  }
+}
+.learn__form-content {
+  margin-top: 3.75rem;
+}
+@media (min-width: 768px) {
+  .learn__form-content {
+    margin: 0;
+    width: 49%;
+  }
+}
+.learn__form-content__info {
+  text-align: center;
+  background-color: hsl(248, 32%, 49%);
+  border-radius: 0.6rem;
+  padding: 1.2rem;
+  box-shadow: 0 0.5rem 0 0 hsla(249, 10%, 26%, 0.3);
+}
+.learn__form-content__info p {
+  padding: 0 2rem;
+}
+.learn__form-content__form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5rem;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 0.6rem;
+  padding: 1.5rem;
+  display: flex;
+  box-shadow: 0 0.5rem 0 0 hsla(249, 10%, 26%, 0.3);
+}
+@media (min-width: 768px) {
+  .learn__form-content__form {
+    margin-top: 1rem;
+    padding: 3rem;
+  }
+}
+.learn__form-content__form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+.learn__form-content__form__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  flex-direction: column;
+}
+.learn__form-content__form__container div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.learn__form-content__form__container input {
+  border: none;
+  border: 1px solid hsl(246, 25%, 77%);
+  padding: 1.1rem;
+  width: 100%;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 0.3rem;
+}
+.learn__form-content__form__container input::placeholder {
+  font-weight: 700;
+}
+.learn__form-content__form__container input:focus {
+  outline: none;
+  border: 1px solid hsl(249, 10%, 26%);
+}
+.learn__form-content__form__container img {
+  position: absolute;
+  right: 1.5rem;
+  display: none;
+}
+.learn__form-content__form__container--error {
+  color: hsl(0, 100%, 74%);
+  font-size: 11px;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 0.3rem;
+  font-weight: 500;
+}
+.learn__form-content__form button {
+  background-color: hsl(154, 59%, 51%);
+  border: none;
+  color: hsl(0, 0%, 100%);
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 1.2rem;
+  border-radius: 0.3rem;
+  font-size: 15.5px;
+  cursor: pointer;
+  box-shadow: 0 0.25rem 0 0 rgb(48, 175, 120);
+}
+.learn__form-content__form p {
+  color: hsl(246, 25%, 77%);
+  font-size: 11px;
+  text-align: center;
+  padding: 0 5%;
+  margin-top: -0.4rem;
+  line-height: 1.8;
+}
+.learn__form-content__form p b {
+  color: hsl(0, 100%, 74%);
+}
+
+/*# sourceMappingURL=style.css.map */
