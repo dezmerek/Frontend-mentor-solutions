@@ -141,7 +141,6 @@ body {
 .learn__form-content__form__container--error {
   color: hsl(0, 100%, 74%);
   font-size: 11px;
-  display: flex;
   justify-content: flex-end;
   padding-top: 0.3rem;
   font-weight: 500;
