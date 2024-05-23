@@ -44,7 +44,13 @@ body {
     }
 
     h1 {
+      font-weight: 300;
       font-size: 22px;
+      color: $gray;
+
+      b {
+        color: $very-dark-blue;
+      }
 
       @media (min-width: 768px) {
         font-size: 47px;
@@ -86,7 +92,7 @@ body {
 
     input {
       padding: 0.7rem 2rem;
-      border-radius: 1.2rem;
+      border-radius: 1.5rem;
       font-size: 12px;
       border: 1px solid $pale-blue;
       width: 17.5rem;
@@ -118,7 +124,7 @@ body {
 
     button {
       padding: 0.7rem;
-      border-radius: 1.2rem;
+      border-radius: 1.5rem;
       border: none;
       background-color: $blue;
       color: $white;
@@ -171,6 +177,7 @@ body {
       svg {
         width: 1rem;
         height: 1rem;
+        fill: $blue;
       }
     }
   }
@@ -178,6 +185,7 @@ body {
   &__footer {
     margin-top: 1.7rem;
     font-size: 10px;
+    color: $gray;
 
     @media (min-width: 768px) {
       font-size: 12px;
