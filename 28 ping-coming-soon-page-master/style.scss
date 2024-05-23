@@ -66,15 +66,22 @@ body {
   &__form {
     display: flex;
     flex-direction: column;
-    width: 100%;
     gap: 0.8rem;
     margin-top: 2rem;
     padding: 0 13%;
 
     @media (min-width: 768px) {
-      flex-direction: row;
-      justify-content: center;
       margin-top: 2.5rem;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+
+      @media (min-width: 768px) {
+        flex-direction: row;
+      }
     }
 
     input {
@@ -82,6 +89,7 @@ body {
       border-radius: 1.2rem;
       font-size: 12px;
       border: 1px solid $pale-blue;
+      width: 17.5rem;
 
       @media (min-width: 768px) {
         width: 420px;
@@ -96,10 +104,16 @@ body {
     &--error {
       color: $light-red;
       font-size: 10.5px;
-      text-align: center;
       margin-top: -0.3rem;
       margin-bottom: 0.7rem;
       display: none;
+      padding-left: 1.5rem;
+      display: flex;
+      justify-content: center;
+
+      @media (min-width: 768px) {
+        justify-content: start;
+      }
     }
 
     button {
@@ -109,6 +123,7 @@ body {
       background-color: $blue;
       color: $white;
       font-weight: 700;
+      cursor: pointer;
 
       @media (min-width: 768px) {
         padding: 1rem 4.5rem;
