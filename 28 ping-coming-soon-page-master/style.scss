@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap");
+
+$blue: hsl(223, 87%, 63%);
+$pale-blue: hsl(223, 100%, 88%);
+$light-red: hsl(354, 100%, 66%);
+$gray: hsl(0, 0%, 59%);
+$very-dark-blue: hsl(209, 33%, 12%);
+$white: hsl(0, 0%, 100%);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Libre Franklin", sans-serif;
+  color: $very-dark-blue;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__logo {
+    margin-top: 5.3rem;
+
+    img {
+      width: 55px;
+
+      @media (min-width: 768px) {
+        width: 85px;
+      }
+    }
+  }
+
+  &__content {
+    margin-top: 2.1rem;
+
+    @media (min-width: 768px) {
+      margin-top: 3rem;
+    }
+
+    h1 {
+      font-size: 22px;
+
+      @media (min-width: 768px) {
+        font-size: 47px;
+      }
+    }
+
+    p {
+      margin-top: 1.2rem;
+      font-size: 12px;
+      text-align: center;
+
+      @media (min-width: 768px) {
+        margin-top: 1rem;
+        font-size: 20px;
+      }
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.8rem;
+    margin-top: 2rem;
+    padding: 0 13%;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      justify-content: center;
+      margin-top: 2.5rem;
+    }
+
+    input {
+      padding: 0.7rem 2rem;
+      border-radius: 1.2rem;
+      font-size: 12px;
+      border: 1px solid $pale-blue;
+
+      @media (min-width: 768px) {
+        width: 420px;
+        height: 55px;
+      }
+
+      &::placeholder {
+        color: $pale-blue;
+      }
+    }
+
+    &--error {
+      color: $light-red;
+      font-size: 10.5px;
+      text-align: center;
+      margin-top: -0.3rem;
+      margin-bottom: 0.7rem;
+      display: none;
+    }
+
+    button {
+      padding: 0.7rem;
+      border-radius: 1.2rem;
+      border: none;
+      background-color: $blue;
+      color: $white;
+      font-weight: 700;
+
+      @media (min-width: 768px) {
+        padding: 1rem 4.5rem;
+      }
+    }
+  }
+
+  &__illustration {
+    margin-top: 4.3rem;
+    padding: 0 7.5%;
+
+    @media (min-width: 768px) {
+      display: flex;
+      justify-content: center;
+      margin-top: 5.5rem;
+    }
+
+    img {
+      max-width: 100%;
+
+      @media (min-width: 768px) {
+        max-width: 52%;
+      }
+    }
+  }
+
+  &__social {
+    display: flex;
+    gap: 1rem;
+    margin-top: 7.5rem;
+
+    @media (min-width: 768px) {
+      margin-top: 4.5rem;
+    }
+
+    &__icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid $gray;
+      border-radius: 50%;
+      width: 1.75rem;
+      height: 1.75rem;
+
+      svg {
+        width: 1rem;
+        height: 1rem;
+      }
+    }
+  }
+
+  &__footer {
+    margin-top: 1.7rem;
+    font-size: 10px;
+
+    @media (min-width: 768px) {
+      font-size: 12px;
+    }
+  }
+}
