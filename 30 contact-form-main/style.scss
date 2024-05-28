@@ -72,6 +72,16 @@ input:hover {
       flex-direction: column;
       gap: 1.7rem;
 
+      &--errorFirst {
+        color: $red;
+        display: none;
+      }
+
+      &--errorLast {
+        color: $red;
+        display: none;
+      }
+
       @media (min-width: 768px) {
         flex-direction: row;
         justify-content: space-between;
@@ -102,6 +112,11 @@ input:hover {
       display: flex;
       flex-direction: column;
       gap: 0.7rem;
+
+      &--error {
+        color: $red;
+        display: none;
+      }
     }
 
     &__type {
@@ -111,6 +126,11 @@ input:hover {
 
       input[type="radio"] {
         accent-color: $green-600;
+      }
+
+      &--error {
+        color: $red;
+        display: none;
       }
 
       &__types {
@@ -148,11 +168,17 @@ input:hover {
       display: flex;
       flex-direction: column;
 
+      &--error {
+        color: $red;
+        display: none;
+      }
+
       textarea {
         margin-top: -0.5rem;
         border: 1px solid $grey-900;
         border-radius: 0.5rem;
         height: 240px;
+        margin-bottom: 0.5rem;
 
         @media (min-width: 768px) {
           height: 105px;
@@ -162,13 +188,24 @@ input:hover {
 
     &__consent {
       display: flex;
-      gap: 1.2rem;
+      flex-direction: column;
       margin-top: 0.9rem;
-      align-items: center;
       line-height: 1.4;
 
       @media (min-width: 768px) {
         margin-top: 0.7rem;
+      }
+
+      div {
+        display: flex;
+        align-items: center;
+        gap: 1.2rem;
+        margin-bottom: 0.5rem;
+      }
+
+      &--error {
+        color: $red;
+        display: none;
       }
 
       input {

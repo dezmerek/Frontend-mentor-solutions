@@ -20,28 +20,26 @@
           <div class="contact__form__name--first">
             <label for="firstName">First Name <span>*</span></label>
             <input type="text" id="firstName" />
+            <p class="contact__form__name--errorFirst"></p>
           </div>
           <div class="contact__form__name--last">
             <label for="lastName">Last Name <span>*</span></label>
             <input type="text" id="lastName" />
+            <p class="contact__form__name--errorLast"></p>
           </div>
         </div>
 
         <div class="contact__form__email">
-          <label for="email">Email Address <span>*</span></label>
+          <labela for="email">Email Address <span>*</span></labela>
           <input type="email" id="email" />
+          <p class="contact__form__email--error"></p>
         </div>
 
         <div class="contact__form__type">
           <label>Query Type <span>*</span></label>
           <div class="contact__form__type__types">
             <label for="general_enquiry">
-              <input
-                type="radio"
-                id="general_enquiry"
-                name="query_type"
-                required
-              />
+              <input type="radio" id="general_enquiry" name="query_type" />
               General Enquiry</label
             >
 
@@ -50,23 +48,30 @@
               Support Request</label
             >
           </div>
+          <p class="contact__form__type--error"></p>
         </div>
 
         <div class="contact__form__message">
           <label for="message">Message <span>*</span></label
           ><br />
-          <textarea id="message" name="message" required></textarea>
+          <textarea id="message" name="message"></textarea>
+          <p class="contact__form__message--error"></p>
         </div>
 
         <div class="contact__form__consent">
-          <input type="checkbox" name="consent" id="consent" />
-          <label for="consent"
-            >I consent to being contacted by the team <span>*</span></label
-          >
+          <div>
+            <input type="checkbox" name="consent" id="consent" />
+            <label for="consent"
+              >I consent to being contacted by the team <span>*</span></label
+            >
+          </div>
+          <p class="contact__form__consent--error"></p>
         </div>
 
-        <button>Submit</button>
+        <button type="button">Submit</button>
       </form>
     </div>
+
+    <script src="app.js"></script>
   </body>
 </html>

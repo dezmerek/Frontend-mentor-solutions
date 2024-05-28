@@ -62,6 +62,14 @@ input:hover {
   flex-direction: column;
   gap: 1.7rem;
 }
+.contact__form__name--errorFirst {
+  color: hsl(0, 66%, 54%);
+  display: none;
+}
+.contact__form__name--errorLast {
+  color: hsl(0, 66%, 54%);
+  display: none;
+}
 @media (min-width: 768px) {
   .contact__form__name {
     flex-direction: row;
@@ -93,6 +101,10 @@ input:hover {
   flex-direction: column;
   gap: 0.7rem;
 }
+.contact__form__email--error {
+  color: hsl(0, 66%, 54%);
+  display: none;
+}
 .contact__form__type {
   display: flex;
   flex-direction: column;
@@ -100,6 +112,10 @@ input:hover {
 }
 .contact__form__type input[type=radio] {
   accent-color: hsl(169, 82%, 27%);
+}
+.contact__form__type--error {
+  color: hsl(0, 66%, 54%);
+  display: none;
 }
 .contact__form__type__types {
   display: flex;
@@ -134,11 +150,16 @@ input:hover {
   display: flex;
   flex-direction: column;
 }
+.contact__form__message--error {
+  color: hsl(0, 66%, 54%);
+  display: none;
+}
 .contact__form__message textarea {
   margin-top: -0.5rem;
   border: 1px solid hsl(187, 24%, 22%);
   border-radius: 0.5rem;
   height: 240px;
+  margin-bottom: 0.5rem;
 }
 @media (min-width: 768px) {
   .contact__form__message textarea {
@@ -147,15 +168,24 @@ input:hover {
 }
 .contact__form__consent {
   display: flex;
-  gap: 1.2rem;
+  flex-direction: column;
   margin-top: 0.9rem;
-  align-items: center;
   line-height: 1.4;
 }
 @media (min-width: 768px) {
   .contact__form__consent {
     margin-top: 0.7rem;
   }
+}
+.contact__form__consent div {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+.contact__form__consent--error {
+  color: hsl(0, 66%, 54%);
+  display: none;
 }
 .contact__form__consent input[type=checkbox] {
   width: 1.4rem;
