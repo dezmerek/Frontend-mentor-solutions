@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: hsl(0, 0%, 94%);
+  color: hsl(0, 0%, 8%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calculator {
+  background-color: hsl(0, 0%, 100%);
+  margin: 5.5rem 1rem;
+  border-radius: 1.5rem 1.5rem 6rem 1.5rem;
+  padding: 2.8rem 1.5rem;
+  max-width: 840px;
+}
+@media (min-width: 768px) {
+  .calculator {
+    padding: 3.3rem 3.5rem;
+    width: 100%;
+    border-radius: 1.5rem 1.5rem 12rem 1.5rem;
+  }
+}
+.calculator__date {
+  display: flex;
+  gap: 1rem;
+}
+@media (min-width: 768px) {
+  .calculator__date {
+    gap: 2rem;
+  }
+}
+.calculator__date label {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: hsl(0, 1%, 44%);
+  font-size: 11px;
+  letter-spacing: 4.5px;
+}
+@media (min-width: 768px) {
+  .calculator__date label {
+    font-size: 13px;
+  }
+}
+.calculator__date input {
+  width: 100%;
+  border: none;
+  border: 1px solid hsl(0, 0%, 86%);
+  border-radius: 0.5rem;
+  font-size: 21px;
+  font-weight: 700;
+  padding: 0.87rem;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .calculator__date input {
+    margin-top: 0.45rem;
+    padding: 1.04rem;
+    font-size: 32px;
+  }
+}
+.calculator__date input:focus {
+  outline: none;
+  border: 1px solid hsl(259, 100%, 65%);
+}
+.calculator__date--error {
+  display: none;
+  color: hsl(0, 100%, 67%);
+  font-size: 8px;
+  margin-top: 0.5rem;
+}
+@media (min-width: 768px) {
+  .calculator__date--error {
+    font-size: 13px;
+  }
+}
+@media (min-width: 768px) {
+  .calculator__date__day, .calculator__date__month, .calculator__date__year {
+    width: 160px;
+  }
+}
+.calculator__hr {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-top: 4rem;
+}
+@media (min-width: 768px) {
+  .calculator__hr {
+    margin-top: 3rem;
+    align-items: flex-end;
+  }
+}
+.calculator__hr hr {
+  width: 100%;
+}
+.calculator__hr img {
+  padding: 0.5rem;
+  background-color: hsl(259, 100%, 65%);
+  border-radius: 50%;
+  position: relative;
+  margin-top: -2rem;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .calculator__hr img {
+    padding: 1.5rem;
+    margin-top: -3rem;
+  }
+}
+.calculator__count {
+  display: flex;
+  flex-direction: column;
+  font-size: 32px;
+  font-weight: 800;
+  font-size: 53px;
+  font-style: italic;
+  margin-top: 2.3rem;
+  line-height: 1.14;
+}
+@media (min-width: 768px) {
+  .calculator__count {
+    font-size: 100px;
+    margin-top: 0rem;
+  }
+}
+.calculator__count span {
+  color: hsl(259, 100%, 65%);
+  font-size: 54px;
+}
+@media (min-width: 768px) {
+  .calculator__count span {
+    font-size: 100px;
+    margin-right: -1rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
