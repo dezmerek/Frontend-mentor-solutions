@@ -19,7 +19,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const submitBtn = document.querySelector(".calculator__hr img");
 
+  const yearCount = document.querySelector(".calculator__count__year span");
+  const monthCount = document.querySelector(".calculator__count__month span");
+  const dayCount = document.querySelector(".calculator__count__day span");
+
   submitBtn.addEventListener("click", () => {
+    let isValid = true;
+
     const daysInMonth = new Date(
       yearInput.value,
       monthInput.value,
@@ -35,6 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
       dayError.innerText = "Must be a valid day";
       dayInput.style.borderColor = "hsl(0, 100%, 67%)";
       dayLabel.style.color = "hsl(0, 100%, 67%)";
+      isValid = false;
     } else {
       dayError.style.display = "none";
       dayInput.style.borderColor = "";
@@ -46,6 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
       monthError.innerText = "Must be a valid month";
       monthInput.style.borderColor = "hsl(0, 100%, 67%)";
       monthLabel.style.color = "hsl(0, 100%, 67%)";
+      isValid = false;
     } else {
       monthError.style.display = "none";
       monthInput.style.borderColor = "";
@@ -57,10 +65,43 @@ document.addEventListener("DOMContentLoaded", () => {
       yearError.innerText = "Must be in the past";
       yearInput.style.borderColor = "hsl(0, 100%, 67%)";
       yearLabel.style.color = "hsl(0, 100%, 67%)";
+      isValid = false;
     } else {
       yearError.style.display = "none";
       yearInput.style.borderColor = "";
       yearLabel.style.color = "";
+    }
+
+    if (isValid) {
+      let currentDate = new Date();
+      let inputDate = new Date(
+        yearInput.value,
+        monthInput.value - 1,
+        dayInput.value
+      );
+
+      let yearDiff = currentDate.getFullYear() - inputDate.getFullYear();
+      let monthDiff = currentDate.getMonth() - inputDate.getMonth();
+      let dayDiff = currentDate.getDate() - inputDate.getDate();
+
+      if (dayDiff < 0) {
+        monthDiff--;
+        let daysInLastMonth = new Date(
+          inputDate.getFullYear(),
+          inputDate.getMonth(),
+          0
+        ).getDate();
+        dayDiff += daysInLastMonth;
+      }
+
+      if (monthDiff < 0) {
+        yearDiff--;
+        monthDiff += 12;
+      }
+
+      yearCount.innerText = yearDiff;
+      monthCount.innerText = monthDiff;
+      dayCount.innerText = dayDiff;
     }
   });
 });

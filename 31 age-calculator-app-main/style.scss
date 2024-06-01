@@ -21,6 +21,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (min-width: 768px) {
+    min-height: 100vh;
+  }
 }
 
 .calculator {

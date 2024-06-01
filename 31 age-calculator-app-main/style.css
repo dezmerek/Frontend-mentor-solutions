@@ -13,6 +13,11 @@ body {
   align-items: center;
   justify-content: center;
 }
+@media (min-width: 768px) {
+  body {
+    min-height: 100vh;
+  }
+}
 
 .calculator {
   background-color: hsl(0, 0%, 100%);
