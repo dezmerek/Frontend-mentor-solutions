@@ -21,11 +21,36 @@ body {
   justify-content: center;
   min-height: 100vh;
   align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
 textarea:hover,
 input:hover {
   border-color: $green-600 !important;
+}
+
+.alert {
+  display: flex;
+  flex-direction: column;
+  background-color: $grey-900;
+  color: $white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  gap: 1rem;
+  max-width: 400px;
+  position: relative;
+  display: none;
+
+  div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  p {
+    font-size: 14px;
+  }
 }
 
 .contact {
@@ -179,6 +204,8 @@ input:hover {
         border-radius: 0.5rem;
         height: 240px;
         margin-bottom: 0.5rem;
+        padding: 1rem;
+        font-family: "Karla", sans-serif;
 
         @media (min-width: 768px) {
           height: 105px;
