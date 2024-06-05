@@ -17,6 +17,10 @@ body {
   font-family: "Inter", sans-serif;
   background-color: $off-white;
   color: $very-dark-blue;
+  max-width: 1142px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
@@ -25,9 +29,17 @@ body {
   align-items: center;
   padding: 1.8rem 1rem 0.75rem;
 
+  @media (min-width: 768px) {
+    padding: 5.5rem 1rem 0.75rem;
+  }
+
   &__logo {
     img {
       width: 44px;
+
+      @media (min-width: 768px) {
+        width: 65px;
+      }
     }
   }
 
@@ -36,15 +48,53 @@ body {
       img {
         width: 100%;
       }
+
+      @media (min-width: 768px) {
+        display: none;
+      }
     }
 
     &__desktop {
+      display: flex;
+      gap: 2.55rem;
+
+      @media (max-width: 767px) {
+        display: none;
+      }
+
+      a {
+        text-decoration: none;
+        color: $dark-grayish-blue;
+        font-size: 15px;
+
+        &:hover {
+          color: $soft-orange;
+        }
+      }
     }
+  }
+}
+
+.content {
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+    padding: 1rem;
+    margin-top: 1.5rem;
   }
 }
 
 .main-article {
   padding: 1rem;
+
+  @media (min-width: 768px) {
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+  }
 
   &__image {
     background-image: url("./assets/images/image-web-3-mobile.jpg");
@@ -55,6 +105,7 @@ body {
 
     @media (min-width: 768px) {
       background-image: url("./assets/images/image-web-3-desktop.jpg");
+      grid-column: span 2;
     }
   }
 
@@ -62,12 +113,22 @@ body {
     margin-top: 1.6rem;
     font-size: 40.5px;
     line-height: 1;
+
+    @media (min-width: 768px) {
+      font-size: 56px;
+      font-weight: 800;
+      margin-top: 0rem;
+    }
   }
 
   p {
     margin-top: 0.9rem;
     line-height: 1.7;
     font-size: 15px;
+
+    @media (min-width: 768px) {
+      margin-top: 0;
+    }
   }
 
   button {
@@ -79,6 +140,19 @@ body {
     letter-spacing: 4px;
     padding: 0.9rem 1.87rem;
     cursor: pointer;
+    text-wrap: nowrap;
+
+    &:hover {
+      color: $off-white;
+      background-color: $very-dark-blue;
+    }
+
+    @media (min-width: 768px) {
+      grid-column: 2;
+      max-width: 11.5rem;
+      max-height: 3rem;
+      margin-top: -4.3rem;
+    }
   }
 }
 
@@ -87,8 +161,18 @@ body {
   padding: 1.3rem;
   margin: 2.95rem 1rem 1rem;
 
+  @media (min-width: 768px) {
+    margin: 0;
+    margin-left: 1rem;
+    margin-bottom: 1.3rem;
+  }
+
   h1 {
     color: $soft-orange;
+
+    @media (min-width: 768px) {
+      font-size: 40px;
+    }
   }
 
   &__article {
@@ -104,6 +188,11 @@ body {
 
     h2 {
       font-size: 20.2px;
+      cursor: pointer;
+
+      &:hover {
+        color: $soft-orange;
+      }
     }
 
     p {
@@ -120,6 +209,11 @@ body {
   flex-direction: column;
   margin-top: 3rem;
   gap: 1.9rem;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    margin-top: 1.2rem;
+  }
 
   &__article {
     display: flex;
@@ -142,11 +236,17 @@ body {
       h2 {
         font-size: 18px;
         font-weight: 800;
+        cursor: pointer;
+
+        &:hover {
+          color: $soft-red;
+        }
       }
 
       p {
         font-size: 15px;
         line-height: 1.8;
+        max-width: 300px;
       }
     }
   }
