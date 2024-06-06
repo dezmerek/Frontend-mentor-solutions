@@ -35,6 +35,11 @@ body {
     width: 65px;
   }
 }
+@media (min-width: 768px) {
+  .header__menu img {
+    display: none;
+  }
+}
 .header__menu__mobile {
   display: flex;
   gap: 5.75rem;
@@ -45,14 +50,19 @@ body {
   background-color: hsl(36, 100%, 99%);
   padding: 1.5rem;
   width: 256px;
-  height: 670px;
+  height: 100%;
   justify-content: flex-start;
-  display: none;
+}
+@media (min-width: 768px) {
+  .header__menu__mobile {
+    display: none !important;
+  }
 }
 .header__menu__mobile img {
   width: 32px;
   height: 32px;
   align-self: flex-end;
+  cursor: pointer;
 }
 .header__menu__mobile__list {
   display: flex;

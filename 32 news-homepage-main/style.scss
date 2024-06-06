@@ -45,6 +45,12 @@ body {
   }
 
   &__menu {
+    img {
+      @media (min-width: 768px) {
+        display: none;
+      }
+    }
+
     &__mobile {
       display: flex;
       gap: 5.75rem;
@@ -55,14 +61,18 @@ body {
       background-color: $off-white;
       padding: 1.5rem;
       width: 256px;
-      height: 670px;
+      height: 100%;
       justify-content: flex-start;
-      display: none;
+
+      @media (min-width: 768px) {
+        display: none !important;
+      }
 
       img {
         width: 32px;
         height: 32px;
         align-self: flex-end;
+        cursor: pointer;
       }
 
       &__list {
