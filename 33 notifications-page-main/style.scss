@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap");
+
+$red: hsl(1, 90%, 64%);
+$blue: hsl(219, 85%, 26%);
+$white: hsl(0, 0%, 100%);
+$very-light-grayish-blue: hsl(210, 60%, 98%);
+$light-grayish-blue-1: hsl(211, 68%, 94%);
+$light-grayish-blue-2: hsl(205, 33%, 90%);
+$grayish-blue: hsl(219, 14%, 63%);
+$dark-grayish-blue: hsl(219, 12%, 42%);
+$very-dark-blue: hsl(224, 21%, 14%);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-color: $very-light-grayish-blue;
+}
+
+.notif {
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 1rem;
+
+    &__count {
+      display: flex;
+      gap: 0.6rem;
+      h1 {
+        font-size: 20px;
+      }
+
+      span {
+        background-color: $blue;
+        border-radius: 0.4rem;
+        color: $white;
+        font-size: 14px;
+        padding: 0.25rem 0.7rem;
+      }
+    }
+
+    &--mark {
+      font-size: 14px;
+      color: $dark-grayish-blue;
+      cursor: pointer;
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0 1rem;
+
+    &__box {
+      display: flex;
+      gap: 0.8rem;
+      padding: 1rem 1rem;
+      border-radius: 0.5rem;
+
+      &.active-box {
+        background-color: $light-grayish-blue-1;
+      }
+
+      img {
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+
+      &__content {
+        display: flex;
+        flex-direction: column;
+        color: $dark-grayish-blue;
+        font-size: 14.2px;
+
+        &--user {
+          color: $very-dark-blue;
+        }
+
+        span {
+          font-weight: 700;
+        }
+
+        &--dot {
+          display: inline-block;
+          background-color: hsl(1, 90%, 64%);
+          width: 0.5rem;
+          height: 0.5rem;
+          border-radius: 50%;
+          margin-left: 0.3rem;
+        }
+
+        &--club {
+          color: $blue;
+        }
+
+        &--ago {
+          font-size: 14px;
+          margin-top: 0.2rem;
+          color: $grayish-blue;
+        }
+
+        &__comment {
+          color: $dark-grayish-blue;
+          padding: 1rem;
+          border: 1px solid $light-grayish-blue-1;
+          border-radius: 0.5rem;
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-color: hsl(210, 60%, 98%);
+}
+
+.notif__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 1rem;
+}
+.notif__header__count {
+  display: flex;
+  gap: 0.6rem;
+}
+.notif__header__count h1 {
+  font-size: 20px;
+}
+.notif__header__count span {
+  background-color: hsl(219, 85%, 26%);
+  border-radius: 0.4rem;
+  color: hsl(0, 0%, 100%);
+  font-size: 14px;
+  padding: 0.25rem 0.7rem;
+}
+.notif__header--mark {
+  font-size: 14px;
+  color: hsl(219, 12%, 42%);
+  cursor: pointer;
+}
+.notif__container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0 1rem;
+}
+.notif__container__box {
+  display: flex;
+  gap: 0.8rem;
+  padding: 1rem 1rem;
+  border-radius: 0.5rem;
+}
+.notif__container__box.active-box {
+  background-color: hsl(211, 68%, 94%);
+}
+.notif__container__box img {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.notif__container__box__content {
+  display: flex;
+  flex-direction: column;
+  color: hsl(219, 12%, 42%);
+  font-size: 14.2px;
+}
+.notif__container__box__content--user {
+  color: hsl(224, 21%, 14%);
+}
+.notif__container__box__content span {
+  font-weight: 700;
+}
+.notif__container__box__content--dot {
+  display: inline-block;
+  background-color: hsl(1, 90%, 64%);
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  margin-left: 0.3rem;
+}
+.notif__container__box__content--club {
+  color: hsl(219, 85%, 26%);
+}
+.notif__container__box__content--ago {
+  font-size: 14px;
+  margin-top: 0.2rem;
+  color: hsl(219, 14%, 63%);
+}
+.notif__container__box__content__comment {
+  color: hsl(219, 12%, 42%);
+  padding: 1rem;
+  border: 1px solid hsl(211, 68%, 94%);
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+}
+
+/*# sourceMappingURL=style.css.map */
