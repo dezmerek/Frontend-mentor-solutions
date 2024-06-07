@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+
+$white: hsl(0, 0%, 100%);
+$light-grayish-violet: hsl(270, 3%, 87%);
+$dark-grayish-violet: hsl(279, 6%, 55%);
+$very-dark-violet: hsl(278, 68%, 11%);
+$primary-gradient: linear-gradient(
+  to right,
+  hsl(249, 99%, 64%),
+  hsl(278, 94%, 30%)
+);
+$red: hsl(0, 100%, 66%);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-image: url("./images/bg-main-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 240px;
+  padding: 2rem 1rem;
+  color: $white;
+
+  &__back {
+    background-image: url("./images/bg-card-back.png");
+    background-size: 100% 100%;
+    width: 286px;
+    height: 157px;
+    position: absolute;
+    right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 2.2rem;
+
+    &--cvc {
+      font-size: 10px;
+      letter-spacing: 0.1rem;
+    }
+  }
+
+  &__front {
+    background-image: url("./images/bg-card-front.png");
+    background-size: 100% 100%;
+    width: 286px;
+    height: 157px;
+    margin-top: 5.9rem;
+    position: absolute;
+    left: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.1rem 1.25rem 1.2rem;
+
+    img {
+      width: 54px;
+      height: 30px;
+    }
+
+    &__data {
+      display: flex;
+      flex-direction: column;
+      gap: 1.1rem;
+
+      &--number {
+        letter-spacing: 0.2rem;
+        font-size: 16.4px;
+      }
+
+      div {
+        display: flex;
+        justify-content: space-between;
+        font-size: 11px;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

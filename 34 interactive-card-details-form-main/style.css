@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-image: url("./images/bg-main-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 240px;
+  padding: 2rem 1rem;
+  color: hsl(0, 0%, 100%);
+}
+.card__back {
+  background-image: url("./images/bg-card-back.png");
+  background-size: 100% 100%;
+  width: 286px;
+  height: 157px;
+  position: absolute;
+  right: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 2.2rem;
+}
+.card__back--cvc {
+  font-size: 10px;
+  letter-spacing: 0.1rem;
+}
+.card__front {
+  background-image: url("./images/bg-card-front.png");
+  background-size: 100% 100%;
+  width: 286px;
+  height: 157px;
+  margin-top: 5.9rem;
+  position: absolute;
+  left: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.1rem 1.25rem 1.2rem;
+}
+.card__front img {
+  width: 54px;
+  height: 30px;
+}
+.card__front__data {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+.card__front__data--number {
+  letter-spacing: 0.2rem;
+  font-size: 16.4px;
+}
+.card__front__data div {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+/*# sourceMappingURL=style.css.map */
