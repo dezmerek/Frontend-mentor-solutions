@@ -19,20 +19,39 @@ $very-dark-blue: hsl(224, 21%, 14%);
 body {
   font-family: "Plus Jakarta Sans", sans-serif;
   background-color: $very-light-grayish-blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
 }
 
 .notif {
+  max-width: 730px;
+
+  @media (min-width: 768px) {
+    background-color: $white;
+  }
+
   &__header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 1.5rem 1rem;
 
+    @media (min-width: 768px) {
+      padding: 2rem 2rem;
+    }
+
     &__count {
       display: flex;
       gap: 0.6rem;
+
       h1 {
         font-size: 20px;
+
+        @media (min-width: 768px) {
+          font-size: 24px;
+        }
       }
 
       span {
@@ -48,6 +67,14 @@ body {
       font-size: 14px;
       color: $dark-grayish-blue;
       cursor: pointer;
+
+      @media (min-width: 768px) {
+        font-size: 15.5px;
+      }
+
+      &:hover {
+        color: hsl(219, 85%, 26%);
+      }
     }
   }
 
@@ -57,11 +84,19 @@ body {
     gap: 0.5rem;
     padding: 0 1rem;
 
+    @media (min-width: 768px) {
+      padding: 0 2rem;
+    }
+
     &__box {
       display: flex;
       gap: 0.8rem;
       padding: 1rem 1rem;
       border-radius: 0.5rem;
+
+      @media (min-width: 768px) {
+        gap: 1.6rem;
+      }
 
       &.active-box {
         background-color: $light-grayish-blue-1;
@@ -78,31 +113,48 @@ body {
         color: $dark-grayish-blue;
         font-size: 14.2px;
 
+        @media (min-width: 768px) {
+          font-size: 16px;
+          gap: 0.2rem;
+        }
+
         &--user {
           color: $very-dark-blue;
+          cursor: pointer;
         }
 
         span {
           font-weight: 700;
+          cursor: pointer;
         }
 
         &--dot {
-          display: inline-block;
           background-color: hsl(1, 90%, 64%);
           width: 0.5rem;
           height: 0.5rem;
           border-radius: 50%;
           margin-left: 0.3rem;
+          cursor: default !important;
+          display: none;
+
+          &.active-dot {
+            display: inline-block;
+          }
         }
 
         &--club {
           color: $blue;
+          cursor: pointer;
         }
 
         &--ago {
           font-size: 14px;
           margin-top: 0.2rem;
           color: $grayish-blue;
+
+          @media (min-width: 768px) {
+            font-size: 16px;
+          }
         }
 
         &__comment {
@@ -111,6 +163,11 @@ body {
           border: 1px solid $light-grayish-blue-1;
           border-radius: 0.5rem;
           margin-top: 1rem;
+          cursor: pointer;
+
+          &:hover {
+            background-color: $light-grayish-blue-2;
+          }
         }
       }
     }
