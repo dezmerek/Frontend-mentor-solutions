@@ -7,7 +7,7 @@
 
 body {
   font-family: "Space Grotesk", sans-serif;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 @media (min-width: 1024px) {
@@ -39,6 +39,10 @@ body {
     width: 50%;
     gap: 2rem;
   }
+}
+.card__form-error {
+  color: hsl(0, 100%, 66%);
+  font-size: 12px;
 }
 .card__back {
   background-image: url("./images/bg-card-back.png");
@@ -181,6 +185,7 @@ body {
   letter-spacing: 0.5px;
   width: 100%;
   cursor: pointer;
+  color: hsl(278, 68%, 11%);
 }
 .card__form input::placeholder {
   color: hsl(270, 3%, 87%);
@@ -221,6 +226,49 @@ body {
 @media (min-width: 768px) {
   .card__form button {
     margin-top: 2rem;
+  }
+}
+.card__complete {
+  display: none;
+  margin-top: 5.7rem;
+  flex-direction: column;
+  padding: 0 1.5rem;
+  gap: 2.1rem;
+  align-items: center;
+}
+@media (min-width: 1024px) {
+  .card__complete {
+    margin-top: 0.5rem;
+    padding: 0 4rem;
+    gap: 2rem;
+  }
+}
+.card__complete img {
+  width: 80px;
+}
+.card__complete h1 {
+  font-weight: 500;
+  font-size: 30px;
+  letter-spacing: 2px;
+}
+.card__complete p {
+  font-size: 18px;
+  margin-top: -1.2rem;
+}
+.card__complete button {
+  background-color: hsl(278, 68%, 11%);
+  border: none;
+  color: hsl(0, 0%, 100%);
+  padding: 1rem;
+  border-radius: 0.75rem;
+  margin-top: 0.9rem;
+  font-size: 19px;
+  cursor: pointer;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .card__complete button {
+    margin-top: 1rem;
   }
 }
 

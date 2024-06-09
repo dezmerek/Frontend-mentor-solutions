@@ -19,7 +19,7 @@ $red: hsl(0, 100%, 66%);
 
 body {
   font-family: "Space Grotesk", sans-serif;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 
   @media (min-width: 1024px) {
@@ -48,6 +48,11 @@ body {
     flex-direction: column-reverse;
     width: 50%;
     gap: 2rem;
+  }
+
+  &__form-error {
+    color: $red;
+    font-size: 12px;
   }
 
   &__back {
@@ -193,6 +198,7 @@ body {
       letter-spacing: 0.5px;
       width: 100%;
       cursor: pointer;
+      color: $very-dark-violet;
 
       &::placeholder {
         color: $light-grayish-violet;
@@ -240,6 +246,52 @@ body {
 
       @media (min-width: 768px) {
         margin-top: 2rem;
+      }
+    }
+  }
+
+  &__complete {
+    display: none;
+    margin-top: 5.7rem;
+    flex-direction: column;
+    padding: 0 1.5rem;
+    gap: 2.1rem;
+    align-items: center;
+
+    @media (min-width: 1024px) {
+      margin-top: 0.5rem;
+      padding: 0 4rem;
+      gap: 2rem;
+    }
+
+    img {
+      width: 80px;
+    }
+
+    h1 {
+      font-weight: 500;
+      font-size: 30px;
+      letter-spacing: 2px;
+    }
+
+    p {
+      font-size: 18px;
+      margin-top: -1.2rem;
+    }
+
+    button {
+      background-color: $very-dark-violet;
+      border: none;
+      color: $white;
+      padding: 1rem;
+      border-radius: 0.75rem;
+      margin-top: 0.9rem;
+      font-size: 19px;
+      cursor: pointer;
+      width: 100%;
+
+      @media (min-width: 768px) {
+        margin-top: 1rem;
       }
     }
   }
