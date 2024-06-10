@@ -21,6 +21,104 @@ body {
   height: 19px;
 }
 
+.burger-menu-container {
+  position: absolute;
+  background-color: hsla(0, 0%, 8%, 0.7);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.burger-menu {
+  background-color: hsl(0, 0%, 98%);
+  height: 100%;
+  width: 240px;
+  padding: 1.3rem 1.2rem 1.3rem 1.5rem;
+  flex-direction: column;
+  display: flex;
+  gap: 2.2rem;
+}
+.burger-menu__img {
+  display: flex;
+  justify-content: flex-end;
+}
+.burger-menu__img img {
+  width: 26px;
+  height: 26px;
+}
+.burger-menu__content {
+  display: flex;
+  flex-direction: column;
+  color: hsl(0, 0%, 41%);
+  gap: 1.55rem;
+}
+.burger-menu__content__features {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+.burger-menu__content__features__name {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.burger-menu__content__features__container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  margin-top: 0.9rem;
+  padding-left: 1.5rem;
+}
+.burger-menu__content__features__container img {
+  width: 18px;
+}
+.burger-menu__content__features__container div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.burger-menu__content__company {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  margin-top: 0.4rem;
+  margin-bottom: 0.6rem;
+}
+.burger-menu__content__company__name {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.burger-menu__content__company__container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 0.7rem;
+  padding-left: 1.5rem;
+}
+.burger-menu__auth {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  width: 100%;
+  margin-top: -0.6rem;
+}
+.burger-menu__auth button {
+  padding: 0.7rem;
+  border: none;
+  width: 100%;
+  background-color: hsl(0, 0%, 98%);
+  cursor: pointer;
+  color: hsl(0, 0%, 41%);
+  font-size: 15px;
+}
+.burger-menu__auth button:last-child {
+  border-radius: 0.75rem;
+  border: 1px solid hsl(0, 0%, 8%);
+}
+
 .main__hero {
   background-image: url("./images/image-hero-mobile.png");
   background-repeat: no-repeat;
