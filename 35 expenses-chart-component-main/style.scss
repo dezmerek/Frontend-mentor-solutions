@@ -30,6 +30,12 @@ body {
   }
 }
 
+.highlight {
+  &:hover {
+    background-color: hsla(186, 34%, 60%, 0.5) !important;
+  }
+}
+
 .balance {
   background-color: $soft-red;
   display: flex;
@@ -100,6 +106,7 @@ body {
     display: flex;
     justify-content: space-between;
     margin-bottom: 1.4rem;
+    align-items: flex-end;
 
     @media (min-width: 768px) {
       margin-bottom: 2.2rem;
@@ -111,6 +118,8 @@ body {
       background-color: $soft-red;
       border-radius: 0.25rem;
       cursor: pointer;
+      display: flex;
+      justify-content: center;
 
       @media (min-width: 768px) {
         width: 3rem;
@@ -118,6 +127,17 @@ body {
 
       &:hover {
         background-color: hsla(10, 79%, 65%, 0.7);
+
+        &::after {
+          content: attr(amount);
+          background-color: $dark-brown;
+          color: $very-pale-orange;
+          border-radius: 0.3rem;
+          position: absolute;
+          padding: 0.5rem;
+          font-size: 18.5px;
+          margin-top: -3rem;
+        }
       }
     }
 
