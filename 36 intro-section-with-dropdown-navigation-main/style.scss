@@ -34,7 +34,7 @@ body {
   background-color: hsla(0, 0%, 8%, 0.7);
   width: 100%;
   height: 100%;
-  display: flex;
+  display: none;
   justify-content: flex-end;
 }
 
@@ -44,7 +44,7 @@ body {
   width: 240px;
   padding: 1.3rem 1.2rem 1.3rem 1.5rem;
   flex-direction: column;
-  display: flex;
+  display: none;
   gap: 2.2rem;
 
   &__img {
@@ -61,7 +61,15 @@ body {
     display: flex;
     flex-direction: column;
     color: $medium-gray;
-    gap: 1.55rem;
+    // gap: 1.55rem;
+    gap: 1.2rem;
+
+    .icon-arrow {
+      background-image: url("./images/icon-arrow-down.svg");
+      background-repeat: no-repeat;
+      width: 9px;
+      height: 9px;
+    }
 
     &__features {
       display: flex;
