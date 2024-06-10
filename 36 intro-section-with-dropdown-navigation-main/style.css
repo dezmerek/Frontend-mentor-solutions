@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Epilogue", sans-serif;
+  background-color: hsl(0, 0%, 98%);
+  color: hsl(0, 0%, 8%);
+}
+
+.header__mobile {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.3rem 1rem 1.5rem;
+}
+.header__mobile__menu {
+  max-width: 100%;
+  height: 19px;
+}
+
+.main__hero {
+  background-image: url("./images/image-hero-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: 100%;
+  width: 100%;
+  height: 300px;
+}
+.main__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  gap: 1.2rem;
+}
+.main__content h1 {
+  font-size: 35.5px;
+}
+.main__content p {
+  padding: 0 1.2rem;
+  line-height: 1.6;
+  text-align: center;
+}
+.main__content button {
+  background-color: hsl(0, 0%, 8%);
+  color: hsl(0, 0%, 98%);
+  font-weight: 700;
+  font-size: 17px;
+  padding: 0.9rem;
+  margin-top: 0.4rem;
+  border-radius: 1rem;
+  width: 8.5rem;
+  border: none;
+}
+.main__content__partner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+  width: 100%;
+  margin-top: 1.8rem;
+  gap: 2rem;
+}
+.main__content__partner img:nth-child(1) {
+  width: 80px;
+}
+.main__content__partner img:nth-child(2) {
+  width: 50px;
+}
+.main__content__partner img:nth-child(3) {
+  width: 60px;
+}
+.main__content__partner img:nth-child(4) {
+  width: 60px;
+}
+
+/*# sourceMappingURL=style.css.map */
