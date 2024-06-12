@@ -27,9 +27,13 @@ body {
   }
 
   &__mobile {
-    display: none;
+    display: flex;
     justify-content: space-between;
     padding: 1.3rem 1rem 1.5rem;
+
+    @media (min-width: 768px) {
+      display: none;
+    }
 
     &__menu {
       max-width: 100%;
@@ -38,7 +42,11 @@ body {
   }
 
   &__desktop {
-    display: flex;
+    display: none;
+
+    @media (min-width: 768px) {
+      display: flex;
+    }
     justify-content: space-between;
 
     .icon-arrow {
@@ -78,7 +86,7 @@ body {
 
           &__container {
             position: absolute;
-            display: flex;
+            display: none;
             flex-direction: column;
             padding: 1.5rem;
             background-color: #fff;
@@ -109,7 +117,7 @@ body {
 
           &__container {
             position: absolute;
-            display: flex;
+            display: none;
             flex-direction: column;
             padding: 1.5rem;
             background-color: #fff;
@@ -208,7 +216,7 @@ body {
       }
 
       &__container {
-        display: flex;
+        display: none;
         flex-direction: column;
         gap: 1.4rem;
         margin-top: 0.9rem;
@@ -240,7 +248,7 @@ body {
       }
 
       &__container {
-        display: flex;
+        display: none;
         flex-direction: column;
         gap: 1.5rem;
         margin-top: 0.7rem;
