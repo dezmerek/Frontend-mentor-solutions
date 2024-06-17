@@ -111,6 +111,12 @@ body {
     padding: 1.7rem 2rem;
   }
 }
+.container .profile__switch p {
+  cursor: pointer;
+}
+.container .profile__switch .active {
+  color: hsl(0, 0%, 100%);
+}
 .container .work {
   background-color: hsl(15, 100%, 70%);
   background-image: url("./images/icon-work.svg");
@@ -166,6 +172,9 @@ body {
   justify-content: space-between;
   align-items: center;
   font-size: 20px;
+}
+.container .track__info__category img {
+  cursor: pointer;
 }
 .container .track__info__time {
   display: flex;

@@ -120,6 +120,14 @@ body {
         gap: 1.4rem;
         padding: 1.7rem 2rem;
       }
+
+      p {
+        cursor: pointer;
+      }
+
+      .active {
+        color: $white;
+      }
     }
   }
 
@@ -182,6 +190,10 @@ body {
         justify-content: space-between;
         align-items: center;
         font-size: 20px;
+
+        img {
+          cursor: pointer;
+        }
       }
 
       &__time {
