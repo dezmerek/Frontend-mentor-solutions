@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Space Mono", monospace;
+}
+
+body {
+  background-color: hsl(185, 41%, 84%);
+  color: hsl(183, 100%, 15%);
+}
+
+.container {
+  margin-top: 2.3rem;
+}
+.container .title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 26px;
+  letter-spacing: 0.6rem;
+}
+.container .calculator {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 1rem 1rem 0 0;
+  margin-top: 2rem;
+  height: 100vh;
+}
+.container .calculator__form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+}
+.container .calculator__form__bill {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.container .calculator__form__bill__container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.container .calculator__form__bill__container img {
+  position: absolute;
+  padding-left: 1.2rem;
+}
+.container .calculator__form__bill__container input {
+  border: none;
+  background-color: hsl(189, 41%, 97%);
+  width: 100%;
+  padding: 0.3rem 1rem;
+  text-align: right;
+  color: hsl(183, 100%, 15%);
+  font-weight: 700;
+  font-size: 24px;
+}
+.container .calculator__form__tip {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+.container .calculator__form__tip__buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.container .calculator__form__tip__buttons button {
+  border: none;
+  background-color: hsl(183, 100%, 15%);
+  color: hsl(189, 41%, 97%);
+  border-radius: 0.3rem;
+  font-size: 24px;
+  padding: 0.35rem;
+  width: 100%;
+}
+.container .calculator__form__tip__buttons input {
+  border: none;
+  font-size: 24px;
+  width: 100%;
+  text-align: right;
+  background-color: hsl(189, 41%, 97%);
+  border-radius: 0.3rem;
+  padding-right: 1rem;
+}
+.container .calculator__form__people {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.container .calculator__form__people__container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.container .calculator__form__people__container img {
+  position: absolute;
+  padding-left: 1.2rem;
+}
+.container .calculator__form__people__container input {
+  border: none;
+  background-color: hsl(189, 41%, 97%);
+  width: 100%;
+  padding: 0.3rem 1rem;
+  text-align: right;
+  color: hsl(183, 100%, 15%);
+  font-weight: 700;
+  font-size: 24px;
+}
+.container .calculator__completed {
+  background-color: hsl(183, 100%, 15%);
+  display: flex;
+  flex-direction: column;
+  padding: 2.3rem 1.5rem 1.5rem 1.5rem;
+  margin: 0 1.5rem;
+  border-radius: 1rem;
+  gap: 0.9rem;
+}
+.container .calculator__completed__tip {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .calculator__completed__tip div {
+  display: flex;
+  flex-direction: column;
+}
+.container .calculator__completed__tip div p {
+  color: hsl(0, 0%, 100%);
+}
+.container .calculator__completed__tip div span {
+  color: hsl(184, 14%, 56%);
+  font-size: 13px;
+}
+.container .calculator__completed__tip h1 {
+  color: hsl(172, 67%, 45%);
+  font-size: 36px;
+}
+.container .calculator__completed__total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .calculator__completed__total div {
+  display: flex;
+  flex-direction: column;
+}
+.container .calculator__completed__total div p {
+  color: hsl(0, 0%, 100%);
+}
+.container .calculator__completed__total div span {
+  color: hsl(184, 14%, 56%);
+  font-size: 13px;
+}
+.container .calculator__completed__total h1 {
+  color: hsl(172, 67%, 45%);
+  font-size: 36px;
+}
+.container .calculator__completed button {
+  margin-top: 1rem;
+  border: none;
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+  border-radius: 0.3rem;
+  font-size: 20px;
+  padding: 0.6rem;
+  width: 100%;
+  text-transform: uppercase;
+}
+
+/*# sourceMappingURL=style.css.map */
