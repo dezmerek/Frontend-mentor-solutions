@@ -7,6 +7,7 @@ $grayish-cyan: hsl(184, 14%, 56%);
 $light-grayish-cyan: hsl(185, 41%, 84%);
 $very-light-grayish-cyan: hsl(189, 41%, 97%);
 $white: hsl(0, 0%, 100%);
+$red: hsl(0, 100%, 74%);
 
 * {
   margin: 0;
@@ -18,10 +19,19 @@ $white: hsl(0, 0%, 100%);
 body {
   background-color: $light-grayish-cyan;
   color: $very-dark-cyan;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  align-items: center;
 }
 
 .container {
   margin-top: 2.3rem;
+
+  @media (min-width: 768px) {
+    width: 920px;
+    margin: 0;
+  }
 
   .title {
     display: flex;
@@ -29,14 +39,34 @@ body {
     align-items: center;
     font-size: 26px;
     letter-spacing: 0.6rem;
+
+    @media (min-width: 768px) {
+      font-size: 24px;
+      letter-spacing: 0.5rem;
+    }
   }
 
   .calculator {
     background-color: $white;
     border-radius: 1rem 1rem 0 0;
     margin-top: 2rem;
+    min-height: 100vh;
+    padding-bottom: 2rem;
 
-    height: 100vh;
+    @media (min-width: 768px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      height: 100%;
+      border-radius: 1rem;
+      margin-top: 5rem;
+      padding: 0;
+      min-height: auto;
+    }
+
+    .error {
+      color: $red;
+      display: none;
+    }
 
     &__form {
       display: flex;
@@ -44,10 +74,20 @@ body {
       gap: 2rem;
       padding: 2rem;
 
+      @media (min-width: 768px) {
+        padding: 3rem 2rem 3rem 3rem;
+        gap: 2.5rem;
+      }
+
       &__bill {
         display: flex;
         flex-direction: column;
         gap: 0.4rem;
+
+        &__label {
+          display: flex;
+          justify-content: space-between;
+        }
 
         &__container {
           position: relative;
@@ -68,6 +108,11 @@ body {
             color: $very-dark-cyan;
             font-weight: 700;
             font-size: 24px;
+            cursor: pointer;
+
+            &:focus {
+              outline-color: $strong-cyan;
+            }
           }
         }
       }
@@ -82,6 +127,10 @@ body {
           grid-template-columns: 1fr 1fr;
           gap: 1rem;
 
+          @media (min-width: 768px) {
+            grid-template-columns: 1fr 1fr 1fr;
+          }
+
           button {
             border: none;
             background-color: $very-dark-cyan;
@@ -90,6 +139,12 @@ body {
             font-size: 24px;
             padding: 0.35rem;
             width: 100%;
+            cursor: pointer;
+
+            &:hover {
+              background-color: $light-grayish-cyan;
+              color: $very-dark-cyan;
+            }
           }
 
           input {
@@ -100,6 +155,16 @@ body {
             background-color: $very-light-grayish-cyan;
             border-radius: 0.3rem;
             padding-right: 1rem;
+            cursor: pointer;
+
+            &:focus {
+              outline-color: $strong-cyan;
+            }
+
+            @media (min-width: 768px) {
+              padding-right: 0;
+              text-align: center;
+            }
           }
         }
       }
@@ -108,6 +173,11 @@ body {
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
+
+        &__label {
+          display: flex;
+          justify-content: space-between;
+        }
 
         &__container {
           position: relative;
@@ -128,6 +198,11 @@ body {
             color: $very-dark-cyan;
             font-weight: 700;
             font-size: 24px;
+            cursor: pointer;
+
+            &:focus {
+              outline-color: $strong-cyan;
+            }
           }
         }
       }
@@ -141,6 +216,12 @@ body {
       margin: 0 1.5rem;
       border-radius: 1rem;
       gap: 0.9rem;
+
+      @media (min-width: 768px) {
+        margin: 2rem 2rem 2rem 1rem;
+        padding: 2.5rem 2.5rem 1.5rem 2.5rem;
+        gap: 1.8rem;
+      }
 
       &__tip {
         display: flex;
@@ -164,6 +245,10 @@ body {
         h1 {
           color: $strong-cyan;
           font-size: 36px;
+
+          @media (min-width: 768px) {
+            font-size: 46px;
+          }
         }
       }
 
@@ -189,6 +274,10 @@ body {
         h1 {
           color: $strong-cyan;
           font-size: 36px;
+
+          @media (min-width: 768px) {
+            font-size: 46px;
+          }
         }
       }
 
@@ -202,6 +291,15 @@ body {
         padding: 0.6rem;
         width: 100%;
         text-transform: uppercase;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $light-grayish-cyan;
+        }
+
+        @media (min-width: 768px) {
+          margin-top: 6rem;
+        }
       }
     }
   }

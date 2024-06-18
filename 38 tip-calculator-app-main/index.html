@@ -22,10 +22,13 @@
       <div class="calculator">
         <div class="calculator__form">
           <div class="calculator__form__bill">
-            <label for="bill">Bill</label>
+            <div class="calculator__form__bill__label">
+              <label for="bill">Bill</label>
+              <p class="error"></p>
+            </div>
             <div class="calculator__form__bill__container">
               <img src="./images/icon-dollar.svg" alt="" />
-              <input type="number" id="bill" placeholder="0" />
+              <input type="number" id="bill" min="0" placeholder="0" />
             </div>
           </div>
 
@@ -42,10 +45,13 @@
           </div>
 
           <div class="calculator__form__people">
-            <label for="people">Number of People</label>
+            <div class="calculator__form__people__label">
+              <label for="people">Number of People</label>
+              <p class="error">Cant't be zero</p>
+            </div>
             <div class="calculator__form__people__container">
               <img src="./images/icon-person.svg" alt="" />
-              <input type="number" id="people" placeholder="0" />
+              <input type="number" id="people" min="0" placeholder="0" />
             </div>
           </div>
         </div>
