@@ -24,7 +24,6 @@
           <div class="calculator__form__bill">
             <div class="calculator__form__bill__label">
               <label for="bill">Bill</label>
-              <p class="error"></p>
             </div>
             <div class="calculator__form__bill__container">
               <img src="./images/icon-dollar.svg" alt="" />
@@ -40,7 +39,13 @@
               <button>15%</button>
               <button>25%</button>
               <button>50%</button>
-              <input type="number" id="tip" placeholder="Custom" />
+              <input
+                type="number"
+                id="tip"
+                min="0"
+                max="100"
+                placeholder="Custom"
+              />
             </div>
           </div>
 
@@ -75,5 +80,7 @@
         </div>
       </div>
     </div>
+
+    <script src="app.js"></script>
   </body>
 </html>
