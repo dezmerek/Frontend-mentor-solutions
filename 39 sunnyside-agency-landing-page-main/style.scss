@@ -21,7 +21,7 @@ body {
   font-family: "Barlow", sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  color: #333;
+  color: $very-dark-grayish-blue;
 }
 
 .nav {
@@ -81,6 +81,7 @@ body {
       text-align: center;
       line-height: 42px;
       font-weight: 900;
+      color: $very-dark-desaturated-blue;
     }
 
     p {
@@ -114,6 +115,7 @@ body {
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
+      color: $dark-desaturated-cyan;
 
       h2 {
         font-family: "Fraunces", sans-serif;
@@ -144,6 +146,7 @@ body {
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
+      color: $dark-blue;
 
       h2 {
         font-family: "Fraunces", sans-serif;
@@ -168,7 +171,93 @@ body {
 }
 
 .client {
-  h2 {
+  color: $dark-grayish-blue;
+  text-align: center;
+  padding-top: 3.8rem;
+
+  h3 {
     text-transform: uppercase;
+    font-family: "Fraunces", sans-serif;
+    letter-spacing: 2.5px;
+  }
+
+  &__container {
+    margin-top: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2.3rem;
+
+      img {
+        border-radius: 50%;
+        width: 4.5rem;
+      }
+
+      p {
+        font-size: 18px;
+        padding: 0 1.5rem;
+        line-height: 30px;
+      }
+
+      h3 {
+        font-size: 18px;
+        letter-spacing: -1px;
+      }
+
+      span {
+        margin-top: -2rem;
+        letter-spacing: -1px;
+      }
+    }
+  }
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  margin-top: 5rem;
+
+  img {
+    width: 100%;
+  }
+}
+
+.footer {
+  color: $dark-desaturated-cyan;
+  background-color: $dark-moderate-cyan;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 4rem;
+  padding-bottom: 5rem;
+
+  img {
+    height: 2rem;
+  }
+
+  &__menu {
+    display: flex;
+    justify-content: space-between;
+    gap: 3.5rem;
+    font-size: 18px;
+    margin-top: 2.5rem;
+  }
+
+  &__social {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 5.5rem;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
   }
 }
