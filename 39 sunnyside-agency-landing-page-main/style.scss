@@ -53,14 +53,22 @@ body {
     }
 
     &__mobile {
-      display: none;
+      display: flex;
+
+      @media (min-width: 768px) {
+        display: none;
+      }
     }
 
     &__desktop {
-      display: flex;
+      display: none;
       gap: 3rem;
       align-items: center;
       font-size: 18px;
+
+      @media (min-width: 768px) {
+        display: flex;
+      }
 
       div:last-child {
         background-color: $white;
