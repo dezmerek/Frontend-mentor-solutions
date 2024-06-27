@@ -34,6 +34,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 @media (min-width: 768px) {
   .nav__menu img {
@@ -47,6 +48,31 @@ body {
   .nav__menu__mobile {
     display: none;
   }
+}
+.nav__menu__mobile__container {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(213, 9%, 39%);
+  top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: 0;
+  right: 0;
+  position: absolute;
+  margin: 0 0.4rem;
+}
+.nav__menu__mobile__container div {
+  padding: 1rem 0;
+  cursor: pointer;
+}
+.nav__menu__mobile__container ::before {
+  content: "";
+  width: 9rem;
+  height: 0.6rem;
+  display: block;
+  position: absolute;
+  padding-top: 2rem;
+  margin-top: 1rem;
 }
 .nav__menu__desktop {
   display: none;
