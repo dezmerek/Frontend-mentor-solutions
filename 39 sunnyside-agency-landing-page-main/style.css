@@ -59,20 +59,31 @@ body {
   left: 0;
   right: 0;
   position: absolute;
-  margin: 0 0.4rem;
+  margin: 1.6rem 0.4rem;
+  padding-top: 1.5rem;
+  padding-bottom: 2.5rem;
 }
 .nav__menu__mobile__container div {
-  padding: 1rem 0;
+  padding: 0.9rem 0;
   cursor: pointer;
+  font-size: 19px;
 }
-.nav__menu__mobile__container ::before {
-  content: "";
-  width: 9rem;
-  height: 0.6rem;
-  display: block;
-  position: absolute;
-  padding-top: 2rem;
+.nav__menu__mobile__container :last-child {
+  background-color: hsl(51, 100%, 49%);
+  color: hsl(212, 27%, 19%);
+  border-radius: 3rem;
+  padding: 0.8rem 2.25rem;
   margin-top: 1rem;
+}
+.nav__menu__mobile__container ::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -1.4rem;
+  border-top: 0.8rem solid transparent;
+  border-bottom: 0.8rem solid hsl(0, 0%, 100%);
+  border-left: 0.8rem solid transparent;
+  border-right: 0.8rem solid hsl(0, 0%, 100%);
 }
 .nav__menu__desktop {
   display: none;
