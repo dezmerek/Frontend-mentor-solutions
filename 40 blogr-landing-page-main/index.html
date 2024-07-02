@@ -19,6 +19,22 @@
         <img src="./images/icon-hamburger.svg" alt="icon-hamburger" />
       </div>
 
+      <div class="header__desktop">
+        <div class="header__desktop__nav">
+          <img src="./images/logo.svg" alt="logo" />
+          <div class="header__desktop__nav__menu">
+            <div>Product</div>
+            <div>Company</div>
+            <div>Connect</div>
+          </div>
+        </div>
+
+        <div class="header__desktop__buttons">
+          <button>Log in</button>
+          <button>Sign up</button>
+        </div>
+      </div>
+
       <div class="header__content">
         <h1>A modern publishing platform</h1>
         <p>Grow your audience and build your online brand</p>
@@ -31,7 +47,16 @@
 
     <div class="future">
       <h2>Designed for the future</h2>
-      <img src="./images/illustration-editor-mobile.svg" alt="" />
+      <picture>
+        <source
+          srcset="./images/illustration-editor-desktop.svg"
+          media="(min-width: 768px)"
+        />
+        <img
+          src="./images/illustration-editor-mobile.svg"
+          alt="Responsive Illustration"
+        />
+      </picture>
       <div class="future__content">
         <div>
           <h3>Introducing an extensible editor</h3>
