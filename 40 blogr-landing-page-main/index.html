@@ -95,7 +95,17 @@
     </div>
 
     <div class="simple">
-      <img src="./images/illustration-laptop-mobile.svg" alt="" />
+      <picture>
+        <source
+          srcset="./images/illustration-laptop-desktop.svg"
+          media="(min-width: 768px)"
+        />
+        <img
+          src="./images/illustration-laptop-mobile.svg"
+          alt="Responsive Illustration"
+        />
+      </picture>
+
       <div class="simple__content">
         <div>
           <h3>Free, open, simple</h3>
@@ -121,34 +131,32 @@
 
     <div class="footer">
       <img src="./images/logo.svg" alt="" />
-      <div class="footer__content">
-        <div>
-          <h3>Product</h3>
-          <ul>
-            <li>Overview</li>
-            <li>Pricing</li>
-            <li>Marketplace</li>
-            <li>Features</li>
-            <li>Integrations</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Company</h3>
-          <ul>
-            <li>About</li>
-            <li>Team</li>
-            <li>Blog</li>
-            <li>Careers</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Connect</h3>
-          <ul>
-            <li>Contact</li>
-            <li>Newsletter</li>
-            <li>LinkedIn</li>
-          </ul>
-        </div>
+      <div>
+        <h3>Product</h3>
+        <ul>
+          <li>Overview</li>
+          <li>Pricing</li>
+          <li>Marketplace</li>
+          <li>Features</li>
+          <li>Integrations</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Company</h3>
+        <ul>
+          <li>About</li>
+          <li>Team</li>
+          <li>Blog</li>
+          <li>Careers</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Connect</h3>
+        <ul>
+          <li>Contact</li>
+          <li>Newsletter</li>
+          <li>LinkedIn</li>
+        </ul>
       </div>
     </div>
   </body>
