@@ -169,12 +169,45 @@ body {
       align-items: center;
       gap: 4rem;
 
+      &__container {
+        display: flex;
+        gap: 1.8rem;
+      }
+
       &__menu {
         display: flex;
-        gap: 3.2rem;
         font-size: 16px;
         color: $white;
         font-family: "Ubuntu", sans-serif;
+
+        &--name {
+          display: flex;
+          font-weight: 700;
+          font-size: 17.5px;
+
+          img {
+            width: 12px !important;
+          }
+        }
+
+        &__hide {
+          background: $white;
+          padding: 1.5rem;
+          padding-top: 2rem;
+          border-radius: 0.25rem;
+          margin-top: 3.3rem;
+          margin-left: -1.3rem;
+          color: $very-dark-grayish-blue;
+          font-size: 16px;
+          font-weight: 500;
+          font-family: "Overpass", sans-serif;
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+          position: absolute;
+          width: 170px;
+          box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+        }
       }
     }
 
