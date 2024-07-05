@@ -26,6 +26,10 @@ body {
     padding: 3.6rem 1.5rem 9.6rem 1.5rem;
   }
 }
+.header .rotate-arrow {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
 .header__mobile {
   display: flex;
   justify-content: space-between;
@@ -90,9 +94,9 @@ body {
   font-size: 16px;
   font-weight: 600;
   font-family: "Overpass", sans-serif;
-  display: flex;
   flex-direction: column;
   gap: 1rem;
+  display: none;
 }
 .header__mobile__nav__buttons {
   display: flex;
@@ -138,7 +142,7 @@ body {
 }
 .header__desktop__nav__container {
   display: flex;
-  gap: 1.8rem;
+  gap: 1.6rem;
 }
 .header__desktop__nav__menu {
   display: flex;
@@ -146,13 +150,19 @@ body {
   color: hsl(0, 0%, 100%);
   font-family: "Ubuntu", sans-serif;
 }
+.header__desktop__nav__menu img {
+  width: 12px !important;
+}
 .header__desktop__nav__menu--name {
   display: flex;
-  font-weight: 700;
+  align-items: center;
+  font-weight: 500;
   font-size: 17.5px;
+  gap: 0.3rem;
+  cursor: pointer;
 }
-.header__desktop__nav__menu--name img {
-  width: 12px !important;
+.header__desktop__nav__menu--name:hover {
+  text-decoration: underline;
 }
 .header__desktop__nav__menu__hide {
   background: hsl(0, 0%, 100%);
@@ -165,12 +175,18 @@ body {
   font-size: 16px;
   font-weight: 500;
   font-family: "Overpass", sans-serif;
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 0.5rem;
   position: absolute;
   width: 170px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+.header__desktop__nav__menu__hide div {
+  cursor: pointer;
+}
+.header__desktop__nav__menu__hide div:hover {
+  font-weight: 700;
 }
 .header__desktop__buttons {
   display: flex;
@@ -182,6 +198,7 @@ body {
   font-family: "Ubuntu", sans-serif;
   font-size: 16.5px;
   font-weight: 500;
+  cursor: pointer;
 }
 .header__desktop__buttons button:first-child {
   background: none;
@@ -191,6 +208,10 @@ body {
   background: hsl(0, 0%, 100%);
   color: hsl(356, 100%, 66%);
   padding: 0.9rem 2.5rem;
+}
+.header__desktop__buttons button:last-child:hover {
+  background: hsl(355, 100%, 74%);
+  color: hsl(0, 0%, 100%);
 }
 .header__content {
   display: flex;
@@ -238,16 +259,25 @@ body {
   font-family: "Ubuntu", sans-serif;
   font-size: 16.5px;
   font-weight: 500;
+  cursor: pointer;
 }
 .header__content__buttons button:first-child {
   background: hsl(0, 0%, 100%);
   color: hsl(356, 100%, 66%);
   padding: 0.9rem 1.1rem;
 }
+.header__content__buttons button:first-child:hover {
+  background: hsl(355, 100%, 74%);
+  color: hsl(0, 0%, 100%);
+}
 .header__content__buttons button:last-child {
   background: none;
   border: 1px solid hsl(0, 0%, 100%);
   padding: 0.9rem 1.5rem;
+}
+.header__content__buttons button:last-child:hover {
+  background: hsl(0, 0%, 100%);
+  color: hsl(355, 100%, 74%);
 }
 
 .future {
@@ -539,6 +569,10 @@ body {
 }
 .footer ul li {
   margin-left: 0;
+  cursor: pointer;
+}
+.footer ul li:hover {
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=style.css.map */
