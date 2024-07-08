@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+body {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(202, 55%, 16%);
+}
+
+.calculator__content {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1.5rem;
+}
+.calculator__content__header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.calculator__content__header h1 {
+  font-size: 24px;
+}
+.calculator__content__header p {
+  text-decoration: underline;
+  color: hsl(200, 24%, 40%);
+}
+.calculator__content__form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1.7rem;
+}
+.calculator__content__form label {
+  color: hsl(200, 24%, 40%);
+}
+.calculator__content__form__input {
+  display: flex;
+  align-items: center;
+  border: 1px solid hsl(200, 26%, 54%);
+  border-radius: 0.25rem;
+  position: relative;
+  margin-bottom: 0.75rem;
+}
+.calculator__content__form__input input {
+  color: hsl(200, 24%, 40%);
+  border: none;
+  outline: none;
+  flex: 1;
+  padding: 0 1rem;
+  font-weight: 700;
+  font-size: 18px;
+  width: 100%;
+}
+.calculator__content__form__input span {
+  display: flex;
+  align-items: center;
+  color: hsl(200, 24%, 40%);
+  background-color: hsl(202, 86%, 94%);
+  border-left: 1px solid hsl(200, 26%, 54%);
+  padding: 0.8rem 1rem;
+  height: 100%;
+  font-weight: 700;
+  font-size: 18px;
+}
+.calculator__content__form__input span:first-child {
+  border-left: none;
+  border-right: 1px solid hsl(200, 26%, 54%);
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+.calculator__content__form__input span:last-child {
+  border-left: 1px solid hsl(200, 26%, 54%);
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+.calculator__content__form__order {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+.calculator__content__form__order div {
+  display: flex;
+  align-items: center;
+  border: 1px solid hsl(200, 26%, 54%);
+  border-radius: 0.25rem;
+  padding: 0.8rem 1.25rem;
+  gap: 1.4rem;
+}
+.calculator__content__form__order div label {
+  font-weight: 700;
+  font-size: 18px;
+}
+.calculator__content__form__order div input {
+  transform: scale(1.5);
+  accent-color: hsl(61, 70%, 52%);
+}
+.calculator__content__form__button {
+  background-color: hsl(61, 70%, 52%);
+  border: none;
+  border-radius: 2rem;
+  font-weight: 700;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.7rem;
+  padding: 1rem;
+  gap: 1rem;
+  color: hsl(202, 55%, 16%);
+}
+.calculator__shown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: hsl(202, 55%, 16%);
+  padding: 2rem 0;
+  color: hsl(0, 0%, 100%);
+  text-align: center;
+}
+.calculator__shown h1 {
+  font-size: 24px;
+  margin-top: 1rem;
+}
+.calculator__shown p {
+  margin-top: 1.1rem;
+  line-height: 1.5;
+}
+
+/*# sourceMappingURL=style.css.map */
