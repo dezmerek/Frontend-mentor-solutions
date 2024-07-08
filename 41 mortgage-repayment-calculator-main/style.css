@@ -43,6 +43,13 @@ body {
     grid-template-columns: 1fr 1fr;
   }
 }
+.calculator .error {
+  display: none;
+  color: hsl(4, 69%, 50%);
+  font-size: 14px;
+  margin-top: -0.05rem;
+  margin-bottom: 1rem;
+}
 .calculator__content {
   display: flex;
   flex-direction: column;
@@ -78,10 +85,12 @@ body {
   text-decoration: underline;
   color: hsl(200, 24%, 40%);
 }
+.calculator__content__header p:hover {
+  cursor: pointer;
+}
 .calculator__content__form {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
   margin-top: 1.7rem;
 }
 @media (min-width: 768px) {
@@ -93,6 +102,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+  margin: 0.8rem 0;
 }
 @media (min-width: 768px) {
   .calculator__content__form__container {
@@ -151,6 +161,7 @@ body {
   color: hsl(200, 24%, 40%);
 }
 .calculator__content__form__input {
+  margin-top: 0.75rem;
   display: flex;
   align-items: center;
   border: 1px solid hsl(200, 26%, 54%);
@@ -167,6 +178,9 @@ body {
   font-weight: 700;
   font-size: 18px;
   width: 100%;
+}
+.calculator__content__form__input input:hover {
+  cursor: pointer;
 }
 .calculator__content__form__input span {
   display: flex;
@@ -194,6 +208,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0.65rem;
+  margin-top: 0.8rem;
 }
 .calculator__content__form__order div {
   display: flex;
@@ -202,6 +217,10 @@ body {
   border-radius: 0.25rem;
   padding: 0.8rem 1.25rem;
   gap: 1.4rem;
+}
+.calculator__content__form__order div:hover {
+  cursor: pointer;
+  border: 1px solid hsl(61, 70%, 52%);
 }
 .calculator__content__form__order div label {
   font-weight: 700;
@@ -220,14 +239,18 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 0.7rem;
+  margin-top: 1.3rem;
   padding: 1rem;
   gap: 1rem;
   color: hsl(202, 55%, 16%);
 }
+.calculator__content__form__button:hover {
+  cursor: pointer;
+  background-color: rgba(215, 218, 47, 0.5);
+}
 @media (min-width: 768px) {
   .calculator__content__form__button {
-    margin-top: 1.6rem;
+    margin-top: 2.3rem;
     max-width: 315px;
   }
 }
