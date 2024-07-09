@@ -17,7 +17,7 @@
       <div class="calculator__content">
         <div class="calculator__content__header">
           <h1>Mortgage Calculator</h1>
-          <p>Clear All</p>
+          <p id="reset">Clear All</p>
         </div>
         <form class="calculator__content__form">
           <label for="amount">Mortgage Amount</label>
@@ -67,7 +67,11 @@
             <p class="error">This field is required</p>
           </div>
 
-          <button type="button" class="calculator__content__form__button">
+          <button
+            type="button"
+            id="calculate"
+            class="calculator__content__form__button"
+          >
             <img src="./assets/images/icon-calculator.svg" alt="arrow" />
             Calculate Repayments
           </button>
@@ -96,15 +100,17 @@
         <div class="calculator__result__content">
           <div>
             <p>Your monthly repayments</p>
-            <h1>£1,797.74</h1>
+            <h1 id="month">NaN</h1>
           </div>
           <hr />
           <div>
             <p>Total you'll repay over the term</p>
-            <h2>£539,322.94</h2>
+            <h2 id="total">NaN</h2>
           </div>
         </div>
       </div>
     </div>
+
+    <script src="app.js"></script>
   </body>
 </html>

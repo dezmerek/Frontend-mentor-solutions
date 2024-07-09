@@ -286,7 +286,7 @@ body {
   }
 
   &__shown {
-    display: none;
+    display: flex;
     flex-direction: column;
     align-items: center;
     background-color: $slate-900;
@@ -324,7 +324,7 @@ body {
   }
 
   &__result {
-    display: flex;
+    display: none;
     flex-direction: column;
     background-color: $slate-900;
     padding: 1rem 1.5rem 2.2rem 1.5rem;

@@ -255,7 +255,7 @@ body {
   }
 }
 .calculator__shown {
-  display: none;
+  display: flex;
   flex-direction: column;
   align-items: center;
   background-color: hsl(202, 55%, 16%);
@@ -294,7 +294,7 @@ body {
   }
 }
 .calculator__result {
-  display: flex;
+  display: none;
   flex-direction: column;
   background-color: hsl(202, 55%, 16%);
   padding: 1rem 1.5rem 2.2rem 1.5rem;
