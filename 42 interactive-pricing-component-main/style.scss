@@ -132,7 +132,11 @@ body {
         input[type="range"] {
           -webkit-appearance: none;
           appearance: none;
-          background: transparent;
+          background: linear-gradient(
+            to right,
+            $strong-cyan 50%,
+            $soft-cyan 50%
+          );
           cursor: pointer;
           width: 100%;
           margin-top: 2.5rem;
@@ -147,7 +151,7 @@ body {
         /******** Chrome, Safari, Opera and Edge Chromium styles ********/
         /* slider track */
         input[type="range"]::-webkit-slider-runnable-track {
-          background-color: $soft-cyan;
+          background-color: transparent;
           border-radius: 0.5rem;
           height: 0.5rem;
         }
@@ -182,7 +186,7 @@ body {
         /*********** Firefox styles ***********/
         /* slider track */
         input[type="range"]::-moz-range-track {
-          background-color: $soft-cyan;
+          background-color: transparent;
           border-radius: 0.5rem;
           height: 0.5rem;
         }

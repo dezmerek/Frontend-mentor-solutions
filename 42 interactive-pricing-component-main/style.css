@@ -130,7 +130,7 @@ body {
 .container .component__container__slider input[type=range] {
   -webkit-appearance: none;
   appearance: none;
-  background: transparent;
+  background: linear-gradient(to right, hsl(174, 86%, 45%) 50%, hsl(174, 77%, 80%) 50%);
   cursor: pointer;
   width: 100%;
   margin-top: 2.5rem;
@@ -140,7 +140,7 @@ body {
   outline: none;
 }
 .container .component__container__slider input[type=range]::-webkit-slider-runnable-track {
-  background-color: hsl(174, 77%, 80%);
+  background-color: transparent;
   border-radius: 0.5rem;
   height: 0.5rem;
 }
@@ -167,7 +167,7 @@ body {
   outline-offset: 0.125rem;
 }
 .container .component__container__slider input[type=range]::-moz-range-track {
-  background-color: hsl(174, 77%, 80%);
+  background-color: transparent;
   border-radius: 0.5rem;
   height: 0.5rem;
 }
