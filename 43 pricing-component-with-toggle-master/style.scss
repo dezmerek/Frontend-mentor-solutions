@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+
+$linear-gradient: linear-gradient(
+  to right,
+  hsl(236, 72%, 79%),
+  hsl(237, 63%, 64%)
+);
+$very-light-grayish-blue: hsl(240, 78%, 98%);
+$light-grayish-blue: hsl(234, 14%, 74%);
+$grayish-blue: hsl(233, 13%, 49%);
+$dark-grayish-blue: hsl(232, 13%, 33%);
+$white: hsl(0, 0%, 100%);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background: url("images/bg-top.svg"), url("images/bg-bottom.svg"),
+    $very-light-grayish-blue;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 80%, 26.5%;
+  background-position: top 0 right -10rem, bottom -4.7rem left -1.9rem;
+  height: 100vh;
+
+  @media (min-width: 768px) {
+    background-size: 26.5%, 26.5%;
+    background-position: top 0 right -1rem, bottom -4.7rem left -1.9rem;
+  }
+}
+
+.container {
+  .pricing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+    padding-top: 4rem;
+
+    h1 {
+      color: $grayish-blue;
+    }
+
+    &__switch {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+
+      p {
+        color: $light-grayish-blue;
+      }
+
+      label {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+
+        input {
+          opacity: 0;
+          width: 0;
+          height: 0;
+
+          & + .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: $linear-gradient;
+            transition: 0.4s;
+            border-radius: 34px;
+
+            &:before {
+              position: absolute;
+              content: "";
+              height: 26px;
+              width: 26px;
+              left: 4px;
+              bottom: 4px;
+              background-color: $very-light-grayish-blue;
+              transition: 0.4s;
+              border-radius: 50%;
+            }
+          }
+
+          &:checked + .slider:before {
+            transform: translateX(26px);
+          }
+        }
+      }
+    }
+  }
+
+  .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5rem;
+    gap: 2.2rem;
+
+    &__card {
+      background-color: $white;
+      padding: 1rem;
+      padding-bottom: 1.9rem;
+      width: 87%;
+      text-align: center;
+      border-radius: 0.5rem;
+
+      h4 {
+        color: $grayish-blue;
+        margin-top: 1rem;
+        font-size: 18px;
+      }
+
+      h1 {
+        color: $dark-grayish-blue;
+        font-size: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 1.2rem;
+        margin-bottom: 1.55rem;
+        letter-spacing: -1px;
+        gap: 0.3rem;
+
+        span {
+          font-size: 41px;
+        }
+      }
+
+      hr {
+        border: 0;
+        height: 1px;
+        background-color: $light-grayish-blue;
+        margin: 1.03rem 1rem;
+        opacity: 0.3;
+      }
+
+      p {
+        color: $grayish-blue;
+        letter-spacing: -0.5px;
+      }
+
+      button {
+        background: $linear-gradient;
+        color: $white;
+        border: none;
+        padding: 0.9rem;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        width: 92%;
+        text-transform: uppercase;
+        font-size: 12px;
+        letter-spacing: 2px;
+        margin-top: 1rem;
+      }
+
+      &__pro {
+        background: $linear-gradient;
+
+        h4,
+        h1,
+        p {
+          color: $white;
+        }
+
+        button {
+          background: $white;
+          color: $dark-grayish-blue;
+        }
+      }
+    }
+  }
+}
