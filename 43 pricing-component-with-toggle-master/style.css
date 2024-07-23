@@ -81,6 +81,7 @@ body {
   flex-direction: column;
   margin-top: 5rem;
   gap: 2.2rem;
+  padding-bottom: 4.3rem;
 }
 .container .box__card {
   background-color: hsl(0, 0%, 100%);
