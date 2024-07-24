@@ -27,6 +27,11 @@ body {
   gap: 2.5rem;
   padding-top: 4rem;
 }
+@media (min-width: 768px) {
+  .container .pricing {
+    padding-top: 4.5rem;
+  }
+}
 .container .pricing h1 {
   color: hsl(233, 13%, 49%);
 }
@@ -48,6 +53,9 @@ body {
   opacity: 0;
   width: 0;
   height: 0;
+}
+.container .pricing__switch label input:hover + .slider {
+  background: hsla(237, 63%, 64%, 0.25);
 }
 .container .pricing__switch label input + .slider {
   position: absolute;
@@ -83,6 +91,14 @@ body {
   gap: 2.2rem;
   padding-bottom: 4.3rem;
 }
+@media (min-width: 768px) {
+  .container .box {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0;
+    margin-top: 5.3rem;
+  }
+}
 .container .box__card {
   background-color: hsl(0, 0%, 100%);
   padding: 1rem;
@@ -90,6 +106,18 @@ body {
   width: 87%;
   text-align: center;
   border-radius: 0.5rem;
+}
+@media (min-width: 768px) {
+  .container .box__card {
+    width: 24.3%;
+  }
+}
+@media (min-width: 768px) {
+  .container .box__card:nth-child(2) {
+    margin-top: -1.45rem;
+    padding-top: 2.5rem;
+    padding-bottom: 3.5rem;
+  }
 }
 .container .box__card h4 {
   color: hsl(233, 13%, 49%);
@@ -133,6 +161,12 @@ body {
   font-size: 12px;
   letter-spacing: 2px;
   margin-top: 1rem;
+  border: 1px solid transparent;
+}
+.container .box__card button:hover {
+  background: none;
+  border: 1px solid hsl(237, 63%, 64%);
+  color: hsl(237, 63%, 64%);
 }
 .container .box__card__pro {
   background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
@@ -145,6 +179,13 @@ body {
 .container .box__card__pro button {
   background: hsl(0, 0%, 100%);
   color: hsl(232, 13%, 33%);
+  border: 1px solid transparent;
+}
+.container .box__card__pro button:hover {
+  background: none;
+  border-style: inset;
+  border: 1px solid hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 100%);
 }
 
 /*# sourceMappingURL=style.css.map */
