@@ -126,7 +126,6 @@ body {
 }
 .container .box__card h1 {
   color: hsl(232, 13%, 33%);
-  font-size: 70px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -134,9 +133,10 @@ body {
   margin-bottom: 1.55rem;
   letter-spacing: -1px;
   gap: 0.3rem;
+  font-size: 41px;
 }
 .container .box__card h1 span {
-  font-size: 41px;
+  font-size: 70px;
 }
 .container .box__card hr {
   border: 0;

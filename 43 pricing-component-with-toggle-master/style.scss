@@ -148,7 +148,6 @@ body {
 
       h1 {
         color: $dark-grayish-blue;
-        font-size: 70px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -156,9 +155,10 @@ body {
         margin-bottom: 1.55rem;
         letter-spacing: -1px;
         gap: 0.3rem;
+        font-size: 41px;
 
         span {
-          font-size: 41px;
+          font-size: 70px;
         }
       }
 
