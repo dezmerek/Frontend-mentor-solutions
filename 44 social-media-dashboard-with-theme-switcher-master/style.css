@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: hsl(230, 17%, 14%);
+}
+
+.header {
+  background-color: hsl(225, 100%, 98%);
+  padding: 2.25rem 1.55rem;
+  padding-bottom: 5.5rem;
+  border-radius: 0 0 2rem 2rem;
+}
+.header hr {
+  margin-top: 1.5rem;
+  margin-bottom: 0.95rem;
+}
+.header__dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.header__dashboard h1 {
+  font-size: 24px;
+}
+.header__dashboard p {
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 0.05rem;
+  letter-spacing: 0.15px;
+}
+.header__darkmode {
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__darkmode label {
+  position: relative;
+  display: inline-block;
+  width: 46px;
+  height: 24px;
+}
+.header__darkmode label input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.header__darkmode label input:hover + .slider {
+  background: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+.header__darkmode label input + .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: hsl(230, 22%, 74%);
+  transition: 0.4s;
+  border-radius: 34px;
+}
+.header__darkmode label input + .slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 4px;
+  background-color: hsl(0, 0%, 100%);
+  transition: 0.4s;
+  border-radius: 50%;
+}
+.header__darkmode label input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+.social {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.6rem;
+  margin-top: -3rem;
+  padding: 0 1.5rem;
+}
+.social__card {
+  background-color: hsl(227, 47%, 96%);
+  border-top: 4px solid;
+  border-radius: 0.3rem;
+  padding-top: 1.75rem;
+  padding-bottom: 1.5rem;
+}
+.social__card:nth-child(1) {
+  border-color: hsl(208, 92%, 53%);
+}
+.social__card:nth-child(2) {
+  border-color: hsl(203, 89%, 53%);
+}
+.social__card:nth-child(3) {
+  position: relative;
+  top: 4px;
+  border: 1px solid transparent;
+}
+.social__card:nth-child(3)::after {
+  position: absolute;
+  content: "";
+  top: -5px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+  border-radius: 10px;
+  z-index: -1;
+}
+.social__card:nth-child(4) {
+  border-color: hsl(348, 97%, 39%);
+}
+.social__card__name {
+  display: flex;
+  gap: 0.45rem;
+  align-items: center;
+  justify-content: center;
+  color: hsl(228, 12%, 44%);
+  font-weight: 700;
+  font-size: 12px;
+}
+.social__card__follow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.2rem;
+}
+.social__card__follow h1 {
+  font-size: 55px;
+}
+.social__card__follow p {
+  text-transform: uppercase;
+  color: hsl(228, 12%, 44%);
+  font-size: 12px;
+  letter-spacing: 5px;
+}
+.social__card__today {
+  display: flex;
+  gap: 0.2rem;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  margin-top: 1.55rem;
+  font-size: 12px;
+}
+.social__card__today--up {
+  color: hsl(163, 72%, 41%);
+}
+.social__card__today--down {
+  color: hsl(356, 69%, 56%);
+}
+
+.overview {
+  padding: 0 1.5rem;
+  margin-top: 2.85rem;
+}
+.overview--title {
+  font-weight: 700;
+  font-size: 24.5px;
+}
+.overview__container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.7rem;
+}
+.overview__container__card {
+  background-color: hsl(227, 47%, 96%);
+  padding: 1.5rem;
+  padding-right: 2rem;
+  border-radius: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding-bottom: 1.2rem;
+}
+.overview__container__card__name {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 0.15rem;
+}
+.overview__container__card__follow {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.overview__container__card__follow div {
+  display: flex;
+  align-items: center;
+  gap: 0.1rem;
+  justify-content: center;
+}
+.overview__container__card__follow div p {
+  font-size: 12px;
+  font-weight: 700;
+  padding-bottom: 0.3rem;
+}
+.overview__container__card__follow--up {
+  color: hsl(163, 72%, 41%);
+}
+.overview__container__card__follow--down {
+  color: hsl(356, 69%, 56%);
+}
+
+/*# sourceMappingURL=style.css.map */
