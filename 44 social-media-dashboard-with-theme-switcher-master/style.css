@@ -31,15 +31,32 @@ body .header__darkmode label input + .slider {
 body .header__darkmode label input:hover + .slider {
   background: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
 }
+@media (min-width: 768px) {
+  body {
+    max-width: 1159px;
+    margin: 0 auto;
+  }
+}
 
 .header {
   padding: 2.25rem 1.55rem;
   padding-bottom: 5.5rem;
   border-radius: 0 0 2rem 2rem;
 }
+@media (min-width: 768px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+  }
+}
 .header hr {
   margin-top: 1.5rem;
   margin-bottom: 0.95rem;
+}
+@media (min-width: 768px) {
+  .header hr {
+    display: none;
+  }
 }
 .header__dashboard {
   display: flex;
@@ -48,6 +65,11 @@ body .header__darkmode label input:hover + .slider {
 }
 .header__dashboard h1 {
   font-size: 24px;
+}
+@media (min-width: 768px) {
+  .header__dashboard h1 {
+    font-size: 28px;
+  }
 }
 .header__dashboard p {
   font-size: 14px;
@@ -61,6 +83,12 @@ body .header__darkmode label input:hover + .slider {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+@media (min-width: 768px) {
+  .header__darkmode {
+    justify-content: flex-end;
+    gap: 1rem;
+  }
 }
 .header__darkmode label {
   position: relative;
@@ -108,6 +136,12 @@ body .header__darkmode label input:hover + .slider {
   gap: 1.6rem;
   margin-top: -3rem;
   padding: 0 1.5rem;
+}
+@media (min-width: 768px) {
+  .social {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 .social__card {
   border-top: 4px solid;
@@ -192,6 +226,12 @@ body .header__darkmode label input:hover + .slider {
   flex-direction: column;
   gap: 1rem;
   margin-top: 1.7rem;
+}
+@media (min-width: 768px) {
+  .overview__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 .overview__container__card {
   padding: 1.5rem;
