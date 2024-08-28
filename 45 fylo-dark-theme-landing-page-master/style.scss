@@ -33,6 +33,10 @@ body {
 
   img {
     width: 82px;
+
+    @media (min-width: 768px) {
+      width: 177px;
+    }
   }
 
   &__navbar {
@@ -41,17 +45,35 @@ body {
     padding: 1.5rem 1.2rem;
     background-color: $intro-bg;
 
+    @media (min-width: 768px) {
+      padding: 4.55rem 5rem;
+    }
+
     &__nav {
       display: flex;
       align-items: center;
       gap: 1.5rem;
-      padding-right: 0.4rem;
+      padding-right: 0.15rem;
+
+      @media (min-width: 768px) {
+        gap: 3.5rem;
+      }
 
       a {
         text-decoration: none;
         color: $white;
         text-wrap: nowrap;
         font-size: 12px;
+
+        @media (min-width: 768px) {
+          font-size: 16px;
+        }
+
+        &:hover {
+          cursor: pointer;
+          font-weight: 600;
+          text-decoration: underline;
+        }
       }
     }
   }
@@ -64,21 +86,45 @@ body {
     background-size: 100%;
     background-position: bottom;
     padding-bottom: 6rem;
+    display: flex;
+    justify-content: center;
+
+    @media (min-width: 768px) {
+      padding: 0.15rem 5rem;
+      background-image: url("./images/bg-curvy-desktop.svg");
+      padding-bottom: 35.5rem;
+    }
 
     img {
       width: 100%;
+
+      @media (min-width: 768px) {
+        max-width: 720px;
+      }
     }
   }
 
   &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     padding: 0.3rem 1rem;
     margin-top: -4.5rem;
+
+    @media (min-width: 768px) {
+      margin-top: -33.5rem;
+    }
 
     h1 {
       font-size: 24px;
       line-height: 1.5;
       font-family: "Raleway", sans-serif;
+
+      @media (min-width: 768px) {
+        font-size: 40px;
+        max-width: 720px;
+      }
     }
 
     p {
@@ -86,6 +132,12 @@ body {
       margin-top: 1rem;
       padding: 0 1.5rem;
       line-height: 1.5;
+
+      @media (min-width: 768px) {
+        font-size: 20.5px;
+        max-width: 680px;
+        margin-top: 2rem;
+      }
     }
 
     button {
@@ -98,6 +150,16 @@ body {
       font-weight: 700;
       margin-top: 1.9rem;
       font-size: 14px;
+
+      @media (min-width: 768px) {
+        margin-top: 1.8rem;
+        font-size: 16px;
+        padding: 1.2rem 6rem;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 }
@@ -107,36 +169,72 @@ body {
   margin-top: 7.85rem;
   gap: 5.35rem;
 
+  @media (min-width: 768px) {
+    margin-top: 9.7rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+    gap: 4.5rem 0;
+  }
+
   &__gird {
     display: flex;
     flex-direction: column;
     align-items: center;
 
+    @media (min-width: 768px) {
+      max-width: 420px;
+    }
+
     &--anywhere {
       width: 64px;
+
+      @media (min-width: 768px) {
+        width: 84px;
+      }
     }
 
     &--security {
       width: 54px;
       margin-bottom: -0.3rem;
+
+      @media (min-width: 768px) {
+        width: 74px;
+        margin: 0;
+      }
     }
 
     &--collaboration {
       width: 64px;
       margin-top: 0.5rem;
       margin-bottom: 0.2rem;
+
+      @media (min-width: 768px) {
+        width: 84px;
+        margin: 0;
+      }
     }
 
     &--file {
       width: 70px;
       margin-top: 0.6rem;
       margin-bottom: 0.35rem;
+
+      @media (min-width: 768px) {
+        width: 90px;
+      }
     }
 
     h4 {
       margin-top: 2.15rem;
       font-family: "Raleway", sans-serif;
       font-size: 18px;
+
+      @media (min-width: 768px) {
+        text-align: center;
+        font-size: 20px;
+      }
     }
 
     p {
@@ -152,25 +250,54 @@ body {
 .collaboration {
   margin-top: 9.9rem;
 
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 8.3rem;
+  }
+
   &--illustration {
     width: 100%;
     padding: 0 2.25rem;
+
+    @media (min-width: 768px) {
+      padding: 0;
+      max-width: 620px;
+    }
   }
 
   &__content {
     padding: 0 1.5rem 0 1.8rem;
     margin-top: 2.8rem;
 
+    @media (min-width: 768px) {
+      padding: 0;
+      margin-top: 3rem;
+      max-width: 550px;
+    }
+
     h2 {
       font-size: 18.2px;
       font-family: "Raleway", sans-serif;
       padding-left: 0.2rem;
+
+      @media (min-width: 768px) {
+        font-size: 40px;
+        max-width: 400px;
+        padding: 0;
+      }
     }
 
     p {
       font-size: 14px;
       margin-top: 1.1rem;
       line-height: 1.5;
+
+      @media (min-width: 768px) {
+        font-size: 16px;
+      }
     }
 
     button {
@@ -184,6 +311,17 @@ body {
       align-items: center;
       gap: 0.45rem;
       padding-bottom: 0.3rem;
+
+      @media (min-width: 768px) {
+        font-size: 16px;
+        margin-top: 2rem;
+      }
+
+      &:hover {
+        cursor: pointer;
+        color: $white;
+        border-color: $white;
+      }
     }
   }
 }
@@ -198,6 +336,15 @@ body {
   background-position: 3.3rem 0;
   background-size: 22px;
 
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0 2.5rem;
+    margin-top: 8.5rem;
+    padding: 2.2rem 8.8rem;
+    background-position: 8rem 0;
+    background-size: 64px;
+  }
+
   &__content {
     display: flex;
     flex-direction: column;
@@ -207,9 +354,19 @@ body {
     border-radius: 0.2rem;
     padding-bottom: 1.15rem;
 
+    @media (min-width: 768px) {
+      padding: 2.5rem 1.5rem 1.5rem 1.5rem;
+      gap: 1.4rem;
+    }
+
     p {
       font-size: 10px;
       line-height: 1.8;
+
+      @media (min-width: 768px) {
+        font-size: 15px;
+        line-height: 1.45;
+      }
     }
 
     &__author {
@@ -233,6 +390,10 @@ body {
         p {
           font-size: 8px;
           font-family: "Raleway", sans-serif;
+
+          @media (min-width: 768px) {
+            font-size: 9px;
+          }
         }
       }
     }
@@ -250,9 +411,24 @@ body {
   position: relative;
   z-index: 1;
 
+  @media (min-width: 768px) {
+    margin-top: 8.5rem;
+    padding-top: 3rem;
+    padding-bottom: 2.5rem;
+    position: relative;
+    max-width: 860px;
+    margin: 0 auto;
+    margin-top: 10.5rem;
+  }
+
   h2 {
     font-size: 18px;
     font-family: "Raleway", sans-serif;
+
+    @media (min-width: 768px) {
+      font-size: 32px;
+      margin: 0 auto;
+    }
   }
 
   p {
@@ -260,35 +436,84 @@ body {
     padding-top: 1.2rem;
     font-size: 14px;
     line-height: 1.5;
+
+    @media (min-width: 768px) {
+      font-size: 14px;
+      max-width: 720px;
+      margin: 0 auto;
+    }
   }
 
   &__mail {
-    display: flex;
-    flex-direction: column;
-    margin-top: 1.9rem;
-    gap: 1.5rem;
+    &--error {
+      color: $error;
+      text-align: left;
+      display: none;
 
-    input {
-      border: none;
-      margin: 0 1.8rem;
-      padding: 1.05rem 2rem;
-      border-radius: 2rem;
-
-      &::placeholder {
-        font-size: 10px;
+      @media (min-width: 768px) {
+        padding-left: 2.75rem !important;
+        font-size: 10.7px !important;
+        margin-top: -1rem !important;
       }
     }
 
-    button {
-      border: none;
-      font-weight: 700;
-      font-family: "Raleway", sans-serif;
-      font-size: 14px;
-      padding: 1rem 3.5rem;
-      background: $call-to-action-gradient;
-      color: $white;
-      margin: 0 1.8rem;
-      border-radius: 2rem;
+    &__form {
+      display: flex;
+      flex-direction: column;
+      margin-top: 1.9rem;
+      gap: 1.5rem;
+
+      @media (min-width: 768px) {
+        flex-direction: row;
+        align-self: center;
+        justify-content: center;
+        margin-top: 2.4rem;
+        padding: 0 4.8rem;
+        gap: 1.8rem;
+      }
+
+      div {
+        width: 100%;
+      }
+
+      input {
+        border: none;
+        margin: 0 1.8rem;
+        padding: 1.05rem 2rem;
+        border-radius: 2rem;
+
+        &::placeholder {
+          font-size: 10px;
+          font-family: "Raleway", sans-serif;
+        }
+
+        @media (min-width: 768px) {
+          width: 100%;
+          margin: 0;
+        }
+      }
+
+      button {
+        border: none;
+        font-weight: 700;
+        font-family: "Raleway", sans-serif;
+        font-size: 14px;
+        padding: 1rem 2.5rem;
+        background: $call-to-action-gradient;
+        color: $white;
+        margin: 0 1.8rem;
+        border-radius: 2rem;
+
+        @media (min-width: 768px) {
+          text-wrap: nowrap;
+          padding: 0 2rem;
+          margin: 0;
+        }
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
     }
   }
 }
@@ -298,13 +523,32 @@ body {
   margin-top: -11rem;
   padding-top: 15.5rem;
 
+  @media (min-width: 768px) {
+    margin-top: -7.35rem;
+    padding-top: 10.5rem;
+    padding-bottom: 3rem;
+  }
+
   &--logo {
     padding: 0 2.5rem;
+
+    @media (min-width: 768px) {
+      padding: 0 7.5rem;
+      width: 350px;
+    }
   }
 
   &__content {
     margin-top: 2.65rem;
     padding: 0 1.75rem;
+
+    @media (min-width: 768px) {
+      display: grid;
+      grid-template-columns: repeat(5, auto);
+      padding-left: 7.5rem;
+      margin-top: 3rem;
+      align-items: flex-start;
+    }
 
     &__location {
       display: flex;
@@ -314,6 +558,7 @@ body {
       p {
         margin-top: -0.4em;
         line-height: 1.5;
+        width: 340px;
       }
     }
 
@@ -325,11 +570,18 @@ body {
       padding: 0 0.1rem;
       margin-bottom: 5.15rem;
 
+      @media (min-width: 768px) {
+        margin: 0;
+      }
+
       div {
         display: flex;
         align-items: center;
         gap: 1.15rem;
         font-size: 14px;
+
+        @media (min-width: 768px) {
+        }
       }
     }
 
@@ -339,6 +591,10 @@ body {
       justify-content: center;
       gap: 1rem;
       margin-bottom: 3rem;
+
+      @media (min-width: 768px) {
+        margin: 0;
+      }
 
       a {
         text-decoration: none;
@@ -355,6 +611,10 @@ body {
       margin-top: 5rem;
       padding-bottom: 3rem;
 
+      @media (min-width: 768px) {
+        margin-top: 0;
+      }
+
       div {
         display: flex;
         align-items: center;
@@ -364,8 +624,13 @@ body {
         width: 1.7rem;
         height: 1.7rem;
 
+        @media (min-width: 768px) {
+          width: 2rem;
+          height: 2rem;
+        }
+
         svg {
-          width: 10px;
+          width: 14px;
           fill: $white;
         }
       }
