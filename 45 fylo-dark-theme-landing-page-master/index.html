@@ -162,10 +162,17 @@
       </p>
       <div class="access__mail">
         <div class="access__mail__form">
-          <input type="email" placeholder="email@example.com" name="" id="" />
-          <button>Get Started For Free</button>
+          <input
+            type="email"
+            placeholder="email@example.com"
+            name=""
+            id="email-input"
+          />
+          <button id="email-button">Get Started For Free</button>
         </div>
-        <p class="access__mail--error">Please enter a valid email address</p>
+        <p class="access__mail--error" id="error">
+          Please enter a valid email address
+        </p>
       </div>
     </div>
 
@@ -228,5 +235,6 @@
         </div>
       </div>
     </div>
+    <script src="app.js"></script>
   </body>
 </html>
