@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Barlow+Condensed:wght@400;700&display=swap");
+
+$red: hsl(0, 100%, 68%);
+$very-dark-blue: hsl(230, 29%, 20%);
+$dark-grayish-blue: hsl(230, 11%, 40%);
+$grayish-blue: hsl(231, 7%, 65%);
+$light-grayish-blue: hsl(207, 33%, 95%);
+$white: hsl(0, 0%, 100%);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Barlow", sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.4rem 2rem;
+
+  &--logo {
+    width: 24px;
+    height: 24px;
+  }
+
+  &__nav {
+    &__hamburger {
+      display: block;
+      @media (min-width: 768px) {
+        display: none;
+      }
+
+      &__menu {
+        display: flex;
+        flex-direction: column;
+        background-color: $white;
+        padding: 1.5rem 2rem;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 84%;
+        text-align: center;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        margin-top: 2.5rem;
+        gap: 1.45rem;
+
+        a {
+          text-transform: uppercase;
+          font-weight: 700;
+          color: $very-dark-blue;
+          font-size: 19px;
+          letter-spacing: 1px;
+          text-decoration: none;
+          font-family: "Barlow Condensed", sans-serif;
+
+          &:last-child {
+            color: $grayish-blue;
+          }
+        }
+
+        hr {
+          border: 0;
+          border-top: 1px solid $grayish-blue;
+          margin-top: 1.5rem;
+          margin: 0;
+        }
+      }
+    }
+
+    &__menu {
+      display: none;
+      @media (min-width: 768px) {
+        display: block;
+      }
+    }
+  }
+}
+
+.main {
+  margin-top: 1.2rem;
+  overflow: hidden;
+
+  &--illustration {
+    width: 137%;
+    padding-left: 0.5rem;
+  }
+
+  &__content {
+    margin-top: 3.25rem;
+    padding: 2rem;
+
+    h1 {
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 40px;
+      text-transform: uppercase;
+      margin-top: 1rem;
+      line-height: 1;
+    }
+
+    p {
+      margin-top: 1rem;
+      font-size: 18px;
+      padding-right: 2rem;
+      line-height: 1.4;
+    }
+
+    div {
+      display: flex;
+
+      &:nth-child(1) {
+        gap: 1rem;
+        align-items: center;
+
+        span {
+          color: $white;
+          font-weight: 600;
+          background-color: $very-dark-blue;
+          padding: 0.3rem 0.6rem;
+          border-radius: 1rem;
+          text-transform: uppercase;
+          font-size: 14px;
+          font-family: "Barlow Condensed", sans-serif;
+          letter-spacing: 0.1rem;
+        }
+
+        h4 {
+          text-transform: uppercase;
+          font-weight: 400;
+          color: $grayish-blue;
+          letter-spacing: 0.11rem;
+        }
+      }
+
+      &:nth-last-child(1) {
+        gap: 1.2rem;
+        margin-top: 1.7rem;
+        align-items: center;
+
+        button {
+          border: 0;
+          background-color: $red;
+          border-radius: 0.25rem;
+          padding: 0.75rem 1.35rem;
+          color: $white;
+          text-transform: uppercase;
+          font-weight: 700;
+          font-family: "Barlow Condensed", sans-serif;
+          letter-spacing: 0.1rem;
+        }
+
+        span {
+          text-transform: uppercase;
+          color: $grayish-blue;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+.background {
+  background-color: $light-grayish-blue;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  width: 50%;
+  height: 53.1vh;
+  border-bottom-left-radius: 3.8rem;
+}
