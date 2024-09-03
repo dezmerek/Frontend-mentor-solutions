@@ -26,9 +26,52 @@ body {
   background-color: $very-light-gray;
   padding: 1.5rem 6%;
 
+  @media (min-width: 768px) {
+    padding: 1.2rem 11.5%;
+  }
+
   &--icon-hamburger {
     width: 32px;
     height: 32px;
+
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    &__links {
+      display: flex;
+      gap: 1.5rem;
+
+      a {
+        color: $grayish-blue;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-decoration: none;
+
+        &:hover {
+          color: $very-dark-violet;
+        }
+      }
+    }
+
+    button {
+      background: none;
+      color: $dark-violet;
+      border: 2px solid $dark-violet;
+      padding: 0.7rem 1.7rem;
+      text-transform: uppercase;
+      font-size: 13px;
+      letter-spacing: 1px;
+      font-weight: 700;
+    }
   }
 }
 
