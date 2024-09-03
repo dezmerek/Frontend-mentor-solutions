@@ -16,51 +16,107 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: hsl(0, 0%, 98%);
-  padding: 1.5rem 6%;
+  flex-direction: column;
 }
 @media (min-width: 768px) {
   .nav {
     padding: 1.2rem 11.5%;
+    flex-direction: row;
   }
 }
-.nav--icon-hamburger {
+.nav__container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1.5rem 6%;
+  align-items: center;
+}
+.nav__container--icon-hamburger {
   width: 32px;
   height: 32px;
 }
 @media (min-width: 768px) {
-  .nav--icon-hamburger {
+  .nav__container--icon-hamburger {
     display: none;
+  }
+}
+@media (min-width: 768px) {
+  .nav__container {
+    padding: 0;
+    margin: 0;
   }
 }
 .nav__menu {
   display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 2rem;
+  background: hsl(270, 9%, 17%);
+  width: 100%;
+  padding-top: 3rem;
+  text-align: center;
+  padding-bottom: 18.5rem;
+  background: url("./images/bg-pattern-mobile-nav.svg") bottom center no-repeat, hsl(270, 9%, 17%);
+  z-index: 1;
+}
+@media (min-width: 768px) {
+  .nav__menu {
+    flex-direction: row;
+    background: none;
+    justify-content: flex-end;
+    padding: 0;
+    margin: 0;
+  }
 }
 .nav__menu__links {
   display: flex;
-  gap: 1.5rem;
+  gap: 2.6rem;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .nav__menu__links {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
 }
 .nav__menu__links a {
   color: hsl(216, 30%, 68%);
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 700;
   letter-spacing: 1px;
   text-decoration: none;
+  color: hsl(0, 0%, 98%);
+}
+@media (min-width: 768px) {
+  .nav__menu__links a {
+    color: hsl(216, 30%, 68%);
+    text-wrap: nowrap;
+    font-size: 14px;
+  }
 }
 .nav__menu__links a:hover {
-  color: hsl(270, 9%, 17%);
+  color: hsl(256, 26%, 20%);
 }
 .nav__menu button {
   background: none;
   color: hsl(256, 26%, 20%);
-  border: 2px solid hsl(256, 26%, 20%);
-  padding: 0.7rem 1.7rem;
+  border: 2px solid hsl(0, 0%, 98%);
   text-transform: uppercase;
-  font-size: 13px;
+  font-size: 19px;
   letter-spacing: 1px;
-  font-weight: 700;
+  color: hsl(0, 0%, 98%);
+  padding: 1rem 6rem;
+}
+@media (min-width: 768px) {
+  .nav__menu button {
+    color: hsl(270, 9%, 17%);
+    border: 2px solid hsl(270, 9%, 17%);
+    font-size: 14px;
+    padding: 0.7rem 1.4rem;
+    font-weight: 700;
+    text-wrap: nowrap;
+  }
 }
 
 .intro {
