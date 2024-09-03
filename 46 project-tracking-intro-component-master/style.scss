@@ -24,11 +24,7 @@ body {
   padding: 2.4rem 2rem;
 
   @media (min-width: 768px) {
-    padding: 4rem 0;
-    @media (min-width: 768px) {
-      max-width: 1110px;
-      margin: 0 auto;
-    }
+    padding: 4rem 11.5%;
   }
 
   &--logo {
@@ -42,6 +38,12 @@ body {
   }
 
   &__nav {
+    a {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
     &__hamburger {
       display: block;
       @media (min-width: 768px) {
@@ -225,6 +227,11 @@ body {
           font-weight: 700;
           font-family: "Barlow Condensed", sans-serif;
           letter-spacing: 0.1rem;
+
+          &:hover {
+            cursor: pointer;
+            background: hsla(0, 100%, 68%, 0.7);
+          }
 
           @media (min-width: 768px) {
             padding: 0.9rem 2rem;
