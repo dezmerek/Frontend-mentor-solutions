@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+$dark-violet: hsl(256, 26%, 20%);
+$grayish-blue: hsl(216, 30%, 68%);
+$very-dark-violet: hsl(270, 9%, 17%);
+$dark-grayish-violet: hsl(273, 4%, 51%);
+$very-light-gray: hsl(0, 0%, 98%);
+$white: hsl(0, 0%, 100%);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  background: $white;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $very-light-gray;
+  padding: 1.5rem 6%;
+
+  &--icon-hamburger {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  color: $very-light-gray;
+
+  &::before {
+    content: "";
+    background-image: url(images/bg-pattern-intro-left-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: left top;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 531px;
+    pointer-events: none;
+  }
+
+  &::after {
+    content: "";
+    background-image: url(images/bg-pattern-intro-right-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    position: absolute;
+    bottom: -46.5%;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+  }
+
+  &__container {
+    background: $dark-violet;
+    padding: 4rem 6%;
+    text-align: center;
+    padding-bottom: 5.8rem;
+
+    h1 {
+      font-family: "DM Serif Display", serif;
+      font-weight: 400;
+      font-size: 46.5px;
+      line-height: 1.1;
+      margin-top: 1.7rem;
+    }
+
+    p {
+      margin-top: 0.8rem;
+      line-height: 1.6;
+      padding: 0 0.5rem;
+    }
+
+    button {
+      background: none;
+      color: $very-light-gray;
+      border: 1px solid $very-light-gray;
+      padding: 0.7rem 1.7rem;
+      text-transform: uppercase;
+      margin-top: 2.1rem;
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
+  }
+}
+
+.diff {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 8.75rem;
+
+  &::before {
+    content: "";
+    background-color: $dark-violet;
+    position: absolute;
+    height: 1px;
+    width: 10rem;
+  }
+
+  h1 {
+    font-family: "DM Serif Display", serif;
+    margin-top: 2rem;
+    font-size: 47px;
+    font-weight: 400;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 4.5rem;
+    gap: 3.6rem;
+
+    &__box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      h2 {
+        margin-top: 2.05rem;
+        font-size: 27px;
+        font-family: "DM Serif Display", serif;
+      }
+
+      p {
+        margin-top: 1.15rem;
+        padding: 0 1.6rem;
+        line-height: 1.55;
+      }
+    }
+  }
+}
+
+.how {
+  background: url("./images/bg-pattern-how-we-work-mobile.svg") top right
+      no-repeat,
+    $dark-violet;
+  color: $very-light-gray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 8.8rem 1.5rem 0 1.5rem;
+  padding-top: 4.7rem;
+  padding-bottom: 4.55rem;
+
+  h1 {
+    font-family: "DM Serif Display", serif;
+    font-size: 38.5px;
+    font-weight: 400;
+    line-height: 1;
+    text-align: center;
+  }
+
+  button {
+    background: none;
+    color: $very-light-gray;
+    border: 1px solid $very-light-gray;
+    padding: 0.7rem 1.4rem;
+    text-transform: uppercase;
+    margin-top: 2.6rem;
+    font-size: 13px;
+    letter-spacing: 1px;
+  }
+}
+
+.footer {
+  margin-top: 8.75rem;
+  background: url("./images/bg-pattern-footer-mobile.svg") top right no-repeat,
+    $very-light-gray;
+  padding-bottom: 5.5rem;
+
+  @media (min-width: 768px) {
+    background: url("./images/bg-pattern-footer-desktop.svg") top left no-repeat,
+      $very-light-gray;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 5.5rem;
+    align-items: center;
+    gap: 2rem;
+
+    &--logo {
+      width: 112px;
+    }
+
+    &__social {
+      display: flex;
+      gap: 1rem;
+    }
+  }
+
+  &__menu {
+    display: grid;
+    margin-top: 5rem;
+    text-align: center;
+    gap: 2.6rem;
+
+    &::before {
+      content: "";
+      background-color: $dark-grayish-violet;
+      position: absolute;
+      left: 1rem;
+      right: 1rem;
+      height: 1px;
+      margin-top: -2.5rem;
+    }
+
+    &__links {
+      display: flex;
+      flex-direction: column;
+
+      h2 {
+        font-size: 14px;
+        letter-spacing: 1px;
+        color: $dark-grayish-violet;
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+      }
+
+      p {
+        color: $dark-grayish-violet;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 700;
+        color: $dark-violet;
+      }
+
+      div {
+        display: flex;
+        flex-direction: column;
+        gap: 0.85rem;
+      }
+    }
+  }
+}
