@@ -56,7 +56,7 @@ body {
   }
 
   &__menu {
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     gap: 2rem;
@@ -71,11 +71,16 @@ body {
     z-index: 1;
 
     @media (min-width: 768px) {
+      display: flex;
       flex-direction: row;
       background: none;
       justify-content: flex-end;
       padding: 0;
       margin: 0;
+    }
+
+    &.active {
+      display: flex;
     }
 
     &__links {

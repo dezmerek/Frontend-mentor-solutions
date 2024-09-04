@@ -49,7 +49,7 @@ body {
   }
 }
 .nav__menu {
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   gap: 2rem;
@@ -63,12 +63,16 @@ body {
 }
 @media (min-width: 768px) {
   .nav__menu {
+    display: flex;
     flex-direction: row;
     background: none;
     justify-content: flex-end;
     padding: 0;
     margin: 0;
   }
+}
+.nav__menu.active {
+  display: flex;
 }
 .nav__menu__links {
   display: flex;
