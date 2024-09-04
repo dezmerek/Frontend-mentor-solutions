@@ -127,3 +127,123 @@
 ![desktop-preview (31)](https://github.com/dezmerek/Frontend-mentor-solutions/assets/18598456/609240b2-033b-45a2-928b-99eee5745f40)
 
 [Live](https://dezmerek.github.io/Frontend-mentor-solutions/21%20huddle-landing-page-with-curved-sections-master/) | [Repo](https://github.com/dezmerek/Frontend-mentor-solutions/tree/main/21%20huddle-landing-page-with-curved-sections-master) | [Try Out](https://www.frontendmentor.io/challenges/huddle-landing-page-with-curved-sections-5ca5ecd01e82137ec91a50f2)
+
+### 22. Chat app CSS illustration
+
+![desktop-preview](https://github.com/user-attachments/assets/5b2afe8e-5135-4de8-b4be-3a21c7953358)
+
+[Live](https://dezmerek.github.io/Frontend-mentor-solutions/22%20chat-app-css-illustration-master/) | [Repo](https://github.com/dezmerek/Frontend-mentor-solutions/tree/main/22%20chat-app-css-illustration-master) | [Try Out](https://www.frontendmentor.io/challenges/chat-app-css-illustration-O5auMkFqY)
+
+### 23. FAQ accordion
+
+![desktop-preview (1)](https://github.com/user-attachments/assets/355506fa-a363-4a85-879d-02b8d9e41229)
+
+[Live](https://dezmerek.github.io/Frontend-mentor-solutions/23%20faq-accordion-main/) | [Repo](https://github.com/dezmerek/Frontend-mentor-solutions/tree/main/23%20faq-accordion-main) | [Try Out](https://www.frontendmentor.io/challenges/faq-accordion-wyfFdeBwBz)
+
+### 24. Article preview component
+
+![desktop-preview (2)](https://github.com/user-attachments/assets/fd7795ff-a702-4532-9d2f-1641ba49d7d7)
+
+[Live](https://dezmerek.github.io/Frontend-mentor-solutions/24%20article-preview-component-master/) | [Repo](https://github.com/dezmerek/Frontend-mentor-solutions/tree/main/24%20article-preview-component-master) | [Try Out](https://www.frontendmentor.io/challenges/article-preview-component-dYBN_pYFT)
+
+### 25. Interactive rating component
+
+![desktop-preview (3)](https://github.com/user-attachments/assets/81e0dedb-d9be-4151-858d-2c25301ee6a8)
+
+[Live](https://dezmerek.github.io/Frontend-mentor-solutions/25%20interactive-rating-component-main/) | [Repo](https://github.com/dezmerek/Frontend-mentor-solutions/tree/main/25%20interactive-rating-component-main) | [Try Out](https://www.frontendmentor.io/challenges/interactive-rating-component-koxpeBUmI)
+
+### 26. Base Apparel coming soon page
+
+![desktop-preview (4)](https://github.com/user-attachments/assets/168e806a-8942-4f56-b4bd-2744dc1a8bce)
+
+[Live](https://dezmerek.github.io/Frontend-mentor-solutions/26%20base-apparel-coming-soon-master/) | [Repo](https://github.com/dezmerek/Frontend-mentor-solutions/tree/main/26%20base-apparel-coming-soon-master) | [Try Out](https://www.frontendmentor.io/challenges/base-apparel-coming-soon-page-5d46b47f8db8a7063f9331a0)
+
+### 27. Intro component with sign up form
+
+![desktop-preview (5)](https://github.com/user-attachments/assets/41d69c91-9a46-4105-95c3-7a88abc4e70a)
+
+[Live](https://dezmerek.github.io/Frontend-mentor-solutions/27%20intro-component-with-signup-form-master/) | [Repo](https://github.com/dezmerek/Frontend-mentor-solutions/tree/main/27%20intro-component-with-signup-form-master) | [Try Out](https://www.frontendmentor.io/challenges/intro-component-with-signup-form-5cf91bd49edda32581d28fd1)
+
+### 28. Ping coming soon page
+
+![desktop-preview (6)](https://github.com/user-attachments/assets/af76ac95-e028-4c89-9a94-5f86ea1a53a6)
+
+[Live](https://dezmerek.github.io/Frontend-mentor-solutions/28%20ping-coming-soon-page-master/) | [Repo](https://github.com/dezmerek/Frontend-mentor-solutions/tree/main/28%20ping-coming-soon-page-master) | [Try Out](https://www.frontendmentor.io/challenges/ping-single-column-coming-soon-page-5cadd051fec04111f7b848da)
+
+### 29. Newsletter sign-up form with success message
+
+![desktop-preview (7)](https://github.com/user-attachments/assets/cb65bad2-fde8-4240-9660-e0f205805edc)
+
+[Live](https://dezmerek.github.io/Frontend-mentor-solutions/29%20newsletter-sign-up-with-success-message-main/) | [Repo](https://github.com/dezmerek/Frontend-mentor-solutions/tree/main/29%20newsletter-sign-up-with-success-message-main) | [Try Out](https://www.frontendmentor.io/challenges/newsletter-signup-form-with-success-message-3FC1AZbNrv)
+
+### 30. Contact form
+
+![desktop-preview (8)](https://github.com/user-attachments/assets/29bfea7d-c1c3-4830-bb9c-6db85fa48045)
+
+[Live](https://dezmerek.github.io/Frontend-mentor-solutions/30%20contact-form-main/) | [Repo](https://github.com/dezmerek/Frontend-mentor-solutions/tree/main/30%20contact-form-main) | [Try Out](https://www.frontendmentor.io/challenges/contact-form--G-hYlqKJj)
+
+### 31. Age calculator app
+
+![desktop-preview (9)](https://github.com/user-attachments/assets/8f0e4e9a-1ec4-4181-abb8-3d13ff41ac3b)
+
+[Live](https://dezmerek.github.io/Frontend-mentor-solutions/31%20age-calculator-app-main/) | [Repo](https://github.com/dezmerek/Frontend-mentor-solutions/tree/main/31%20age-calculator-app-main) | [Try Out](https://www.frontendmentor.io/challenges/age-calculator-app-dF9DFFpj-Q)
+
+### 32. News homepage
+
+![desktop-preview (10)](https://github.com/user-attachments/assets/fa4a9007-22fa-4293-9c59-dc3cbb283225)
+
+[Live](https://dezmerek.github.io/Frontend-mentor-solutions/32%20news-homepage-main/) | [Repo](https://github.com/dezmerek/Frontend-mentor-solutions/tree/main/32%20news-homepage-main) | [Try Out](https://www.frontendmentor.io/challenges/news-homepage-H6SWTa1MFl)
+
+### 33. Notifications page
+
+![desktop-preview (11)](https://github.com/user-attachments/assets/cbd32f13-0852-472a-b1c4-a5e0596a5888)
+
+[Live](https://dezmerek.github.io/Frontend-mentor-solutions/33%20notifications-page-main/) | [Repo](https://github.com/dezmerek/Frontend-mentor-solutions/tree/main/33%20notifications-page-main) | [Try Out](https://www.frontendmentor.io/challenges/notifications-page-DqK5QAmKbC)
+
+### 34. Interactive card details form
+
+![desktop-preview (12)](https://github.com/user-attachments/assets/5de249f2-55f3-40b6-b0d0-f2861714faf2)
+
+[Live](https://dezmerek.github.io/Frontend-mentor-solutions/34%20interactive-card-details-form-main/) | [Repo](https://github.com/dezmerek/Frontend-mentor-solutions/tree/main/34%20interactive-card-details-form-main) | [Try Out](https://www.frontendmentor.io/challenges/interactive-card-details-form-XpS8cKZDWw)
+
+### 35. Expenses chart component
+
+![desktop-preview (13)](https://github.com/user-attachments/assets/707ecaca-1ebe-4b40-9977-1dfcccec126f)
+
+[Live](https://dezmerek.github.io/Frontend-mentor-solutions/35%20expenses-chart-component-main/) | [Repo](https://github.com/dezmerek/Frontend-mentor-solutions/tree/main/35%20expenses-chart-component-main) | [Try Out](https://www.frontendmentor.io/challenges/expenses-chart-component-e7yJBUdjwt)
+
+### 36. Intro section with dropdown navigation
+
+![desktop-preview (14)](https://github.com/user-attachments/assets/ae45d70c-7225-4516-a0ee-96bf0f423df4)
+
+[Live](https://dezmerek.github.io/Frontend-mentor-solutions/36%20intro-section-with-dropdown-navigation-main/) | [Repo](https://github.com/dezmerek/Frontend-mentor-solutions/tree/main/36%20intro-section-with-dropdown-navigation-main) | [Try Out](https://www.frontendmentor.io/challenges/intro-section-with-dropdown-navigation-ryaPetHE5)
+
+### 37. Time tracking dashboard
+
+![desktop-preview (15)](https://github.com/user-attachments/assets/55929994-8dbf-40db-b624-d1cda12ba506)
+
+[Live](https://dezmerek.github.io/Frontend-mentor-solutions/37%20time-tracking-dashboard-main/) | [Repo](https://github.com/dezmerek/Frontend-mentor-solutions/tree/main/37%20time-tracking-dashboard-main) | [Try Out](https://www.frontendmentor.io/challenges/time-tracking-dashboard-UIQ7167Jw)
+
+### 38. Tip calculator app
+
+![desktop-preview (16)](https://github.com/user-attachments/assets/1d286288-1952-4796-a686-bbf63fd5ef0e)
+
+[Live](https://dezmerek.github.io/Frontend-mentor-solutions/38%20tip-calculator-app-main/) | [Repo](https://github.com/dezmerek/Frontend-mentor-solutions/tree/main/38%20tip-calculator-app-main) | [Try Out](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX)
+
+### 39. Sunnyside agency landing page
+
+![desktop-preview (17)](https://github.com/user-attachments/assets/f226710c-2d79-44e2-bc31-6266588bb2d2)
+
+[Live](https://dezmerek.github.io/Frontend-mentor-solutions/39%20sunnyside-agency-landing-page-main/) | [Repo](https://github.com/dezmerek/Frontend-mentor-solutions/tree/main/39%20sunnyside-agency-landing-page-main) | [Try Out](https://www.frontendmentor.io/challenges/agency-landing-page-7yVs3B6ef)
+
+### 40. Blogr landing page
+
+![desktop-preview (18)](https://github.com/user-attachments/assets/deeb5fcf-6442-44db-b2e4-eda270f3ac74)
+
+[Live](https://dezmerek.github.io/Frontend-mentor-solutions/40%20blogr-landing-page-main/) | [Repo](https://github.com/dezmerek/Frontend-mentor-solutions/tree/main/40%20blogr-landing-page-main) | [Try Out](https://www.frontendmentor.io/challenges/blogr-landing-page-EX2RLAApP)
+
+
+### 41. 
+
+
+[Live]() | [Repo]() | [Try Out]()
