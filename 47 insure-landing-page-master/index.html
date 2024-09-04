@@ -33,7 +33,13 @@
     </div>
 
     <div class="intro">
-      <img src="./images/image-intro-mobile.jpg" alt="" />
+      <picture>
+        <source
+          media="(min-width: 768px)"
+          srcset="./images/image-intro-desktop.jpg"
+        />
+        <img src="./images/image-intro-mobile.jpg" alt="" />
+      </picture>
 
       <div class="intro__container">
         <h1>Humanizing your insurance.</h1>
