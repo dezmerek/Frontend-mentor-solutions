@@ -243,7 +243,44 @@
 [Live](https://dezmerek.github.io/Frontend-mentor-solutions/40%20blogr-landing-page-main/) | [Repo](https://github.com/dezmerek/Frontend-mentor-solutions/tree/main/40%20blogr-landing-page-main) | [Try Out](https://www.frontendmentor.io/challenges/blogr-landing-page-EX2RLAApP)
 
 
-### 41. 
+### 41. Mortgage repayment calculator
 
+![desktop-preview (19)](https://github.com/user-attachments/assets/d0e4caed-5240-4b87-9101-2063fe677466)
 
-[Live]() | [Repo]() | [Try Out]()
+[Live](https://dezmerek.github.io/Frontend-mentor-solutions/41%20mortgage-repayment-calculator-main/) | [Repo](https://github.com/dezmerek/Frontend-mentor-solutions/tree/main/41%20mortgage-repayment-calculator-main) | [Try Out](https://www.frontendmentor.io/challenges/mortgage-repayment-calculator-Galx1LXK73)
+
+### 42. Interactive pricing component
+
+![desktop-preview (20)](https://github.com/user-attachments/assets/3f8bb4dd-2922-4872-9fb5-4b7c66b1633f)
+
+[Live](https://dezmerek.github.io/Frontend-mentor-solutions/42%20interactive-pricing-component-main/) | [Repo](https://github.com/dezmerek/Frontend-mentor-solutions/tree/main/42%20interactive-pricing-component-main) | [Try Out](https://www.frontendmentor.io/challenges/interactive-pricing-component-t0m8PIyY8)
+
+### 43. Pricing component with toggle
+
+![desktop-preview (21)](https://github.com/user-attachments/assets/89395b4b-3b2e-4a25-8328-1abc5bd9acf6)
+
+[Live](https://dezmerek.github.io/Frontend-mentor-solutions/43%20pricing-component-with-toggle-master/) | [Repo](https://github.com/dezmerek/Frontend-mentor-solutions/tree/main/43%20pricing-component-with-toggle-master) | [Try Out](https://www.frontendmentor.io/challenges/pricing-component-with-toggle-8vPwRMIC)
+
+### 44. Social media dashboard with theme switcher
+
+![desktop-preview (22)](https://github.com/user-attachments/assets/c263eaa6-4e56-427b-a650-611d8e36c2dd)
+
+[Live](https://dezmerek.github.io/Frontend-mentor-solutions/44%20social-media-dashboard-with-theme-switcher-master/) | [Repo](https://github.com/dezmerek/Frontend-mentor-solutions/tree/main/44%20social-media-dashboard-with-theme-switcher-master) | [Try Out](https://www.frontendmentor.io/challenges/social-media-dashboard-with-theme-switcher-6oY8ozp_H)
+
+### 45. Fylo dark theme landing page
+
+![desktop-preview (23)](https://github.com/user-attachments/assets/059976f3-ab4a-43a6-85a9-3655e7e650dc)
+
+[Live](https://dezmerek.github.io/Frontend-mentor-solutions/45%20fylo-dark-theme-landing-page-master/) | [Repo](https://github.com/dezmerek/Frontend-mentor-solutions/tree/main/45%20fylo-dark-theme-landing-page-master) | [Try Out](https://www.frontendmentor.io/challenges/fylo-dark-theme-landing-page-5ca5f2d21e82137ec91a50fd)
+
+### 46. Project tracking intro component
+
+![desktop-preview (24)](https://github.com/user-attachments/assets/beb18e7e-1a1f-4bf2-8c76-c15512ad0291)
+
+[Live](https://dezmerek.github.io/Frontend-mentor-solutions/46%20project-tracking-intro-component-master/) | [Repo](https://github.com/dezmerek/Frontend-mentor-solutions/tree/main/46%20project-tracking-intro-component-master) | [Try Out](https://www.frontendmentor.io/challenges/project-tracking-intro-component-5d289097500fcb331a67d80e)
+
+### 47. Insure landing page
+
+![desktop-preview (25)](https://github.com/user-attachments/assets/f4dea527-b9b8-4f3a-aaee-9a91d56ca17a)
+
+[Live](https://dezmerek.github.io/Frontend-mentor-solutions/47%20insure-landing-page-master/) | [Repo](https://github.com/dezmerek/Frontend-mentor-solutions/tree/main/47%20insure-landing-page-master) | [Try Out](https://www.frontendmentor.io/challenges/insure-landing-page-uTU68JV8)
