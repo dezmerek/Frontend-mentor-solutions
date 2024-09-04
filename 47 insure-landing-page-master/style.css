@@ -120,6 +120,11 @@ body {
     text-wrap: nowrap;
   }
 }
+.nav__menu button:hover {
+  background: hsl(270, 9%, 17%);
+  color: hsl(0, 0%, 98%);
+  cursor: pointer;
+}
 
 .intro {
   display: flex;
@@ -230,6 +235,11 @@ body {
   margin-top: 2.1rem;
   font-size: 13px;
   letter-spacing: 1px;
+}
+.intro__container button:hover {
+  color: hsl(256, 26%, 20%);
+  background: hsl(0, 0%, 98%);
+  cursor: pointer;
 }
 
 .diff {
@@ -357,6 +367,11 @@ body {
     margin: 0;
   }
 }
+.how button:hover {
+  color: hsl(256, 26%, 20%);
+  background: hsl(0, 0%, 98%);
+  cursor: pointer;
+}
 
 .footer {
   margin-top: 8.75rem;
@@ -390,6 +405,10 @@ body {
 .footer__header__social {
   display: flex;
   gap: 1rem;
+}
+.footer__header__social img:hover {
+  cursor: pointer;
+  fill: hsl(256, 26%, 20%);
 }
 .footer__menu {
   display: grid;
@@ -438,6 +457,10 @@ body {
   letter-spacing: 1px;
   font-weight: 700;
   color: hsl(256, 26%, 20%);
+}
+.footer__menu__links p:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 .footer__menu__links div {
   display: flex;

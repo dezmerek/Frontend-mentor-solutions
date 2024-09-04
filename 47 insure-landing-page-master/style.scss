@@ -127,6 +127,12 @@ body {
         font-weight: 700;
         text-wrap: nowrap;
       }
+
+      &:hover {
+        background: $very-dark-violet;
+        color: $very-light-gray;
+        cursor: pointer;
+      }
     }
   }
 }
@@ -245,6 +251,12 @@ body {
       margin-top: 2.1rem;
       font-size: 13px;
       letter-spacing: 1px;
+
+      &:hover {
+        color: $dark-violet;
+        background: $very-light-gray;
+        cursor: pointer;
+      }
     }
   }
 }
@@ -376,6 +388,12 @@ body {
     @media (min-width: 768px) {
       margin: 0;
     }
+
+    &:hover {
+      color: $dark-violet;
+      background: $very-light-gray;
+      cursor: pointer;
+    }
   }
 }
 
@@ -412,6 +430,13 @@ body {
     &__social {
       display: flex;
       gap: 1rem;
+
+      img {
+        &:hover {
+          cursor: pointer;
+          fill: $dark-violet;
+        }
+      }
     }
   }
 
@@ -462,6 +487,11 @@ body {
         letter-spacing: 1px;
         font-weight: 700;
         color: $dark-violet;
+
+        &:hover {
+          text-decoration: underline;
+          cursor: pointer;
+        }
       }
 
       div {
