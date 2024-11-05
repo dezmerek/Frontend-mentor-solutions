@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap");
+
+$white: hsl(0, 0%, 100%);
+$black: hsl(0, 0%, 0%);
+$dark-gray: hsl(0, 0%, 55%);
+$very-dark-gray: hsl(0, 0%, 41%);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 15px;
+}
+
+.header {
+  background-image: url("./images/mobile/image-hero.jpg");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  padding-bottom: 14.15rem;
+
+  &__nav {
+    padding: 2.5rem 1.5rem;
+
+    &--logo {
+      width: 144px;
+    }
+  }
+
+  &__content {
+    color: $white;
+    padding: 1.5rem;
+    padding-bottom: 1.1rem;
+    margin: 7.4rem 1.5rem 0 1.5rem;
+    border: 1px solid $white;
+    text-transform: uppercase;
+    font-size: 40px;
+    line-height: 0.96;
+  }
+}
+
+.leader {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 6rem;
+
+  &--image {
+    margin: 0 1.5rem 0 1.5rem;
+  }
+
+  &__content {
+    margin-top: 3rem;
+
+    h1 {
+      font-weight: 300;
+      font-size: 32px;
+    }
+
+    p {
+      margin-top: 1.2rem;
+      font-family: "Alata", sans-serif;
+      color: $very-dark-gray;
+      padding: 0 2.5rem;
+      font-size: 15px;
+      line-height: 1.65;
+    }
+  }
+}
+
+.creation {
+  margin: 0 1.5rem;
+  margin-top: 5.9rem;
+  letter-spacing: 0.1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    text-align: center;
+  }
+
+  button {
+    border: 1px solid $black;
+    padding: 0.6rem;
+    background-color: transparent;
+    width: 10rem;
+    margin-top: 1.8em;
+    font-size: 16px;
+    letter-spacing: 0.3rem;
+    font-family: "Alata", sans-serif;
+  }
+
+  &__content {
+    padding-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+
+    &__section {
+      position: relative;
+
+      img {
+        width: 100%;
+      }
+
+      h2 {
+        position: absolute;
+        color: $white;
+        bottom: 1.5rem;
+        left: 1.2rem;
+        width: 40%;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+.footer {
+  background-color: $black;
+  display: grid;
+  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5.95rem;
+  padding: 3.5rem;
+  padding-bottom: 3.7rem;
+
+  &--img {
+    width: 144px;
+  }
+
+  &__nav {
+    padding-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+
+    a {
+      color: $white;
+      text-decoration: none;
+      text-align: center;
+    }
+  }
+
+  &__social {
+    padding-top: 3.2rem;
+    display: flex;
+    gap: 1rem;
+  }
+
+  &__copy {
+    padding-top: 1.1rem;
+    color: $dark-gray;
+    font-size: 15px;
+    font-family: "Alata", sans-serif;
+  }
+}
