@@ -26,8 +26,39 @@ body {
   &__nav {
     padding: 2.5rem 1.5rem;
 
-    &--logo {
-      width: 144px;
+    &--mobile {
+      background-color: $black;
+      height: 100vh;
+    }
+
+    &__container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &--logo {
+        width: 144px;
+      }
+
+      &--hamburger {
+        @media (min-width: 768px) {
+          display: none;
+        }
+      }
+    }
+
+    &__links {
+      display: flex;
+      flex-direction: column;
+      gap: 1.55rem;
+      padding-top: 10rem;
+
+      a {
+        color: $white;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 24px;
+      }
     }
   }
 

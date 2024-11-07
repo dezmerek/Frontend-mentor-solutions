@@ -20,8 +20,34 @@ body {
 .header__nav {
   padding: 2.5rem 1.5rem;
 }
-.header__nav--logo {
+.header__nav--mobile {
+  background-color: hsl(0, 0%, 0%);
+  height: 100vh;
+}
+.header__nav__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__nav__container--logo {
   width: 144px;
+}
+@media (min-width: 768px) {
+  .header__nav__container--hamburger {
+    display: none;
+  }
+}
+.header__nav__links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.55rem;
+  padding-top: 10rem;
+}
+.header__nav__links a {
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 24px;
 }
 .header__content {
   color: hsl(0, 0%, 100%);
