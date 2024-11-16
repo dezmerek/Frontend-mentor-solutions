@@ -23,12 +23,30 @@ body {
   background-repeat: no-repeat;
   padding-bottom: 14.15rem;
 
+  @media (min-width: 768px) {
+    background-image: url("./images/desktop/image-hero.jpg");
+    padding-bottom: 9rem;
+  }
+
   &__nav {
     padding: 2.5rem 1.5rem;
+
+    @media (min-width: 768px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      padding: 4rem 11.5%;
+    }
 
     &--mobile {
       background-color: $black;
       height: 100vh;
+
+      @media (min-width: 768px) {
+        background-color: transparent;
+        height: auto;
+      }
     }
 
     &__container {
@@ -38,6 +56,10 @@ body {
 
       &--logo {
         width: 144px;
+
+        @media (min-width: 768px) {
+          width: 190px;
+        }
       }
 
       &--hamburger {
@@ -53,11 +75,22 @@ body {
       gap: 1.55rem;
       padding-top: 10rem;
 
+      @media (min-width: 768px) {
+        flex-direction: row;
+        gap: 2rem;
+        padding-top: 0;
+      }
+
       a {
         color: $white;
         text-decoration: none;
         text-transform: uppercase;
         font-size: 24px;
+
+        @media (min-width: 768px) {
+          font-size: 16px;
+          text-transform: none;
+        }
       }
     }
   }
@@ -71,6 +104,14 @@ body {
     text-transform: uppercase;
     font-size: 40px;
     line-height: 0.96;
+
+    @media (min-width: 768px) {
+      font-size: 72px;
+      line-height: 0.95;
+      margin: 4.2rem 11.5% 0 11.5%;
+      padding: 2.5rem 0 2rem 2.5rem;
+      width: 45%;
+    }
   }
 }
 
@@ -80,16 +121,39 @@ body {
   text-align: center;
   margin-top: 6rem;
 
+  @media (min-width: 768px) {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin: 10rem 11.5% 0 11.5%;
+    position: relative;
+  }
+
   &--image {
-    margin: 0 1.5rem 0 1.5rem;
+    width: 100%;
   }
 
   &__content {
     margin-top: 3rem;
 
+    @media (min-width: 768px) {
+      text-align: left;
+      width: 32rem;
+      margin: 0 2rem 0 4.5rem;
+      padding: 4rem 0 0 6rem;
+      z-index: 1;
+      background-color: $white;
+      position: absolute;
+      right: 0;
+    }
+
     h1 {
       font-weight: 300;
       font-size: 32px;
+
+      @media (min-width: 768px) {
+        font-size: 46px;
+      }
     }
 
     p {
@@ -99,6 +163,11 @@ body {
       padding: 0 2.5rem;
       font-size: 15px;
       line-height: 1.65;
+
+      @media (min-width: 768px) {
+        padding: 0;
+        font-size: 16px;
+      }
     }
   }
 }
@@ -112,8 +181,14 @@ body {
   align-items: center;
   position: relative;
 
+  @media (min-width: 768px) {
+    position: unset;
+    margin-top: 11.5rem;
+  }
+
   h1 {
     text-align: center;
+    font-size: 44px;
   }
 
   button {
@@ -131,6 +206,24 @@ body {
     margin-right: auto;
     left: 0;
     right: 0;
+
+    @media (min-width: 768px) {
+      left: auto;
+      right: auto;
+      bottom: auto;
+      position: unset;
+      margin: unset;
+    }
+  }
+
+  &__head {
+    @media (min-width: 768px) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 0 10%;
+    }
   }
 
   &__content {
@@ -138,6 +231,13 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
+
+    @media (min-width: 768px) {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      padding-top: 5rem;
+      gap: 2rem;
+    }
 
     &__section {
       position: relative;
@@ -161,23 +261,48 @@ body {
 .footer {
   background-color: $black;
   display: grid;
+  justify-items: center;
   grid-template-columns: 1fr;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  grid-template-areas:
+    "logo"
+    "nav"
+    "social"
+    "copy";
   margin-top: 5.95rem;
   padding: 3.5rem;
   padding-bottom: 3.7rem;
 
+  @media (min-width: 768px) {
+    grid-template-areas:
+      "logo social"
+      "nav copy";
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    width: 100%;
+    gap: 2rem;
+    margin-top: 10.9rem;
+    padding: 2.7rem 11.5%;
+  }
+
   &--img {
+    grid-area: logo;
     width: 144px;
+    justify-content: center;
   }
 
   &__nav {
+    grid-area: nav;
     padding-top: 2.5rem;
     display: flex;
     flex-direction: column;
     gap: 1.6rem;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      padding: 0;
+      gap: 2.2rem;
+    }
 
     a {
       color: $white;
@@ -187,15 +312,29 @@ body {
   }
 
   &__social {
+    grid-area: social;
     padding-top: 3.2rem;
     display: flex;
+    justify-content: center;
     gap: 1rem;
+
+    @media (min-width: 768px) {
+      padding: 0;
+      justify-content: flex-end;
+    }
   }
 
   &__copy {
+    grid-area: copy;
     padding-top: 1.1rem;
     color: $dark-gray;
     font-size: 15px;
     font-family: "Alata", sans-serif;
+
+    @media (min-width: 768px) {
+      padding: 0;
+      display: flex;
+      justify-content: flex-end;
+    }
   }
 }
