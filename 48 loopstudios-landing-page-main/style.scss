@@ -29,6 +29,7 @@ body {
   }
 
   &__nav {
+    background-color: transparent;
     padding: 2.5rem 1.5rem;
 
     @media (min-width: 768px) {
@@ -40,12 +41,19 @@ body {
     }
 
     &--mobile {
-      background-color: $black;
       height: 100vh;
 
       @media (min-width: 768px) {
         background-color: transparent;
         height: auto;
+      }
+
+      &.active {
+        background-color: $black;
+
+        @media (min-width: 768px) {
+          background-color: transparent;
+        }
       }
     }
 
@@ -73,12 +81,18 @@ body {
       display: flex;
       flex-direction: column;
       gap: 1.55rem;
+      display: none;
       padding-top: 10rem;
+
+      &.active {
+        display: flex;
+      }
 
       @media (min-width: 768px) {
         flex-direction: row;
         gap: 2rem;
         padding-top: 0;
+        display: flex;
       }
 
       a {

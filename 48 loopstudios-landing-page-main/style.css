@@ -24,6 +24,7 @@ body {
   }
 }
 .header__nav {
+  background-color: transparent;
   padding: 2.5rem 1.5rem;
 }
 @media (min-width: 768px) {
@@ -35,13 +36,20 @@ body {
   }
 }
 .header__nav--mobile {
-  background-color: hsl(0, 0%, 0%);
   height: 100vh;
 }
 @media (min-width: 768px) {
   .header__nav--mobile {
     background-color: transparent;
     height: auto;
+  }
+}
+.header__nav--mobile.active {
+  background-color: hsl(0, 0%, 0%);
+}
+@media (min-width: 768px) {
+  .header__nav--mobile.active {
+    background-color: transparent;
   }
 }
 .header__nav__container {
@@ -66,13 +74,18 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1.55rem;
+  display: none;
   padding-top: 10rem;
+}
+.header__nav__links.active {
+  display: flex;
 }
 @media (min-width: 768px) {
   .header__nav__links {
     flex-direction: row;
     gap: 2rem;
     padding-top: 0;
+    display: flex;
   }
 }
 .header__nav__links a {
