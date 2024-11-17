@@ -279,6 +279,7 @@ body {
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(2, 1fr);
     justify-content: space-between;
+    justify-items: unset;
     width: 100%;
     gap: 2rem;
     margin-top: 10.9rem;
