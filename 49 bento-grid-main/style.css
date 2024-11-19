@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+}
+
+body {
+  margin-top: 2rem;
+  font-size: 18px;
+  display: grid;
+  place-items: center;
+  gap: 2rem;
+}
+
+.card {
+  border-radius: 0.6rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 345px;
+}
+.card h2 {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1;
+}
+.card__title {
+  background-color: hsl(256, 67%, 59%);
+  color: hsl(0, 0%, 100%);
+  text-align: center;
+  padding: 2.5rem 2rem;
+}
+.card__title h1 {
+  font-weight: 500;
+  font-size: 42px;
+  line-height: 1;
+  margin-bottom: 1.5rem;
+}
+.card__title span {
+  color: hsl(39, 100%, 71%);
+}
+.card__title img {
+  width: 12rem;
+}
+.card__multiple {
+  padding: 1rem 1rem;
+}
+.card__multiple img {
+  width: 100%;
+  height: auto;
+}
+.card__multiple h2 {
+  margin-top: 0.6rem;
+}
+.card__schedule {
+  padding: 1rem 1rem 0 1rem;
+  background-color: hsl(39, 100%, 71%);
+  overflow: hidden;
+}
+.card__schedule img {
+  width: 13rem;
+  transform: translateY(1rem);
+  margin-bottom: -0.7rem;
+}
+.card__optimize {
+  padding: 2rem 1.2rem 2rem 1.2rem;
+  background-color: hsl(254, 88%, 90%);
+}
+.card__optimize h2 {
+  text-align: center;
+}
+.card__optimize img {
+  width: 100%;
+  margin-top: 1.3rem;
+}
+.card__optimize p {
+  margin-top: 1rem;
+  text-align: center;
+  padding: 0 1rem;
+  line-height: 1.2;
+}
+.card__follow {
+  padding: 1.4rem 3.7rem;
+  background-color: hsl(256, 67%, 59%);
+}
+.card__follow h2 {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 1;
+  text-align: center;
+  margin-top: 2.2rem;
+  color: hsl(0, 0%, 100%);
+}
+.card__follow img {
+  width: 100%;
+}
+.card__growth {
+  padding: 0.9rem 1.5rem;
+  width: 100%;
+}
+.card__growth h1 {
+  font-weight: 500;
+  font-size: 46px;
+  margin-bottom: 0.4rem;
+  letter-spacing: -2px;
+}
+.card__growth img {
+  width: 11rem;
+  margin-top: 1.5rem;
+}
+.card__create {
+  padding: 2rem 2rem;
+  background-color: hsl(31, 66%, 93%);
+}
+.card__create h1 {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 1;
+  margin-bottom: 1.5rem;
+}
+.card__create h1 em {
+  color: hsl(256, 67%, 59%);
+}
+.card__create img {
+  width: 12rem;
+}
+.card__ai {
+  padding: 1.5rem 1.5rem;
+  background-color: hsl(39, 100%, 71%);
+}
+.card__ai h2 {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 1;
+  margin-bottom: 1.2rem;
+}
+.card__ai img {
+  width: 14rem;
+}
+
+/*# sourceMappingURL=style.css.map */
