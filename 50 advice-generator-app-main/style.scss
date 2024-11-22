@@ -16,6 +16,13 @@ body {
   font-family: "Manrope", sans-serif;
   background-color: $dark-blue;
   font-size: 28px;
+
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
 }
 
 .card {
@@ -30,16 +37,31 @@ body {
   text-align: center;
   padding: 2.5rem 1rem 0rem 1rem;
 
+  @media (min-width: 768px) {
+    max-width: 540px;
+    margin: -2rem 0 0;
+    padding: 3rem 2rem 0.5rem 2rem;
+  }
+
   h1 {
     color: $neon-green;
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 3px;
+
+    @media (min-width: 768px) {
+      font-size: 13px;
+      letter-spacing: 4px;
+    }
   }
 
   p {
     margin-top: 1.5rem;
     font-size: 24px;
+
+    @media (min-width: 768px) {
+      font-size: 28px;
+    }
   }
 
   &__pattern {
@@ -54,6 +76,7 @@ body {
       background: url("./images/pattern-divider-desktop.svg");
       background-repeat: no-repeat;
       background-position: center;
+      margin-top: 2.5rem;
     }
   }
 
@@ -67,5 +90,13 @@ body {
     border: none;
     cursor: pointer;
     transform: translateY(2rem);
+
+    @media (min-width: 768px) {
+      transform: translateY(2.5rem);
+    }
+
+    &:hover {
+      box-shadow: 0 0 30px $neon-green;
+    }
   }
 }
