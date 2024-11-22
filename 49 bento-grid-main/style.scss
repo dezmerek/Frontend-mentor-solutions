@@ -14,15 +14,27 @@ $black: hsl(0, 0%, 7%);
 }
 
 body {
+  display: grid;
+  place-items: center;
   font-family: "DM Sans", sans-serif;
+  min-height: 100vh;
 }
 
-body {
+.container {
   margin-top: 2rem;
   font-size: 18px;
   display: grid;
-  place-items: center;
   gap: 2rem;
+  max-width: 1120px;
+
+  @media (min-width: 768px) {
+    grid-auto-columns: 1fr;
+    grid-template-areas:
+      "create title title optimize"
+      "create multiple schedule optimize"
+      "ai multiple schedule optimize"
+      "ai growth follow follow";
+  }
 }
 
 .card {
@@ -30,10 +42,19 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   max-width: 345px;
 
+  @media (min-width: 768px) {
+    max-width: none;
+    overflow: hidden;
+  }
+
   h2 {
     font-size: 24px;
     font-weight: 500;
     line-height: 1;
+
+    @media (min-width: 768px) {
+      font-size: 30px;
+    }
   }
 
   &__title {
@@ -42,11 +63,20 @@ body {
     text-align: center;
     padding: 2.5rem 2rem;
 
+    @media (min-width: 768px) {
+      grid-area: title;
+      padding: 4rem 2rem;
+    }
+
     h1 {
       font-weight: 500;
       font-size: 42px;
       line-height: 1;
       margin-bottom: 1.5rem;
+
+      @media (min-width: 768px) {
+        font-size: 56px;
+      }
     }
 
     span {
@@ -61,13 +91,29 @@ body {
   &__multiple {
     padding: 1rem 1rem;
 
+    @media (min-width: 768px) {
+      grid-area: multiple;
+      overflow: hidden;
+      padding: 0.5rem 1.5rem 0 1.5rem;
+    }
+
     img {
       width: 100%;
       height: auto;
+
+      @media (min-width: 768px) {
+        width: 300px;
+        transform: translateY(1rem);
+      }
     }
 
     h2 {
       margin-top: 0.6rem;
+
+      @media (min-width: 768px) {
+        margin-top: 2rem;
+        line-height: 0.9;
+      }
     }
   }
 
@@ -76,13 +122,27 @@ body {
     background-color: $y-500;
     overflow: hidden;
 
-    h2 {
+    @media (min-width: 768px) {
+      grid-area: schedule;
+      padding: 1.5rem 1.5rem 0 1.5rem;
+      max-height: 15rem;
     }
 
     img {
       width: 13rem;
       transform: translateY(1rem);
       margin-bottom: -0.7rem;
+
+      @media (min-width: 768px) {
+        width: 100%;
+        transform: translateY(1rem);
+      }
+    }
+
+    h2 {
+      @media (min-width: 768px) {
+        line-height: 0.9;
+      }
     }
   }
 
@@ -90,13 +150,27 @@ body {
     padding: 2rem 1.2rem 2rem 1.2rem;
     background-color: $p-100;
 
+    @media (min-width: 768px) {
+      grid-area: optimize;
+      padding: 3rem 2rem 0 2rem;
+      overflow: hidden;
+    }
+
     h2 {
-      text-align: center;
+      @media (min-width: 768px) {
+        text-align: unset;
+      }
     }
 
     img {
       width: 100%;
       margin-top: 1.3rem;
+
+      @media (min-width: 768px) {
+        margin-top: 0.5rem;
+        transform: translateY(1rem);
+        width: 350px;
+      }
     }
 
     p {
@@ -104,12 +178,25 @@ body {
       text-align: center;
       padding: 0 1rem;
       line-height: 1.2;
+
+      @media (min-width: 768px) {
+        text-align: unset;
+        margin-top: 2.5rem;
+        padding: 0;
+        line-height: 1.1;
+      }
     }
   }
 
   &__follow {
     padding: 1.4rem 3.7rem;
     background-color: $p-500;
+
+    @media (min-width: 768px) {
+      grid-area: follow;
+      display: flex;
+      padding: 2rem 1.5rem;
+    }
 
     h2 {
       font-weight: 500;
@@ -118,16 +205,29 @@ body {
       text-align: center;
       margin-top: 2.2rem;
       color: $white;
+
+      @media (min-width: 768px) {
+        text-align: unset;
+        font-size: 38px;
+      }
     }
 
     img {
       width: 100%;
+
+      @media (min-width: 768px) {
+        width: 14rem;
+      }
     }
   }
 
   &__growth {
     padding: 0.9rem 1.5rem;
     width: 100%;
+
+    @media (min-width: 768px) {
+      grid-area: growth;
+    }
 
     h1 {
       font-weight: 500;
@@ -146,11 +246,21 @@ body {
     padding: 2rem 2rem;
     background-color: $y-100;
 
+    @media (min-width: 768px) {
+      grid-area: create;
+      padding: 5rem 2rem 0 2rem;
+    }
+
     h1 {
       font-weight: 500;
       font-size: 28px;
       line-height: 1;
       margin-bottom: 1.5rem;
+
+      @media (min-width: 768px) {
+        font-size: 33px;
+        line-height: 1.1;
+      }
 
       em {
         color: $p-500;
@@ -166,11 +276,19 @@ body {
     padding: 1.5rem 1.5rem;
     background-color: $y-500;
 
+    @media (min-width: 768px) {
+      grid-area: ai;
+    }
+
     h2 {
       font-weight: 500;
       font-size: 28px;
       line-height: 1;
       margin-bottom: 1.2rem;
+
+      @media (min-width: 768px) {
+        font-size: 33px;
+      }
     }
 
     img {
