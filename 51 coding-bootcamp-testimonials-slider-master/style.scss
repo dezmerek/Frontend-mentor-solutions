@@ -42,7 +42,10 @@ body {
 
     @media (min-width: 768px) {
       align-items: flex-start;
-      background-size: cover;
+      background-size: contain;
+      max-width: 650px;
+      width: 100%;
+      transform: translateX(6.5rem);
     }
 
     &__image {
@@ -56,12 +59,12 @@ body {
       }
 
       img {
-        opacity: 0;
         width: 100%;
         height: 100%;
+        display: none;
 
         &.active {
-          opacity: 1;
+          display: block;
         }
       }
     }
@@ -84,6 +87,10 @@ body {
         padding: 1.2rem 0;
         width: 7rem;
         gap: 2.7rem;
+      }
+
+      img {
+        cursor: pointer;
       }
     }
   }

@@ -39,7 +39,10 @@ body {
 @media (min-width: 768px) {
   .slide__container {
     align-items: flex-start;
-    background-size: cover;
+    background-size: contain;
+    max-width: 650px;
+    width: 100%;
+    transform: translateX(6.5rem);
   }
 }
 .slide__container__image {
@@ -54,12 +57,12 @@ body {
   }
 }
 .slide__container__image img {
-  opacity: 0;
   width: 100%;
   height: 100%;
+  display: none;
 }
 .slide__container__image img.active {
-  opacity: 1;
+  display: block;
 }
 .slide__container__button {
   background-color: white;
@@ -81,6 +84,9 @@ body {
     width: 7rem;
     gap: 2.7rem;
   }
+}
+.slide__container__button img {
+  cursor: pointer;
 }
 .slide__content {
   background: url("./images/pattern-quotes.svg");
