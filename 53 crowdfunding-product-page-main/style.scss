@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap");
+
+$modern-cyan: hsl(176, 50%, 47%);
+$dark-cyan: hsl(176, 72%, 28%);
+$black: hsl(0, 0%, 0%);
+$dark-gray: hsl(0, 0%, 48%);
+$white: hsl(0, 0%, 100%);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Commissioner", sans-serif;
+  font-size: 16px;
+  color: $black;
+}
+
+.header {
+  background: url("./images/image-hero-mobile.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+
+  padding: 2rem 1.5rem;
+  height: 300px;
+
+  @media (min-width: 768px) {
+    background: url("./images/image-hero-desktop.jpg");
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .hamburger {
+      @media (min-width: 768px) {
+        display: none;
+      }
+    }
+  }
+
+  &__menu {
+    display: none;
+    flex-direction: column;
+
+    &.active {
+      display: flex;
+
+      @media (max-width: 767px) {
+        background: $white;
+        gap: 1rem;
+        border-radius: 0.5rem;
+        margin-top: 2.25rem;
+      }
+    }
+
+    @media (min-width: 768px) {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+    }
+
+    a {
+      text-decoration: none;
+      color: $black;
+      font-weight: 500;
+      font-size: 18px;
+
+      @media (min-width: 768px) {
+        color: $white;
+        font-weight: 400;
+      }
+
+      @media (max-width: 767px) {
+        &:nth-child(1) {
+          border-bottom: 1px solid hsl(0, 0%, 90%);
+          padding: 1.5rem 1.5rem;
+        }
+
+        &:nth-child(2) {
+          border-bottom: 1px solid hsl(0, 0%, 90%);
+          padding: 0.5rem 1.5rem 1.5rem 1.5rem;
+        }
+
+        &:nth-child(3) {
+          padding: 0.5rem 1.5rem 1.5rem 1.5rem;
+        }
+      }
+    }
+  }
+}
