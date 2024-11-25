@@ -15,7 +15,9 @@ $white: hsl(0, 0%, 100%);
 body {
   font-family: "Commissioner", sans-serif;
   font-size: 16px;
-  color: $black;
+  color: $dark-gray;
+  background-color: hsl(0, 0%, 98%);
+  padding-bottom: 4.6rem;
 }
 
 .header {
@@ -23,7 +25,6 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
-
   padding: 2rem 1.5rem;
   height: 300px;
 
@@ -58,6 +59,8 @@ body {
         gap: 1rem;
         border-radius: 0.5rem;
         margin-top: 2.25rem;
+        z-index: 1000;
+        position: relative;
       }
     }
 
@@ -91,6 +94,223 @@ body {
 
         &:nth-child(3) {
           padding: 0.5rem 1.5rem 1.5rem 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+.info {
+  background: $white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: -3.5rem 1.6rem 0 1.6rem;
+  padding: 0 1rem 2.4rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid hsl(0, 0%, 95%);
+
+  &--logo {
+    transform: translateY(-50%);
+  }
+
+  h1 {
+    color: $black;
+    font-size: 20px;
+    padding: 0 2rem;
+  }
+
+  p {
+    font-size: 14px;
+    margin-top: 1rem;
+    line-height: 1.5;
+  }
+
+  &__cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.6rem;
+    width: 100%;
+    padding: 0 0.4rem;
+
+    button {
+      background-color: $modern-cyan;
+      border: none;
+      color: $white;
+      font-size: 16px;
+      font-weight: 700;
+      padding: 1.2rem 2.6rem;
+      border-radius: 2rem;
+    }
+
+    &__bookmark {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      span {
+        @media (max-width: 767px) {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.stats {
+  background: $white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 1.5rem 1.6rem 0 1.6rem;
+  padding: 2rem 1rem 2.4rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid hsl(0, 0%, 95%);
+
+  @media (min-width: 768px) {
+    text-align: left;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.55rem;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    h1 {
+      color: $black;
+    }
+
+    p {
+      font-size: 14px;
+      padding-top: 0.5rem;
+    }
+
+    &__total {
+      border-top: 1px solid hsl(0, 0%, 85%);
+      border-bottom: 1px solid hsl(0, 0%, 85%);
+      padding-top: 1.4rem;
+      padding-bottom: 1.6rem;
+
+      @media (min-width: 768px) {
+        border-bottom: none;
+        padding-bottom: 0;
+        border-top: none;
+        border-right: 1px solid hsl(0, 0%, 85%);
+        border-left: 1px solid hsl(0, 0%, 85%);
+        padding-right: 2rem;
+        padding-left: 2rem;
+      }
+    }
+  }
+
+  &__bar {
+    margin-top: 2rem;
+    border-radius: 0.5rem;
+    background: hsl(0, 0, 96);
+    width: 100%;
+    height: 0.75rem;
+
+    &__progress {
+      background: $modern-cyan;
+      border-radius: 0.5rem;
+      height: 100%;
+      width: 80%;
+    }
+  }
+}
+
+.about {
+  background: $white;
+  display: flex;
+  flex-direction: column;
+  margin: 1.5rem 1.6rem 0 1.6rem;
+  padding: 2.5rem 1rem 2.4rem 1.3rem;
+  border-radius: 0.5rem;
+  border: 1px solid hsl(0, 0%, 95%);
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    h1 {
+      color: $black;
+      font-size: 18px;
+    }
+
+    p {
+      font-size: 12px;
+      line-height: 2;
+      letter-spacing: 1px;
+    }
+  }
+
+  &__container {
+    margin-top: 2.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0 0.5rem 0 0;
+    &__card {
+      background: $white;
+      display: flex;
+      flex-direction: column;
+      padding: 1.4rem 1.4rem 1.5rem 1.4rem;
+      border-radius: 0.5rem;
+      border: 1px solid hsl(0, 0%, 95%);
+      h2 {
+        color: $black;
+        font-size: 14px;
+      }
+      h3 {
+        color: $modern-cyan;
+        font-size: 14px;
+        margin-top: 0.5rem;
+      }
+      p {
+        font-size: 14px;
+        margin-top: 1.6rem;
+        line-height: 1.7;
+      }
+      h4 {
+        font-size: 14px;
+        margin-top: 1.5rem;
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        span {
+          font-weight: 700;
+          font-size: 32px;
+          color: $black;
+        }
+      }
+      button {
+        background-color: $modern-cyan;
+        border: none;
+        color: $white;
+        font-size: 14px;
+        font-weight: 700;
+        border-radius: 2rem;
+        margin-top: 1.5rem;
+        width: 10rem;
+        padding: 1rem 0;
+      }
+
+      &--out {
+        opacity: 0.5;
+
+        button {
+          background-color: $dark-gray;
         }
       }
     }
