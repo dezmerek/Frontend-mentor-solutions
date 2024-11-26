@@ -423,7 +423,7 @@ body {
   background: $white;
   display: flex;
   flex-direction: column;
-  padding: 2.5rem 1rem 2.4rem 1.3rem;
+  padding: 2rem 1.5rem 2.4rem 1.5rem;
   border-radius: 0.5rem;
   border: 1px solid hsl(0, 0%, 95%);
   align-items: center;
@@ -435,14 +435,33 @@ body {
   z-index: 9999;
   width: 87%;
   @media (min-width: 768px) {
-    max-width: 730px;
-    // margin: 1.5rem auto 0 auto;
+    max-width: 540px;
     padding: 3rem 3rem 3rem;
   }
 
   h1 {
     color: $black;
     font-size: 18px;
+    margin-top: 1.5rem;
+    @media (min-width: 768px) {
+      margin-top: 3rem;
+      font-size: 24px;
+    }
+  }
+  img {
+    @media (min-width: 768px) {
+      width: 5.5rem;
+    }
+  }
+  p {
+    padding-top: 1.7rem;
+    font-size: 14px;
+    line-height: 1.65;
+    @media (min-width: 768px) {
+      font-size: 16px;
+      padding-top: 1.2rem;
+      line-height: 1.8;
+    }
   }
   button {
     background-color: $modern-cyan;
@@ -451,8 +470,8 @@ body {
     font-size: 14px;
     font-weight: 700;
     border-radius: 2rem;
-    margin-top: 1.5rem;
-    width: 10rem;
+    margin-top: 1.95rem;
+    width: 7rem;
     padding: 1rem 0;
   }
 }
