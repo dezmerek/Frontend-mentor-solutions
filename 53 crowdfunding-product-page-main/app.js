@@ -5,9 +5,9 @@ document.addEventListener("DOMContentLoaded", () => {
   let totalBackers = document.getElementById("totalBackers");
   let daysLeft = document.getElementById("daysLeft");
   let barProgress = document.getElementById("barProgress");
-  let bambooLeft = document.querySelectorAll("#BambooLeft");
-  let blackEditionLeft = document.querySelectorAll("#BlackEditionLeft");
-  let mahoganyLeft = document.querySelectorAll("#MahoganyLeft");
+  let bambooLeft = document.querySelectorAll("#bambooLeft");
+  let blackEditionLeft = document.querySelectorAll("#blackEditionLeft");
+  let mahoganyLeft = document.querySelectorAll("#mahoganyLeft");
 
   let ofTotalNumber = 89914;
   let totalBackersNumber = 5007;

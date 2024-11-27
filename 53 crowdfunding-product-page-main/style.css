@@ -419,7 +419,7 @@ body {
 
 .modal {
   background: hsl(0, 0%, 100%);
-  display: flex;
+  display: none;
   flex-direction: column;
   padding: 2rem 1.5rem 2.4rem 1.5rem;
   border-radius: 0.5rem;
@@ -434,15 +434,33 @@ body {
   width: 87%;
   box-shadow: 0 0 3rem hsla(0, 0%, 0%, 0.5);
 }
+@media (min-width: 768px) {
+  .modal {
+    max-width: 730px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 3rem 3rem 3rem;
+  }
+}
 .modal__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+@media (min-width: 768px) {
+  .modal__header {
+    align-items: flex-start;
+  }
+}
 .modal__header h1 {
   color: hsl(0, 0%, 0%);
   grid-area: h1;
   font-size: 18px;
+}
+@media (min-width: 768px) {
+  .modal__header h1 {
+    font-size: 24px;
+  }
 }
 .modal__header img {
   width: 1rem;
@@ -453,24 +471,74 @@ body {
   font-size: 14px;
   line-height: 1.7;
 }
+@media (min-width: 768px) {
+  .modal--text {
+    margin-top: 1.2rem;
+    font-size: 16px;
+  }
+}
 .modal__container {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   margin-top: 1.5rem;
 }
+@media (min-width: 768px) {
+  .modal__container {
+    margin-top: 2rem;
+  }
+}
 .modal__container__card {
   border-radius: 0.5rem;
   border: 1px solid hsl(0, 0%, 85%);
-  padding: 2rem 1.4rem 1.8rem 1.4rem;
-  display: grid;
-  grid-template-areas: "input h2" "input h3" "p p" "h4 h4";
-  grid-template-columns: auto 1fr;
+  display: flex;
+  flex-direction: column;
 }
-.modal__container__card:nth-last-child(1) {
+.modal__container__card.out {
   opacity: 0.5;
 }
-.modal__container__card input[type=radio] {
+.modal__container__card.out input {
+  user-select: none;
+  pointer-events: none;
+}
+.modal__container__card:first-of-type p {
+  padding-top: 2rem;
+}
+@media (min-width: 768px) {
+  .modal__container__card:first-of-type p {
+    padding-top: 1rem;
+  }
+}
+.modal__container__card__content {
+  padding: 2rem 1.4rem 1.8rem 1.4rem;
+  display: grid;
+  grid-template-areas: "input title" "p p" "h4 h4";
+  grid-template-columns: auto 1fr;
+}
+@media (min-width: 768px) {
+  .modal__container__card__content {
+    grid-template-areas: "input title h4" "p p p";
+  }
+}
+.modal__container__card__content__title {
+  grid-area: title;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 1rem;
+  gap: 0.5rem;
+  margin-top: -0.5rem;
+}
+@media (min-width: 768px) {
+  .modal__container__card__content__title {
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 0rem;
+    padding-left: 1.8rem;
+    gap: 1rem;
+  }
+}
+.modal__container__card__content input[type=radio] {
   appearance: none;
   width: 1.5rem;
   height: 1.5rem;
@@ -481,10 +549,10 @@ body {
   position: relative;
   grid-area: input;
 }
-.modal__container__card input[type=radio]:checked {
+.modal__container__card__content input[type=radio]:checked {
   border: 2px solid hsl(0, 0%, 85%);
 }
-.modal__container__card input[type=radio]:checked::before {
+.modal__container__card__content input[type=radio]:checked::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -495,43 +563,126 @@ body {
   border-radius: 50%;
   background-color: hsl(176, 50%, 47%);
 }
-.modal__container__card:nth-child(1) h2 {
-  padding: 0.65rem 0 0 1rem;
-}
-.modal__container__card h2 {
+.modal__container__card__content h2 {
   color: hsl(0, 0%, 0%);
-  grid-area: h2;
   font-size: 14px;
-  padding: 0 0 0 1rem;
-  margin-top: -0.5rem;
 }
-.modal__container__card h3 {
+@media (min-width: 768px) {
+  .modal__container__card__content h2 {
+    font-size: 16px;
+  }
+}
+.modal__container__card__content h3 {
   color: hsl(176, 50%, 47%);
-  grid-area: h3;
   font-size: 14px;
-  padding: 0 0 0 1rem;
-  margin-top: 0.45rem;
 }
-.modal__container__card:nth-child(1) p {
-  padding-top: 2.2rem;
+@media (min-width: 768px) {
+  .modal__container__card__content h3 {
+    font-size: 16px;
+  }
 }
-.modal__container__card p {
+.modal__container__card__content p {
   grid-area: p;
   font-size: 14px;
   padding-top: 1.5rem;
   line-height: 1.7;
 }
-.modal__container__card h4 {
+@media (min-width: 768px) {
+  .modal__container__card__content p {
+    font-size: 15px;
+    padding: 1rem 0 0 3.2rem;
+  }
+}
+.modal__container__card__content h4 {
   grid-area: h4;
   padding-top: 1.5rem;
   font-weight: 400;
   font-size: 14px;
 }
-.modal__container__card h4 span {
+@media (min-width: 768px) {
+  .modal__container__card__content h4 {
+    font-size: 16px;
+    padding-top: 0;
+  }
+}
+.modal__container__card__content h4 span {
   color: hsl(0, 0%, 0%);
   font-size: 17px;
   padding-right: 0.5rem;
   font-weight: 700;
+}
+@media (min-width: 768px) {
+  .modal__container__card__content h4 span {
+    font-size: 18px;
+  }
+}
+.modal__container__card__pledge {
+  padding: 1.5rem 1.4rem 1.5rem 1.4rem;
+  border-top: 1px solid hsl(0, 0%, 85%);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .modal__container__card__pledge {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.8rem 1.5rem rem 1.5rem;
+  }
+}
+.modal__container__card__pledge p {
+  font-size: 14px;
+  line-height: 1.7;
+}
+@media (min-width: 768px) {
+  .modal__container__card__pledge p {
+    font-size: 15px;
+  }
+}
+.modal__container__card__pledge__input {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+@media (min-width: 768px) {
+  .modal__container__card__pledge__input {
+    margin-top: 0;
+  }
+}
+.modal__container__card__pledge__input div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid hsl(0, 0%, 85%);
+  border-radius: 2rem;
+  width: 6.5rem;
+  padding-left: 1.5rem;
+}
+.modal__container__card__pledge__input div span {
+  font-size: 14px;
+  color: hsl(0, 0%, 50%);
+  font-weight: 700;
+}
+.modal__container__card__pledge__input input {
+  font-size: 14px;
+  border: none;
+  width: 2.5rem;
+  font-weight: 700;
+  color: hsl(0, 0%, 0%);
+}
+.modal__container__card__pledge__input input::placeholder {
+  color: hsl(0, 0%, 0%);
+}
+.modal__container__card__pledge__input button {
+  background-color: hsl(176, 50%, 47%);
+  border: none;
+  color: hsl(0, 0%, 100%);
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 2rem;
+  padding: 1rem 1.7rem;
 }
 
 .confirmation {
