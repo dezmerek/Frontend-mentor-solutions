@@ -5,27 +5,32 @@ document.addEventListener("DOMContentLoaded", () => {
   let totalBackers = document.getElementById("totalBackers");
   let daysLeft = document.getElementById("daysLeft");
   let barProgress = document.getElementById("barProgress");
-  let BambooLeft = document.getElementById("BambooLeft");
-  let BlackEditionLeft = document.getElementById("BlackEditionLeft");
-  let MahoganyLeft = document.getElementById("MahoganyLeft");
+  let bambooLeft = document.querySelectorAll("#BambooLeft");
+  let blackEditionLeft = document.querySelectorAll("#BlackEditionLeft");
+  let mahoganyLeft = document.querySelectorAll("#MahoganyLeft");
 
   let ofTotalNumber = 89914;
   let totalBackersNumber = 5007;
   let daysLeftNumber = 56;
   let barProgressNumber = (ofTotalNumber / 100000) * 100;
-  let BambooLeftNumber = 101;
-  let BlackEditionLeftNumber = 64;
-  let MahoganyLeftNumber = 0;
+  let bambooLeftNumber = 101;
+  let blackEditionLeftNumber = 64;
+  let mahoganyLeftNumber = 0;
 
   ofTotal.innerHTML = "$" + ofTotalNumber.toLocaleString();
   totalBackers.innerHTML = totalBackersNumber.toLocaleString();
   daysLeft.innerHTML = daysLeftNumber;
   barProgress.style.width = barProgressNumber + "%";
-  BambooLeft.innerHTML = BambooLeftNumber;
-  BlackEditionLeft.innerHTML = BlackEditionLeftNumber;
-  MahoganyLeft.innerHTML = MahoganyLeftNumber;
 
-  console.log(barProgressNumber);
+  bambooLeft.forEach((count) => {
+    count.innerHTML = bambooLeftNumber;
+  });
+  blackEditionLeft.forEach((count) => {
+    count.innerHTML = blackEditionLeftNumber;
+  });
+  mahoganyLeft.forEach((count) => {
+    count.innerHTML = mahoganyLeftNumber;
+  });
 
   hamburgerIcon.addEventListener("click", () => {
     menu.classList.toggle("active");

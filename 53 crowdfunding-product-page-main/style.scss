@@ -419,9 +419,149 @@ body {
   }
 }
 
-.confirmation {
+.modal {
   background: $white;
   display: flex;
+  flex-direction: column;
+  padding: 2rem 1.5rem 2.4rem 1.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid hsl(0, 0%, 95%);
+  position: fixed;
+  top: 8%;
+  left: 50%;
+  transform: translate(-50%, 8%);
+  z-index: 9999;
+  max-height: 77%;
+  overflow-y: auto;
+  width: 87%;
+  box-shadow: 0 0 3rem hsla(0, 0%, 0%, 0.5);
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h1 {
+      color: $black;
+      grid-area: h1;
+      font-size: 18px;
+    }
+    img {
+      width: 1rem;
+      grid-area: img;
+    }
+  }
+
+  &--text {
+    margin-top: 1.5rem;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+
+    &__card {
+      border-radius: 0.5rem;
+      border: 1px solid hsl(0, 0%, 85%);
+      padding: 2rem 1.4rem 1.8rem 1.4rem;
+      display: grid;
+      grid-template-areas:
+        "input h2"
+        "input h3"
+        "p p"
+        "h4 h4";
+      grid-template-columns: auto 1fr;
+
+      &:nth-last-child(1) {
+        opacity: 0.5;
+      }
+
+      input[type="radio"] {
+        appearance: none;
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 50%;
+        border: 2px solid hsl(0, 0%, 85%);
+        background-color: white;
+        cursor: pointer;
+        position: relative;
+        grid-area: input;
+      }
+
+      input[type="radio"]:checked {
+        border: 2px solid hsl(0, 0%, 85%);
+      }
+
+      input[type="radio"]:checked::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 0.75rem;
+        height: 0.75rem;
+        border-radius: 50%;
+        background-color: $modern-cyan;
+      }
+
+      &:nth-child(1) {
+        h2 {
+          padding: 0.65rem 0 0 1rem;
+        }
+      }
+
+      h2 {
+        color: $black;
+        grid-area: h2;
+        font-size: 14px;
+        padding: 0 0 0 1rem;
+        margin-top: -0.5rem;
+      }
+
+      h3 {
+        color: $modern-cyan;
+        grid-area: h3;
+        font-size: 14px;
+        padding: 0 0 0 1rem;
+        margin-top: 0.45rem;
+      }
+
+      &:nth-child(1) {
+        p {
+          padding-top: 2.2rem;
+        }
+      }
+
+      p {
+        grid-area: p;
+        font-size: 14px;
+        padding-top: 1.5rem;
+        line-height: 1.7;
+      }
+
+      h4 {
+        grid-area: h4;
+        padding-top: 1.5rem;
+        font-weight: 400;
+        font-size: 14px;
+        span {
+          color: $black;
+          font-size: 17px;
+          padding-right: 0.5rem;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
+
+.confirmation {
+  background: $white;
+  display: none;
   flex-direction: column;
   padding: 2rem 1.5rem 2.4rem 1.5rem;
   border-radius: 0.5rem;
