@@ -416,13 +416,8 @@ body {
         margin-top: 1.5rem;
         width: 10rem;
         padding: 1rem 0;
-        cursor: pointer;
         @media (min-width: 768px) {
           grid-area: button;
-        }
-
-        &:hover {
-          background-color: $dark-cyan;
         }
       }
 
@@ -775,10 +770,5 @@ body {
     margin-top: 1.95rem;
     width: 7rem;
     padding: 1rem 0;
-    cursor: pointer;
-
-    &:hover {
-      background-color: $dark-cyan;
-    }
   }
 }

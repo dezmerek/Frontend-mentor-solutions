@@ -157,6 +157,10 @@ body {
   font-weight: 700;
   padding: 1.2rem 2.6rem;
   border-radius: 2rem;
+  cursor: pointer;
+}
+.info__cta button:hover {
+  background-color: hsl(176, 72%, 28%);
 }
 @media (min-width: 768px) {
   .info__cta button {
@@ -167,6 +171,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 @media (min-width: 768px) {
   .info__cta__bookmark {
@@ -183,6 +188,12 @@ body {
     font-weight: 700;
     padding: 0 1.25rem;
   }
+}
+.info__cta__bookmark.addBookmark {
+  background: hsl(192, 26%, 96%);
+}
+.info__cta__bookmark.addBookmark span {
+  color: hsl(176, 72%, 28%);
 }
 
 .stats {
@@ -404,11 +415,15 @@ body {
   margin-top: 1.5rem;
   width: 10rem;
   padding: 1rem 0;
+  cursor: pointer;
 }
 @media (min-width: 768px) {
   .about__container__card button {
     grid-area: button;
   }
+}
+.about__container__card button:hover {
+  background-color: hsl(176, 72%, 28%);
 }
 .about__container__card--out {
   opacity: 0.5;
@@ -745,6 +760,10 @@ body {
   margin-top: 1.95rem;
   width: 7rem;
   padding: 1rem 0;
+  cursor: pointer;
+}
+.confirmation button:hover {
+  background-color: hsl(176, 72%, 28%);
 }
 
 /*# sourceMappingURL=style.css.map */
