@@ -461,6 +461,10 @@ body {
     padding: 3rem 3rem 3rem;
   }
 
+  &.active {
+    display: flex;
+  }
+
   &__header {
     display: flex;
     justify-content: space-between;
@@ -481,6 +485,7 @@ body {
     img {
       width: 1rem;
       grid-area: img;
+      cursor: pointer;
     }
   }
 
@@ -714,6 +719,10 @@ body {
             font-weight: 700;
             border-radius: 2rem;
             padding: 1rem 1.7rem;
+            cursor: pointer;
+            &:hover {
+              background-color: $dark-cyan;
+            }
           }
         }
       }

@@ -10,6 +10,9 @@ document.addEventListener("DOMContentLoaded", () => {
   let mahoganyLeft = document.querySelectorAll("#mahoganyLeft");
   let addBookmark = document.querySelector(".info__cta__bookmark");
   const imageBookmark = document.querySelector(".info__cta__bookmark img");
+  const backProject = document.querySelector(".modal");
+  const buttonBackProject = document.querySelector(".info__cta button");
+  const iconCloseModal = document.querySelector(".modal__header img");
 
   let ofTotalNumber = 89914;
   let totalBackersNumber = 5007;
@@ -54,5 +57,13 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       imageBookmark.src = "./images/icon-bookmark-select.svg";
     }
+  });
+
+  buttonBackProject.addEventListener("click", () => {
+    backProject.classList.toggle("active");
+  });
+
+  iconCloseModal.addEventListener("click", () => {
+    backProject.classList.toggle("active");
   });
 });

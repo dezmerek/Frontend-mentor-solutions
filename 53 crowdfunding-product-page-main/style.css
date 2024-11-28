@@ -457,6 +457,9 @@ body {
     padding: 3rem 3rem 3rem;
   }
 }
+.modal.active {
+  display: flex;
+}
 .modal__header {
   display: flex;
   justify-content: space-between;
@@ -480,6 +483,7 @@ body {
 .modal__header img {
   width: 1rem;
   grid-area: img;
+  cursor: pointer;
 }
 .modal--text {
   margin-top: 1.5rem;
@@ -698,6 +702,10 @@ body {
   font-weight: 700;
   border-radius: 2rem;
   padding: 1rem 1.7rem;
+  cursor: pointer;
+}
+.modal__container__card__pledge__input button:hover {
+  background-color: hsl(176, 72%, 28%);
 }
 
 .confirmation {
