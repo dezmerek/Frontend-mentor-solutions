@@ -8,6 +8,8 @@ document.addEventListener("DOMContentLoaded", () => {
   let bambooLeft = document.querySelectorAll("#bambooLeft");
   let blackEditionLeft = document.querySelectorAll("#blackEditionLeft");
   let mahoganyLeft = document.querySelectorAll("#mahoganyLeft");
+  let addBookmark = document.querySelector(".info__cta__bookmark");
+  const imageBookmark = document.querySelector(".info__cta__bookmark img");
 
   let ofTotalNumber = 89914;
   let totalBackersNumber = 5007;
@@ -40,6 +42,17 @@ document.addEventListener("DOMContentLoaded", () => {
       hamburgerIcon.src = "./images/icon-close-menu.svg";
     } else {
       hamburgerIcon.src = "./images/icon-hamburger.svg";
+    }
+  });
+
+  addBookmark.addEventListener("click", () => {
+    addBookmark.classList.toggle("addBookmark");
+
+    const isBookmark = imageBookmark.src.includes("icon-bookmark-select.svg");
+    if (isBookmark) {
+      imageBookmark.src = "./images/icon-bookmark.svg";
+    } else {
+      imageBookmark.src = "./images/icon-bookmark-select.svg";
     }
   });
 });
