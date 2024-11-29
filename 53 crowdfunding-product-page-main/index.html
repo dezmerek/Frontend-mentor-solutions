@@ -94,7 +94,7 @@
             launch our promotional campaign, and you’ll be added to a special
             Backer member list.
           </p>
-          <h4><span id="bambooLeft">0</span> left</h4>
+          <h4><span class="bambooLeft" id="bambooLeft">0</span> left</h4>
           <button>Select Reward</button>
         </div>
         <div class="about__container__card">
@@ -105,11 +105,13 @@
             you. You’ll be added to our Backer member list. Shipping is
             included.
           </p>
-          <h4><span id="blackEditionLeft">0</span> left</h4>
+          <h4>
+            <span class="blackEditionLeft" id="blackEditionLeft">0</span> left
+          </h4>
           <button>Select Reward</button>
         </div>
 
-        <div class="about__container__card about__container__card--out">
+        <div class="about__container__card">
           <h2>Mahogany Special Edition</h2>
           <h3>Pledge $200 or more</h3>
           <p>
@@ -117,7 +119,7 @@
             personal thank you. You’ll be added to our Backer member list.
             Shipping is included.
           </p>
-          <h4><span id="MahoganyLeft">0</span> left</h4>
+          <h4><span id="mahoganyLeft">0</span> left</h4>
           <button>Out of Stock</button>
         </div>
       </div>
@@ -150,7 +152,13 @@
             <div class="modal__container__card__pledge__input">
               <div>
                 <span class="currency-symbol">$</span>
-                <input type="number" name="" id="" placeholder="25" />
+                <input
+                  type="number"
+                  name=""
+                  id="pledge1Amount"
+                  placeholder="25"
+                  value="25"
+                />
               </div>
               <button>Continue</button>
             </div>
@@ -175,7 +183,13 @@
             <div class="modal__container__card__pledge__input">
               <div>
                 <span class="currency-symbol">$</span>
-                <input type="number" name="" id="" placeholder="25" />
+                <input
+                  type="number"
+                  name=""
+                  id="pledge2Amount"
+                  placeholder="25"
+                  value="25"
+                />
               </div>
               <button>Continue</button>
             </div>
@@ -200,7 +214,13 @@
             <div class="modal__container__card__pledge__input">
               <div>
                 <span class="currency-symbol">$</span>
-                <input type="number" name="" id="" placeholder="75" />
+                <input
+                  type="number"
+                  name=""
+                  id="pledge3Amount"
+                  placeholder="75"
+                  value="75"
+                />
               </div>
               <button>Continue</button>
             </div>
@@ -232,7 +252,7 @@
         Monitor Riser worldwide. You will get an email once our campaign is
         completed.
       </p>
-      <button>Got it!</button>
+      <button id="confirmationButton">Got it!</button>
     </div>
     <script src="app.js"></script>
   </body>

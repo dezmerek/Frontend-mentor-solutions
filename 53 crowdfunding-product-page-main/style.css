@@ -425,10 +425,10 @@ body {
 .about__container__card button:hover {
   background-color: hsl(176, 72%, 28%);
 }
-.about__container__card--out {
+.about__container__card.out {
   opacity: 0.5;
 }
-.about__container__card--out button {
+.about__container__card.out button {
   background-color: hsl(0, 0%, 48%);
 }
 
@@ -642,8 +642,11 @@ body {
   padding: 1.5rem 1.4rem 1.5rem 1.4rem;
   border-top: 1px solid hsl(0, 0%, 85%);
   text-align: center;
-  display: flex;
+  display: none;
   flex-direction: column;
+}
+.modal__container__card__pledge.active {
+  display: flex;
 }
 @media (min-width: 768px) {
   .modal__container__card__pledge {
@@ -736,6 +739,9 @@ body {
     max-width: 540px;
     padding: 3rem 3rem 3rem;
   }
+}
+.confirmation.active {
+  display: flex;
 }
 .confirmation h1 {
   color: hsl(0, 0%, 0%);
