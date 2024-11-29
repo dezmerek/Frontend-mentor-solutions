@@ -520,6 +520,9 @@ body {
   user-select: none;
   pointer-events: none;
 }
+.modal__container__card.selected {
+  border: 2px solid hsl(176, 50%, 47%);
+}
 .modal__container__card:first-of-type p {
   padding-top: 2rem;
 }
@@ -664,6 +667,7 @@ body {
   justify-content: center;
   gap: 1rem;
   margin-top: 1rem;
+  cursor: pointer;
 }
 @media (min-width: 768px) {
   .modal__container__card__pledge__input {
@@ -678,6 +682,9 @@ body {
   border-radius: 2rem;
   width: 6.5rem;
   padding-left: 1.5rem;
+}
+.modal__container__card__pledge__input div:hover {
+  border: 2px solid hsl(176, 50%, 47%);
 }
 .modal__container__card__pledge__input div span {
   font-size: 14px;

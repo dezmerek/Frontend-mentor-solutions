@@ -13,6 +13,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const backProject = document.querySelector(".modal");
   const buttonBackProject = document.querySelector(".info__cta button");
   const iconCloseModal = document.querySelector(".modal__header img");
+  const selectRewardButtons = document.querySelectorAll(
+    ".about__container__card button:not(.about__container__card--out button)"
+  );
 
   let ofTotalNumber = 89914;
   let totalBackersNumber = 5007;
@@ -65,5 +68,37 @@ document.addEventListener("DOMContentLoaded", () => {
 
   iconCloseModal.addEventListener("click", () => {
     backProject.classList.toggle("active");
+  });
+
+  ////////////////////////////
+  const radioButtons = document.querySelectorAll(
+    'input[type="radio"][name="group1"]'
+  );
+  const modalCards = document.querySelectorAll(".modal__container__card");
+
+  const updateSelection = () => {
+    modalCards.forEach((card) => card.classList.remove("selected"));
+
+    const selectedRadio = Array.from(radioButtons).find(
+      (radio) => radio.checked
+    );
+    if (selectedRadio) {
+      const card = selectedRadio.closest(".modal__container__card");
+      card.classList.add("selected");
+    }
+  };
+
+  radioButtons.forEach((radio) => {
+    radio.addEventListener("change", updateSelection);
+  });
+
+  selectRewardButtons.forEach((button, index) => {
+    button.addEventListener("click", () => {
+      if (!backProject.classList.contains("active")) {
+        backProject.classList.add("active");
+      }
+      radioButtons[index + 1].checked = true;
+      updateSelection();
+    });
   });
 });
