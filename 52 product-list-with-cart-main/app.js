@@ -34,6 +34,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
         deserts.appendChild(addDiv);
       });
+
+      const addToCard = document.querySelectorAll(
+        ".desserts__container__card__buttons--add"
+      );
+      const buttonQuantity = document.querySelectorAll(
+        ".desserts__container__card__buttons__quantity"
+      );
+
+      addToCard.forEach((button, index) => {
+        button.addEventListener("click", () => {
+          button.style.display = "none";
+          buttonQuantity[index].style.display = "flex";
+        });
+      });
     })
+
     .catch((error) => console.error("Error: ", error));
 });

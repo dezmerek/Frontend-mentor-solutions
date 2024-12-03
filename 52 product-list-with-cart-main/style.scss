@@ -61,7 +61,7 @@ body {
           align-items: center;
           gap: 0.5rem;
           cursor: pointer;
-          display: none;
+          display: flex;
 
           &::before {
             content: "";
@@ -80,7 +80,7 @@ body {
         }
 
         &__quantity {
-          display: flex;
+          display: none;
           background-color: $color-red;
           justify-content: space-between;
           align-items: center;
