@@ -31,7 +31,7 @@ body {
   &__container {
     display: grid;
     padding-top: 1.9rem;
-    gap: 1.5rem;
+    gap: 1.55rem;
 
     @media (min-width: 768px) {
       grid-template-columns: repeat(3, 1fr);
@@ -46,18 +46,22 @@ body {
       &__buttons {
         display: flex;
         justify-content: center;
-        button {
+        transform: translateY(-1.7rem);
+
+        &--add {
           background-color: $color-white;
           border: 1px solid $color-rose-400;
           border-radius: 1.5rem;
-          padding: 0.7rem 1.7rem;
+          padding: 0.7rem 0;
+          width: 10rem;
           font-weight: 600;
-          transform: translateY(-1.7rem);
           font-size: 14px;
-
+          justify-content: center;
           color: $color-rose-900;
-          display: flex;
           align-items: center;
+          gap: 0.5rem;
+          cursor: pointer;
+          display: none;
 
           &::before {
             content: "";
@@ -75,10 +79,44 @@ body {
           }
         }
 
-        &--add {
-          cursor: pointer;
-          gap: 0.5rem;
-          display: none;
+        &__quantity {
+          display: flex;
+          background-color: $color-red;
+          justify-content: space-between;
+          align-items: center;
+          border-radius: 1.5rem;
+          width: 10rem;
+          padding: 0.735rem 0;
+          color: $color-white;
+
+          &--count {
+            font-weight: 600;
+          }
+
+          button {
+            background: inherit;
+            border: 1px solid $color-white;
+            border-radius: 50%;
+            cursor: pointer;
+            width: 1rem;
+            height: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 0.9rem;
+
+            svg {
+              fill: $color-white;
+            }
+
+            &:hover {
+              background-color: $color-white;
+
+              svg {
+                fill: $color-red;
+              }
+            }
+          }
         }
       }
 
@@ -93,7 +131,7 @@ body {
         font-size: 14px;
         color: $color-rose-500;
         font-weight: 400;
-        padding-top: 2rem;
+        margin-top: -0.8rem;
       }
 
       p {

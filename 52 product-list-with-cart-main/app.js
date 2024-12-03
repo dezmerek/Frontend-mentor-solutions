@@ -17,10 +17,14 @@ document.addEventListener("DOMContentLoaded", () => {
         </picture>
         <div class="desserts__container__card__buttons">
          <button class="desserts__container__card__buttons--add">Add to Cart</button>
-         <div class="desserts__container__card__quantity">
-          <button class="decrease">-</button>
-          <span class="count">1</span>
-          <button class="increase">+</button>
+         <div class="desserts__container__card__buttons__quantity">
+          <button class="desserts__container__card__buttons__quantity--decrease">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="2" fill="none" viewBox="0 0 10 2"><path  d="M0 .375h10v1.25H0V.375Z"/></svg>
+          </button>
+          <span class="desserts__container__card__buttons__quantity--count">1</span>
+          <button class="desserts__container__card__buttons__quantity--increase">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" viewBox="0 0 10 10"><path  d="M10 4.375H5.625V0h-1.25v4.375H0v1.25h4.375V10h1.25V5.625H10v-1.25Z"/></svg>
+          </button>
         </div>
         </div>
         <h3>${item.category}</h3>
@@ -33,14 +37,3 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .catch((error) => console.error("Error: ", error));
 });
-
-// button.addEventListener("click", function () {
-//   fetch("https://api.adviceslip.com/advice")
-//     .then((response) => response.json())
-//     .then(data);
-
-//   function data(data) {
-//     h1.textContent = "Advice #" + data.slip.id;
-//     p.textContent = data.slip.advice;
-//   }
-// });
