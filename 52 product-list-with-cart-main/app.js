@@ -126,27 +126,61 @@ document.addEventListener("DOMContentLoaded", () => {
 
         addItems.forEach((item) => {
           const cartItem = document.createElement("div");
-          cartItem.classList.add("cart__item");
+          cartItem.classList.add("cart__select__item");
           cartItem.innerHTML = `
-            <div class="cart__item__details">
-              <h3>${item.name}</h3>
-              <p>Quantity: ${item.quantity}</p>
-              <p>Price: $${(item.price * item.quantity).toFixed(2)}</p>
-              <button class="cart__item__remove" data-id="${
+              <div>
+                <h3>${item.name}</h3>
+                <div>
+                  <h4>${item.quantity}x</h4>
+                  <p>@ $${item.price.toFixed(2)} <strong>$${(
+            item.price * item.quantity
+          ).toFixed(2)}</strong>
+          </p>
+                </div>
+              </div>
+              <button class="cart__select__remove" data-id="${
                 item.id
-              }">Remove</button>
-            </div>
+              }"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" viewBox="0 0 10 10"><path fill="#CAAFA7" d="M8.375 9.375 5 6 1.625 9.375l-1-1L4 5 .625 1.625l1-1L5 4 8.375.625l1 1L6 5l3.375 3.375-1 1Z"/></svg></button>
           `;
           totalPrice += item.price * item.quantity;
           cartContent.appendChild(cartItem);
         });
 
         const totalDiv = document.createElement("div");
-        totalDiv.classList.add("cart__total");
-        totalDiv.innerHTML = `<h3>Total Price: $${totalPrice.toFixed(2)}</h3>`;
+        totalDiv.classList.add("cart__select__total");
+        totalDiv.innerHTML = `
+        <p>Order Total
+        <h1>$${totalPrice.toFixed(2)}</p></h1>
+        `;
         cartContent.appendChild(totalDiv);
 
-        const removeButtons = document.querySelectorAll(".cart__item__remove");
+        const infoDiv = document.createElement("div");
+        infoDiv.classList.add("cart__select__info");
+        infoDiv.innerHTML = `
+          <img src="./assets/images/icon-carbon-neutral.svg" alt="" />
+          <p>This is a <b>carbon-neutral</b> delivery</p>
+        `;
+        cartContent.appendChild(infoDiv);
+
+        const button = document.createElement("button");
+        button.classList.add("cart__select--button");
+        button.innerHTML = `
+          Confirm Order
+        `;
+        cartContent.appendChild(button);
+
+        const nonAdd = document.querySelector(".cart__content");
+        if (totalPrice > 1) {
+          nonAdd.style.display = "none";
+          totalDiv.style.display = "flex";
+        } else {
+          nonAdd.style.display = "flex";
+          totalDiv.style.display = "none";
+        }
+
+        const removeButtons = document.querySelectorAll(
+          ".cart__select__remove"
+        );
         removeButtons.forEach((button) => {
           button.addEventListener("click", () => {
             const idToRemove = button.getAttribute("data-id");
