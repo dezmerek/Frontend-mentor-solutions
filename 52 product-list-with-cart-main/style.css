@@ -226,4 +226,114 @@ body {
   background-color: hsl(14, 65%, 9%);
 }
 
+.order {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 0.5rem 0.5rem 0 0;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  padding: 2.45rem 1.5rem;
+  margin: 6rem 0;
+  width: 100%;
+  color: hsl(14, 65%, 9%);
+  gap: 9rem;
+  height: 100vh;
+}
+.order h1 {
+  font-size: 40px;
+  color: hsl(14, 65%, 9%);
+  padding-top: 1.2rem;
+  line-height: 1.2;
+  padding-bottom: 0.5rem;
+}
+.order p {
+  color: hsl(12, 20%, 44%);
+}
+.order__container {
+  margin-top: 2rem;
+  background-color: hsl(20, 50%, 98%);
+  display: flex;
+  flex-direction: column;
+}
+.order__container__item {
+  padding: 1.5rem 1.3rem 1rem 1.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid hsl(13, 31%, 94%);
+}
+.order__container__item img {
+  border-radius: 0.5rem;
+  width: 3rem;
+  height: 3rem;
+}
+.order__container__item div {
+  display: flex;
+  gap: 1rem;
+}
+.order__container__item div h3 {
+  font-size: 14px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 160px;
+}
+.order__container__item div div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.order__container__item div div h4 {
+  color: hsl(14, 86%, 42%);
+  font-size: 13px;
+}
+.order__container__item div div p {
+  color: hsl(12, 20%, 44%);
+  font-size: 13px;
+}
+.order__container__item div div div {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.order__container__total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.9rem 1.5rem 1.5rem 1.5rem;
+  margin-top: 0.2rem;
+}
+.order__container__total h1 {
+  color: hsl(14, 65%, 9%);
+  font-size: 24px;
+  padding: 0;
+  margin: 0;
+}
+.order__container__total p {
+  color: hsl(14, 65%, 9%);
+  font-size: 14px;
+  padding: 0;
+  margin: 0;
+}
+.order__container__total p strong {
+  font-weight: 700;
+}
+.order__button button {
+  background-color: hsl(14, 86%, 42%);
+  border: none;
+  border-radius: 1.8rem;
+  font-weight: 600;
+  font-size: 16px;
+  justify-content: center;
+  color: hsl(0, 0%, 100%);
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  width: 100%;
+  padding: 1.1rem 0;
+  margin-top: 2.05rem;
+}
+
 /*# sourceMappingURL=style.css.map */
