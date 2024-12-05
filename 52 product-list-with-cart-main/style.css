@@ -8,10 +8,28 @@
 body {
   font-family: "Red Hat Text", sans-serif;
   background-color: hsl(20, 50%, 98%);
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+}
+
+@media (min-width: 768px) {
+  .container {
+    display: flex;
+    margin-top: 5.5rem;
+    width: 1215px;
+    gap: 3rem;
+    justify-content: center;
+  }
 }
 
 .desserts {
   padding: 1.3rem 1.5rem 2rem 1.5rem;
+}
+@media (min-width: 768px) {
+  .desserts {
+    padding: 0;
+  }
 }
 .desserts h1 {
   font-size: 40px;
@@ -123,6 +141,13 @@ body {
   background-color: hsl(0, 0%, 100%);
   margin: 0 1.5rem;
   padding: 1.6rem 1.5rem;
+}
+@media (min-width: 768px) {
+  .cart {
+    margin: 0;
+    height: 100%;
+    width: 675px;
+  }
 }
 .cart h1 {
   font-size: 24px;
@@ -239,6 +264,14 @@ body {
   color: hsl(14, 65%, 9%);
   gap: 9rem;
   height: 100vh;
+}
+@media (min-width: 768px) {
+  .order {
+    width: 400px;
+    height: auto;
+    top: auto;
+    left: auto;
+  }
 }
 .order h1 {
   font-size: 40px;

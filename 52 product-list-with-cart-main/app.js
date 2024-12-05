@@ -219,11 +219,12 @@ document.addEventListener("DOMContentLoaded", () => {
           const orderDiv = document.createElement("div");
           orderDiv.classList.add("order");
           orderDiv.innerHTML = `
-            <img src="./assets/images/icon-order-confirmed.svg" alt="" />
-            <h1>Order Confirmed</h1>
-            <p>We hope you enjoy your food!</p>
-          `;
-          document.body.prepend(orderDiv);
+    <img src="./assets/images/icon-order-confirmed.svg" alt="" />
+    <h1>Order Confirmed</h1>
+    <p>We hope you enjoy your food!</p>
+  `;
+
+          document.querySelector(".container").prepend(orderDiv);
 
           const orderContainer = document.createElement("div");
           orderContainer.classList.add("order__container");
@@ -235,18 +236,18 @@ document.addEventListener("DOMContentLoaded", () => {
             order.classList.add("order__container__item");
 
             order.innerHTML = `
-              <div>
-                <img src="${item.image.thumbnail}" alt="${item.name}">
-                <div>
-                  <h3>${item.name}</h3>
-                  <div>
-                    <h4>${item.quantity}x</h4>
-                    <p>@ $${item.price.toFixed(2)}</p>
-                  </div>
-                </div>
-              </div>
-              <strong>$${(item.price * item.quantity).toFixed(2)}</strong>
-            `;
+      <div>
+        <img src="${item.image.thumbnail}" alt="${item.name}">
+        <div>
+          <h3>${item.name}</h3>
+          <div>
+            <h4>${item.quantity}x</h4>
+            <p>@ $${item.price.toFixed(2)}</p>
+          </div>
+        </div>
+      </div>
+      <strong>$${(item.price * item.quantity).toFixed(2)}</strong>
+    `;
 
             totalPrice += item.price * item.quantity;
 
@@ -256,16 +257,16 @@ document.addEventListener("DOMContentLoaded", () => {
           const totalOrderDiv = document.createElement("div");
           totalOrderDiv.classList.add("order__container__total");
           totalOrderDiv.innerHTML = `
-            <p>Order Total</p>
-            <h1>$${totalPrice.toFixed(2)}</h1>
-          `;
+    <p>Order Total</p>
+    <h1>$${totalPrice.toFixed(2)}</h1>
+  `;
           orderContainer.appendChild(totalOrderDiv);
 
           const buttonOrderDiv = document.createElement("div");
           buttonOrderDiv.classList.add("order__button");
           buttonOrderDiv.innerHTML = `
-            <button>Start New Order</button>
-          `;
+    <button>Start New Order</button>
+  `;
 
           orderDiv.appendChild(orderContainer);
           orderDiv.appendChild(buttonOrderDiv);

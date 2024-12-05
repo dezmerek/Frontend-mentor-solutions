@@ -19,10 +19,27 @@ $color-rose-900: hsl(14, 65%, 9%);
 body {
   font-family: "Red Hat Text", sans-serif;
   background-color: $color-rose-50;
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+}
+
+.container {
+  @media (min-width: 768px) {
+    display: flex;
+    margin-top: 5.5rem;
+    width: 1215px;
+    gap: 3rem;
+    justify-content: center;
+  }
 }
 
 .desserts {
   padding: 1.3rem 1.5rem 2rem 1.5rem;
+
+  @media (min-width: 768px) {
+    padding: 0;
+  }
 
   h1 {
     font-size: 40px;
@@ -150,6 +167,12 @@ body {
   background-color: $color-white;
   margin: 0 1.5rem;
   padding: 1.6rem 1.5rem;
+
+  @media (min-width: 768px) {
+    margin: 0;
+    height: 100%;
+    width: 675px;
+  }
 
   h1 {
     font-size: 24px;
@@ -287,6 +310,13 @@ body {
   color: $color-rose-900;
   gap: 9rem;
   height: 100vh;
+
+  @media (min-width: 768px) {
+    width: 400px;
+    height: auto;
+    top: auto;
+    left: auto;
+  }
 
   h1 {
     font-size: 40px;
