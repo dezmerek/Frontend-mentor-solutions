@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  background-color: hsl(228, 33%, 97%);
+}
+
+.container {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  margin: 2rem 1rem;
+}
+
+.comment {
+  background-color: hsl(0, 0%, 100%);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+.comment__info {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.comment__info img {
+  width: 2rem;
+  height: 2rem;
+}
+.comment__info h2 {
+  font-size: 16.5px;
+  font-weight: 400;
+  color: hsl(212, 24%, 26%);
+}
+.comment__info span {
+  font-size: 16px;
+  color: hsl(211, 10%, 45%);
+  text-wrap: nowrap;
+}
+.comment--content {
+  margin-top: 1rem;
+  line-height: 1.5;
+  font-size: 16px;
+  color: hsl(211, 10%, 45%);
+  padding-right: 0.2rem;
+}
+.comment__buttons {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+.comment__buttons__rate {
+  display: flex;
+  gap: 1rem;
+  background-color: hsl(223, 19%, 93%);
+  align-items: center;
+  width: 6.3rem;
+  height: 2.5rem;
+  border-radius: 0.75rem;
+  justify-content: space-around;
+  padding: 0 0.75rem;
+}
+.comment__buttons__rate button {
+  border: none;
+  display: flex;
+}
+.comment__buttons__rate span {
+  font-size: 15px;
+  color: hsl(238, 40%, 52%);
+  font-weight: 500;
+}
+.comment__buttons--reply {
+  border-radius: 0.5rem;
+  font-size: 16px;
+  color: hsl(238, 40%, 52%);
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  background: none;
+  display: flex;
+  align-items: center;
+}
+.comment__buttons--reply::before {
+  content: "";
+  background-image: url("./images/icon-reply.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 0.75rem;
+  height: 0.75rem;
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+/*# sourceMappingURL=style.css.map */
