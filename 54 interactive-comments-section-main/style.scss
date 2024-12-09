@@ -19,6 +19,10 @@ $white: hsl(0, 0%, 100%);
 body {
   font-family: "Rubik", sans-serif;
   background-color: $very-light-gray;
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .container {
@@ -26,42 +30,65 @@ body {
   gap: 1rem;
   flex-direction: column;
   margin: 2rem 1rem;
+  @media (min-width: 768px) {
+    margin: 4rem 0;
+    max-width: 730px;
+  }
 }
 
 .comment {
-  background-color: $white;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  &__info {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-    img {
-      width: 2rem;
-      height: 2rem;
+  &__container {
+    background-color: $white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    display: grid;
+    grid-template-areas:
+      "info info"
+      "content content"
+      "rate reply";
+    @media (min-width: 768px) {
+      grid-template-areas:
+        "rate info reply"
+        "rate content content"
+        "rate content content";
+      padding: 0.5rem 1.5rem 1.6rem 1.5rem;
+      gap: 1.5rem;
     }
-    h2 {
-      font-size: 16.5px;
-      font-weight: 400;
-      color: $dark-blue;
+    &__info {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      grid-area: info;
+      @media (min-width: 768px) {
+        margin-top: 1rem;
+      }
+      img {
+        width: 2rem;
+        height: 2rem;
+      }
+      h2 {
+        font-size: 16.5px;
+        font-weight: 500;
+        color: $dark-blue;
+      }
+      span {
+        font-size: 16px;
+        color: $grayish-blue;
+        text-wrap: nowrap;
+      }
     }
-    span {
+    &--content {
+      margin-top: 1rem;
+      line-height: 1.5;
       font-size: 16px;
       color: $grayish-blue;
-      text-wrap: nowrap;
+      padding-right: 0.2rem;
+      grid-area: content;
+      @media (min-width: 768px) {
+        margin-top: -0.5rem;
+        padding-right: 0;
+      }
     }
-  }
-  &--content {
-    margin-top: 1rem;
-    line-height: 1.5;
-    font-size: 16px;
-    color: $grayish-blue;
-    padding-right: 0.2rem;
-  }
-  &__buttons {
-    margin-top: 1rem;
-    display: flex;
-    justify-content: space-between;
     &__rate {
       display: flex;
       gap: 1rem;
@@ -72,6 +99,13 @@ body {
       border-radius: 0.75rem;
       justify-content: space-around;
       padding: 0 0.75rem;
+      grid-area: rate;
+      margin-top: 1rem;
+      @media (min-width: 768px) {
+        flex-direction: column;
+        height: 6.3rem;
+        width: 2.5rem;
+      }
       button {
         border: none;
         display: flex;
@@ -90,8 +124,15 @@ body {
       cursor: pointer;
       border: none;
       background: none;
+      grid-area: reply;
       display: flex;
+      margin: 1rem 0 0 0;
       align-items: center;
+      justify-content: flex-end;
+      @media (min-width: 768px) {
+        margin: 1.5rem 0 0 0;
+        align-items: flex-start;
+      }
       &::before {
         content: "";
         background-image: url("./images/icon-reply.svg");
@@ -101,6 +142,96 @@ body {
         height: 0.75rem;
         display: inline-block;
         margin-right: 0.5rem;
+      }
+    }
+  }
+  &__replies {
+    margin-left: 2rem;
+    border-left: 2px solid $light-gray;
+    padding-left: 2rem;
+    &__container {
+      background-color: $white;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      margin-top: 1rem;
+      display: grid;
+      grid-template-areas:
+        "info info"
+        "content content"
+        "rate reply";
+      @media (min-width: 768px) {
+        grid-template-areas:
+          "rate info reply"
+          "rate content content"
+          "rate content content";
+        padding: 0.5rem 1.5rem 1.6rem 1.5rem;
+        gap: 1.5rem;
+      }
+      &__info {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        grid-area: info;
+        @media (min-width: 768px) {
+          margin-top: 1rem;
+        }
+        img {
+          width: 2rem;
+          height: 2rem;
+        }
+        h2 {
+          font-size: 16.5px;
+          font-weight: 500;
+          color: $dark-blue;
+        }
+        span {
+          font-size: 16px;
+          color: $grayish-blue;
+          text-wrap: nowrap;
+        }
+      }
+      &--content {
+        margin-top: 1rem;
+        line-height: 1.5;
+        font-size: 16px;
+        color: $grayish-blue;
+        padding-right: 0.2rem;
+        grid-area: content;
+        @media (min-width: 768px) {
+          margin-top: -0.5rem;
+          padding-right: 0;
+        }
+        span {
+          color: $moderate-blue;
+          font-weight: 500;
+        }
+      }
+      &__rate {
+        display: flex;
+        gap: 1rem;
+        background-color: $light-gray;
+        align-items: center;
+        width: 6.3rem;
+        height: 2.5rem;
+        border-radius: 0.75rem;
+        justify-content: space-around;
+        padding: 0 0.75rem;
+        grid-area: rate;
+        margin-top: 1rem;
+        @media (min-width: 768px) {
+          flex-direction: column;
+          height: 6.3rem;
+          width: 2.5rem;
+        }
+        button {
+          border: none;
+          display: flex;
+        }
+        span {
+          font-size: 15px;
+          color: $moderate-blue;
+          font-weight: 500;
+        }
       }
     }
   }
