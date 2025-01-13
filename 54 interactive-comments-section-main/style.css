@@ -28,6 +28,13 @@ body {
     max-width: 730px;
   }
 }
+.container .you-label {
+  font-size: 13px;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(238, 40%, 52%);
+  padding: 0.2rem;
+  border-radius: 0.25rem;
+}
 
 .comment__container {
   background-color: hsl(0, 0%, 100%);
@@ -66,7 +73,7 @@ body {
 .comment__container__info span {
   font-size: 16px;
   color: hsl(211, 10%, 45%);
-  text-wrap: nowrap;
+  white-space: nowrap;
 }
 .comment__container--content {
   margin-top: 1rem;
@@ -142,9 +149,15 @@ body {
   margin-right: 0.5rem;
 }
 .comment__replies {
-  margin-left: 2rem;
+  margin-left: 0rem;
   border-left: 2px solid hsl(223, 19%, 93%);
-  padding-left: 2rem;
+  padding-left: 1rem;
+}
+@media (min-width: 768px) {
+  .comment__replies {
+    margin-left: 2.7rem;
+    padding-left: 2.7rem;
+  }
 }
 .comment__replies__container {
   background-color: hsl(0, 0%, 100%);
@@ -158,7 +171,7 @@ body {
   .comment__replies__container {
     grid-template-areas: "rate info reply" "rate content content" "rate content content";
     padding: 0.5rem 1.5rem 1.6rem 1.5rem;
-    gap: 1.5rem;
+    gap: 2rem;
   }
 }
 .comment__replies__container__info {
@@ -184,7 +197,7 @@ body {
 .comment__replies__container__info span {
   font-size: 16px;
   color: hsl(211, 10%, 45%);
-  text-wrap: nowrap;
+  white-space: nowrap;
 }
 .comment__replies__container--content {
   margin-top: 1rem;
@@ -232,6 +245,46 @@ body {
   font-size: 15px;
   color: hsl(238, 40%, 52%);
   font-weight: 500;
+}
+.comment__replies__container--actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  grid-area: reply;
+  margin-top: 1rem;
+}
+.comment__replies__container--edit, .comment__replies__container--delete {
+  border: none;
+  background: none;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.comment__replies__container--edit {
+  color: hsl(238, 40%, 52%);
+}
+.comment__replies__container--edit::before {
+  content: "";
+  background-image: url("./images/icon-edit.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 0.75rem;
+  height: 0.75rem;
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+.comment__replies__container--delete {
+  color: hsl(358, 79%, 66%);
+}
+.comment__replies__container--delete::before {
+  content: "";
+  background-image: url("./images/icon-delete.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 0.75rem;
+  height: 0.75rem;
+  display: inline-block;
+  margin-right: 0.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */

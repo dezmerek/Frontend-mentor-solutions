@@ -34,6 +34,14 @@ body {
     margin: 4rem 0;
     max-width: 730px;
   }
+
+  .you-label {
+    font-size: 13px;
+    color: $white;
+    background-color: $moderate-blue;
+    padding: 0.2rem;
+    border-radius: 0.25rem;
+  }
 }
 
 .comment {
@@ -74,7 +82,7 @@ body {
       span {
         font-size: 16px;
         color: $grayish-blue;
-        text-wrap: nowrap;
+        white-space: nowrap;
       }
     }
     &--content {
@@ -146,9 +154,13 @@ body {
     }
   }
   &__replies {
-    margin-left: 2rem;
+    margin-left: 0rem;
     border-left: 2px solid $light-gray;
-    padding-left: 2rem;
+    padding-left: 1rem;
+    @media (min-width: 768px) {
+      margin-left: 2.7rem;
+      padding-left: 2.7rem;
+    }
     &__container {
       background-color: $white;
       padding: 1rem;
@@ -165,7 +177,7 @@ body {
           "rate content content"
           "rate content content";
         padding: 0.5rem 1.5rem 1.6rem 1.5rem;
-        gap: 1.5rem;
+        gap: 2rem;
       }
       &__info {
         display: flex;
@@ -187,7 +199,7 @@ body {
         span {
           font-size: 16px;
           color: $grayish-blue;
-          text-wrap: nowrap;
+          white-space: nowrap;
         }
       }
       &--content {
@@ -231,6 +243,47 @@ body {
           font-size: 15px;
           color: $moderate-blue;
           font-weight: 500;
+        }
+      }
+      &--actions {
+        display: flex;
+        gap: 1rem;
+        justify-content: flex-end;
+        grid-area: reply;
+        margin-top: 1rem;
+      }
+      &--edit,
+      &--delete {
+        border: none;
+        background: none;
+        font-size: 16px;
+        font-weight: 700;
+        cursor: pointer;
+      }
+      &--edit {
+        color: $moderate-blue;
+        &::before {
+          content: "";
+          background-image: url("./images/icon-edit.svg");
+          background-repeat: no-repeat;
+          background-size: cover;
+          width: 0.75rem;
+          height: 0.75rem;
+          display: inline-block;
+          margin-right: 0.5rem;
+        }
+      }
+      &--delete {
+        color: $soft-red;
+        &::before {
+          content: "";
+          background-image: url("./images/icon-delete.svg");
+          background-repeat: no-repeat;
+          background-size: cover;
+          width: 0.75rem;
+          height: 0.75rem;
+          display: inline-block;
+          margin-right: 0.5rem;
         }
       }
     }
