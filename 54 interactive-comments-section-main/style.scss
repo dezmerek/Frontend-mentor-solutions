@@ -14,10 +14,10 @@ $white: hsl(0, 0%, 100%);
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
 }
 
 body {
-  font-family: "Rubik", sans-serif;
   background-color: $very-light-gray;
   @media (min-width: 768px) {
     display: flex;
@@ -61,6 +61,47 @@ body {
         "rate content content";
       padding: 0.5rem 1.5rem 1.6rem 1.5rem;
       gap: 1.5rem;
+    }
+    &--actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: flex-end;
+      grid-area: reply;
+      margin-top: 1rem;
+    }
+    &--edit,
+    &--delete {
+      border: none;
+      background: none;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    &--edit {
+      color: $moderate-blue;
+      &::before {
+        content: "";
+        background-image: url("./images/icon-edit.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 0.75rem;
+        height: 0.75rem;
+        display: inline-block;
+        margin-right: 0.5rem;
+      }
+    }
+    &--delete {
+      color: $soft-red;
+      &::before {
+        content: "";
+        background-image: url("./images/icon-delete.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 0.75rem;
+        height: 0.75rem;
+        display: inline-block;
+        margin-right: 0.5rem;
+      }
     }
     &__info {
       display: flex;
@@ -286,6 +327,64 @@ body {
           margin-right: 0.5rem;
         }
       }
+    }
+  }
+}
+
+.add-comment {
+  background-color: $white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  display: grid;
+  grid-template-areas:
+    "input input"
+    "avatar button";
+  gap: 1rem;
+  justify-content: space-between;
+  @media (min-width: 768px) {
+    gap: 1.5rem;
+    padding: 1.5rem;
+    grid-template-areas: "avatar input button";
+    align-items: flex-start;
+    grid-template-columns: auto 1fr auto;
+  }
+  &__avatar {
+    grid-area: avatar;
+    width: 2rem;
+    height: 2rem;
+    @media (min-width: 768px) {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+  }
+  &__content {
+    padding: 0.75rem;
+    padding-left: 1.5rem;
+    padding-bottom: 2.7rem;
+    grid-area: input;
+    border-radius: 0.5rem;
+    width: 100%;
+    height: 100%;
+    border: none;
+
+    font-size: 16px;
+    color: $grayish-blue;
+    resize: none;
+    border: 1px solid $light-grayish-blue;
+    @media (min-width: 768px) {
+    }
+  }
+  &__button {
+    grid-area: button;
+    color: $white;
+    background-color: $moderate-blue;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+    padding: 0.9rem 0rem;
+    @media (min-width: 768px) {
+      padding: 1rem 2rem;
     }
   }
 }
