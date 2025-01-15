@@ -4,6 +4,11 @@ document.addEventListener("DOMContentLoaded", () => {
     .then((data) => {
       const container = document.querySelector(".container");
 
+      const updateScore = (item, change) => {
+        item.score += change;
+        return item.score;
+      };
+
       const displayComments = (comments) => {
         comments.forEach((item) => {
           const commentDiv = document.createElement("div");
@@ -24,13 +29,13 @@ document.addEventListener("DOMContentLoaded", () => {
               </div>
               <p class="comment__container--content">${item.content}</p>
               <div class="comment__container__rate">
-                <button><img src="./images/icon-plus.svg" alt="Increase score"></button>
-                <span>${item.score}</span>
-                <button><img src="./images/icon-minus.svg" alt="Decrease score"></button>
+                <button class="increase-score"><img src="./images/icon-plus.svg" alt="Increase score"></button>
+                <span class="score">${item.score}</span>
+                <button class="decrease-score"><img src="./images/icon-minus.svg" alt="Decrease score"></button>
               </div>
               ${
                 isCurrentUser
-                  ? `
+                  ? ` 
                   <div class="comment__container--actions">
                     <button class="comment__container--edit">Edit</button>
                     <button class="comment__container--delete">Delete</button>
@@ -40,6 +45,21 @@ document.addEventListener("DOMContentLoaded", () => {
               }
             </div>
           `;
+
+          // Obsługa punktów +/-
+          const increaseBtn = commentDiv.querySelector(".increase-score");
+          const decreaseBtn = commentDiv.querySelector(".decrease-score");
+          const scoreSpan = commentDiv.querySelector(".score");
+
+          increaseBtn.addEventListener("click", () => {
+            const newScore = updateScore(item, 1);
+            scoreSpan.textContent = newScore;
+          });
+
+          decreaseBtn.addEventListener("click", () => {
+            const newScore = updateScore(item, -1);
+            scoreSpan.textContent = newScore;
+          });
 
           const repliesContainer = document.createElement("div");
           repliesContainer.classList.add("comment__replies");
@@ -66,13 +86,13 @@ document.addEventListener("DOMContentLoaded", () => {
                   ${reply.content}
                 </p>
                 <div class="comment__replies__container__rate">
-                  <button><img src="./images/icon-plus.svg" alt="Increase score"></button>
-                  <span>${reply.score}</span>
-                  <button><img src="./images/icon-minus.svg" alt="Decrease score"></button>
+                  <button class="increase-score"><img src="./images/icon-plus.svg" alt="Increase score"></button>
+                  <span class="score">${reply.score}</span>
+                  <button class="decrease-score"><img src="./images/icon-minus.svg" alt="Decrease score"></button>
                 </div>
                 ${
                   isReplyCurrentUser
-                    ? `
+                    ? ` 
                     <div class="comment__replies__container--actions">
                       <button class="comment__replies__container--delete">Delete</button>
                       <button class="comment__replies__container--edit">Edit</button>
@@ -81,6 +101,24 @@ document.addEventListener("DOMContentLoaded", () => {
                     : '<button class="comment__container--reply">Reply</button>'
                 }
               `;
+
+              // Obsługa punktów +/-
+              const replyIncreaseBtn =
+                replyDiv.querySelector(".increase-score");
+              const replyDecreaseBtn =
+                replyDiv.querySelector(".decrease-score");
+              const replyScoreSpan = replyDiv.querySelector(".score");
+
+              replyIncreaseBtn.addEventListener("click", () => {
+                const newScore = updateScore(reply, 1);
+                replyScoreSpan.textContent = newScore;
+              });
+
+              replyDecreaseBtn.addEventListener("click", () => {
+                const newScore = updateScore(reply, -1);
+                replyScoreSpan.textContent = newScore;
+              });
+
               repliesContainer.appendChild(replyDiv);
             });
           }
@@ -129,9 +167,9 @@ document.addEventListener("DOMContentLoaded", () => {
               </div>
               <p class="comment__container--content">${newComment.content}</p>
               <div class="comment__container__rate">
-                <button><img src="./images/icon-plus.svg" alt="Increase score"></button>
-                <span>${newComment.score}</span>
-                <button><img src="./images/icon-minus.svg" alt="Decrease score"></button>
+                <button class="increase-score"><img src="./images/icon-plus.svg" alt="Increase score"></button>
+                <span class="score">${newComment.score}</span>
+                <button class="decrease-score"><img src="./images/icon-minus.svg" alt="Decrease score"></button>
               </div>
               <div class="comment__container--actions">
                 <button class="comment__container--delete">Delete</button>
