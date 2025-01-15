@@ -159,24 +159,24 @@ document.addEventListener("DOMContentLoaded", () => {
           commentDiv.classList.add("comment");
 
           commentDiv.innerHTML = `
-            <div class="comment__container">
-              <div class="comment__container__info">
-                <img src="${newComment.user.image.png}" alt="User Avatar">
-                <h2>${newComment.user.username} <span class="you-label">you</span></h2>
-                <span>${newComment.createdAt}</span>
-              </div>
-              <p class="comment__container--content">${newComment.content}</p>
-              <div class="comment__container__rate">
-                <button class="increase-score"><img src="./images/icon-plus.svg" alt="Increase score"></button>
-                <span class="score">${newComment.score}</span>
-                <button class="decrease-score"><img src="./images/icon-minus.svg" alt="Decrease score"></button>
-              </div>
-              <div class="comment__container--actions">
-                <button class="comment__container--delete">Delete</button>
-                <button class="comment__container--edit">Edit</button>
-              </div>
-            </div>
-          `;
+      <div class="comment__container">
+        <div class="comment__container__info">
+          <img src="${newComment.user.image.png}" alt="User Avatar">
+          <h2>${newComment.user.username} <span class="you-label">you</span></h2>
+          <span>${newComment.createdAt}</span>
+        </div>
+        <p class="comment__container--content">${newComment.content}</p>
+        <div class="comment__container__rate">
+          <button class="increase-score"><img src="./images/icon-plus.svg" alt="Increase score"></button>
+          <span class="score">${newComment.score}</span>
+          <button class="decrease-score"><img src="./images/icon-minus.svg" alt="Decrease score"></button>
+        </div>
+        <div class="comment__container--actions">
+          <button class="comment__container--delete">Delete</button>
+          <button class="comment__container--edit">Edit</button>
+        </div>
+      </div>
+    `;
 
           const repliesContainer = document.createElement("div");
           repliesContainer.classList.add("comment__replies");
@@ -184,7 +184,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
           container.insertBefore(commentDiv, addCommentForm);
 
-          document.querySelector(".new-comment-content").value = "";
+          const increaseBtn = commentDiv.querySelector(".increase-score");
+          const decreaseBtn = commentDiv.querySelector(".decrease-score");
+          const scoreSpan = commentDiv.querySelector(".score");
+
+          increaseBtn.addEventListener("click", () => {
+            const newScore = updateScore(newComment, 1);
+            scoreSpan.textContent = newScore;
+          });
+
+          decreaseBtn.addEventListener("click", () => {
+            const newScore = updateScore(newComment, -1);
+            scoreSpan.textContent = newScore;
+          });
+
+          document.querySelector(".add-comment__content").value = "";
         }
       });
 
