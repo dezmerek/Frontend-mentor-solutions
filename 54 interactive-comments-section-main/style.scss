@@ -327,6 +327,34 @@ body {
           margin-right: 0.5rem;
         }
       }
+      &--reply {
+        border-radius: 0.5rem;
+        font-size: 16px;
+        color: $moderate-blue;
+        font-weight: 700;
+        cursor: pointer;
+        border: none;
+        background: none;
+        grid-area: reply;
+        display: flex;
+        margin: 1rem 0 0 0;
+        align-items: center;
+        justify-content: flex-end;
+        @media (min-width: 768px) {
+          margin: 1rem 0 0 0;
+          align-items: center;
+        }
+        &::before {
+          content: "";
+          background-image: url("./images/icon-reply.svg");
+          background-repeat: no-repeat;
+          background-size: cover;
+          width: 0.75rem;
+          height: 0.75rem;
+          display: inline-block;
+          margin-right: 0.5rem;
+        }
+      }
     }
   }
 }
@@ -341,6 +369,7 @@ body {
     "avatar button";
   gap: 1rem;
   justify-content: space-between;
+  margin-top: 0.5rem;
   @media (min-width: 768px) {
     gap: 1.5rem;
     padding: 1.5rem;
@@ -387,4 +416,8 @@ body {
       padding: 1rem 2rem;
     }
   }
+}
+
+.reply-form-container {
+  margin-top: 1rem;
 }

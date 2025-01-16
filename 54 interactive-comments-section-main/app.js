@@ -61,6 +61,106 @@ document.addEventListener("DOMContentLoaded", () => {
             scoreSpan.textContent = newScore;
           });
 
+          const handleReply = (
+            parentComment,
+            replyingTo,
+            parentItem,
+            isReplyToReply
+          ) => {
+            const replyForm = document.createElement("form");
+            replyForm.classList.add("add-comment");
+            replyForm.innerHTML = `
+              <textarea class="add-comment__content" placeholder="Add a reply..."></textarea>
+              <img src="${data.currentUser.image.png}" alt="User Avatar" class="add-comment__avatar">
+              <button class="add-comment__button" type="submit">REPLY</button>
+            `;
+            parentComment.insertAdjacentElement("afterend", replyForm);
+
+            replyForm.addEventListener("submit", (event) => {
+              event.preventDefault();
+              const newReplyContent = replyForm.querySelector(
+                ".add-comment__content"
+              ).value;
+
+              if (newReplyContent.trim() !== "") {
+                const newReply = {
+                  user: data.currentUser,
+                  createdAt: "Just now",
+                  content: newReplyContent,
+                  score: 0,
+                  replyingTo: replyingTo,
+                };
+
+                if (!parentItem.replies) {
+                  parentItem.replies = [];
+                }
+
+                parentItem.replies.push(newReply);
+
+                const replyDiv = document.createElement("div");
+                replyDiv.classList.add("comment__replies__container");
+
+                replyDiv.innerHTML = `
+                  <div class="comment__replies__container__info">
+                    <img src="${newReply.user.image.png}" alt="User Avatar">
+                    <h2>${newReply.user.username} <span class="you-label">you</span></h2>
+                    <span>${newReply.createdAt}</span>
+                  </div>
+                  <p class="comment__replies__container--content">
+                    <span>@${newReply.replyingTo}</span>
+                    ${newReply.content}
+                  </p>
+                  <div class="comment__replies__container__rate">
+                    <button class="increase-score"><img src="./images/icon-plus.svg" alt="Increase score"></button>
+                    <span class="score">${newReply.score}</span>
+                    <button class="decrease-score"><img src="./images/icon-minus.svg" alt="Decrease score"></button>
+                  </div>
+                  <div class="comment__replies__container--actions">
+                    <button class="comment__replies__container--delete">Delete</button>
+                    <button class="comment__replies__container--edit">Edit</button>
+                  </div>
+                `;
+
+                const replyIncreaseBtn =
+                  replyDiv.querySelector(".increase-score");
+                const replyDecreaseBtn =
+                  replyDiv.querySelector(".decrease-score");
+                const replyScoreSpan = replyDiv.querySelector(".score");
+
+                replyIncreaseBtn.addEventListener("click", () => {
+                  const newScore = updateScore(newReply, 1);
+                  replyScoreSpan.textContent = newScore;
+                });
+
+                replyDecreaseBtn.addEventListener("click", () => {
+                  const newScore = updateScore(newReply, -1);
+                  replyScoreSpan.textContent = newScore;
+                });
+
+                if (isReplyToReply) {
+                  parentComment.insertAdjacentElement("afterend", replyDiv);
+                } else {
+                  const repliesContainer = parentComment.nextElementSibling;
+                  if (
+                    repliesContainer &&
+                    repliesContainer.classList.contains("comment__replies")
+                  ) {
+                    repliesContainer.appendChild(replyDiv);
+                  } else {
+                    const newRepliesContainer = document.createElement("div");
+                    newRepliesContainer.classList.add("comment__replies");
+                    newRepliesContainer.appendChild(replyDiv);
+                    parentComment.insertAdjacentElement(
+                      "afterend",
+                      newRepliesContainer
+                    );
+                  }
+                }
+                replyForm.remove();
+              }
+            });
+          };
+
           const repliesContainer = document.createElement("div");
           repliesContainer.classList.add("comment__replies");
 
@@ -119,12 +219,30 @@ document.addEventListener("DOMContentLoaded", () => {
                 replyScoreSpan.textContent = newScore;
               });
 
+              const replyReplyBtn = replyDiv.querySelector(
+                ".comment__container--reply"
+              );
+              if (replyReplyBtn) {
+                replyReplyBtn.addEventListener("click", () =>
+                  handleReply(replyDiv, reply.user.username, reply, true)
+                );
+              }
+
               repliesContainer.appendChild(replyDiv);
             });
           }
 
           commentDiv.appendChild(repliesContainer);
           container.insertBefore(commentDiv, addCommentForm);
+
+          const replyBtn = commentDiv.querySelector(
+            ".comment__container--reply"
+          );
+          if (replyBtn) {
+            replyBtn.addEventListener("click", () =>
+              handleReply(commentDiv, item.user.username, item, false)
+            );
+          }
         });
       };
 
