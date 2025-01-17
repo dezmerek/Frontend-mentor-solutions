@@ -9,8 +9,13 @@ document.addEventListener("DOMContentLoaded", () => {
         return item.score;
       };
 
-      const displayComments = (comments) => {
-        comments.forEach((item) => {
+      const deleteComment = (commentDiv, parentItem, commentIndex) => {
+        parentItem.splice(commentIndex, 1);
+        commentDiv.remove();
+      };
+
+      const displayComments = (comments, parentItem = data.comments) => {
+        comments.forEach((item, index) => {
           const commentDiv = document.createElement("div");
           commentDiv.classList.add("comment");
 
@@ -60,6 +65,15 @@ document.addEventListener("DOMContentLoaded", () => {
             const newScore = updateScore(item, -1);
             scoreSpan.textContent = newScore;
           });
+
+          if (isCurrentUser) {
+            const deleteBtn = commentDiv.querySelector(
+              ".comment__container--delete"
+            );
+            deleteBtn.addEventListener("click", () =>
+              deleteComment(commentDiv, parentItem, index)
+            );
+          }
 
           const handleReply = (
             parentComment,
@@ -156,6 +170,20 @@ document.addEventListener("DOMContentLoaded", () => {
                     );
                   }
                 }
+
+                if (newReply.user.username === data.currentUser.username) {
+                  const deleteBtn = replyDiv.querySelector(
+                    ".comment__replies__container--delete"
+                  );
+                  deleteBtn.addEventListener("click", () =>
+                    deleteComment(
+                      replyDiv,
+                      parentItem.replies,
+                      parentItem.replies.length - 1
+                    )
+                  );
+                }
+
                 replyForm.remove();
               }
             });
@@ -165,7 +193,7 @@ document.addEventListener("DOMContentLoaded", () => {
           repliesContainer.classList.add("comment__replies");
 
           if (item.replies && item.replies.length > 0) {
-            item.replies.forEach((reply) => {
+            item.replies.forEach((reply, replyIndex) => {
               const isReplyCurrentUser =
                 reply.user.username === data.currentUser.username;
               const replyUsernameWithYou = isReplyCurrentUser
@@ -218,6 +246,15 @@ document.addEventListener("DOMContentLoaded", () => {
                 const newScore = updateScore(reply, -1);
                 replyScoreSpan.textContent = newScore;
               });
+
+              if (isReplyCurrentUser) {
+                const deleteBtn = replyDiv.querySelector(
+                  ".comment__replies__container--delete"
+                );
+                deleteBtn.addEventListener("click", () =>
+                  deleteComment(replyDiv, item.replies, replyIndex)
+                );
+              }
 
               const replyReplyBtn = replyDiv.querySelector(
                 ".comment__container--reply"
@@ -315,6 +352,13 @@ document.addEventListener("DOMContentLoaded", () => {
             const newScore = updateScore(newComment, -1);
             scoreSpan.textContent = newScore;
           });
+
+          const deleteBtn = commentDiv.querySelector(
+            ".comment__container--delete"
+          );
+          deleteBtn.addEventListener("click", () =>
+            deleteComment(commentDiv, data.comments, data.comments.length - 1)
+          );
 
           document.querySelector(".add-comment__content").value = "";
         }
