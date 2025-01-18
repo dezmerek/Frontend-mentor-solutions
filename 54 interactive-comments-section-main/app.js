@@ -14,6 +14,42 @@ document.addEventListener("DOMContentLoaded", () => {
         commentDiv.remove();
       };
 
+      const editComment = (commentDiv, item) => {
+        const contentElement = commentDiv.querySelector(
+          ".comment__container--content, .comment__replies__container--content"
+        );
+        const originalContent = item.replyingTo
+          ? `@${item.replyingTo} ${item.content}`
+          : item.content;
+        contentElement.innerHTML = `
+          <div class="edit-comment">
+            <textarea class="edit-comment__content">${originalContent}</textarea>
+            <button class="edit-comment__save">UPDATE</button>
+          </div>
+        `;
+
+        const saveBtn = contentElement.querySelector(".edit-comment__save");
+        const editTextarea = contentElement.querySelector(
+          ".edit-comment__content"
+        );
+
+        saveBtn.addEventListener("click", () => {
+          const newContent = editTextarea.value.trim();
+          if (newContent) {
+            item.content = item.replyingTo
+              ? newContent.replace(`@${item.replyingTo} `, "")
+              : newContent;
+            contentElement.innerHTML = item.replyingTo
+              ? `<span>@${item.replyingTo}</span> ${item.content}`
+              : item.content;
+          } else {
+            contentElement.innerHTML = item.replyingTo
+              ? `<span>@${item.replyingTo}</span> ${item.content}`
+              : item.content;
+          }
+        });
+      };
+
       const displayComments = (comments, parentItem = data.comments) => {
         comments.forEach((item, index) => {
           const commentDiv = document.createElement("div");
@@ -32,7 +68,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 <h2>${usernameWithYou}</h2>
                 <span>${item.createdAt}</span>
               </div>
-              <p class="comment__container--content">${item.content}</p>
+              <p class="comment__container--content">${
+                item.replyingTo
+                  ? `<span>@${item.replyingTo}</span> ${item.content}`
+                  : item.content
+              }</p>
               <div class="comment__container__rate">
                 <button class="increase-score"><img src="./images/icon-plus.svg" alt="Increase score"></button>
                 <span class="score">${item.score}</span>
@@ -72,6 +112,13 @@ document.addEventListener("DOMContentLoaded", () => {
             );
             deleteBtn.addEventListener("click", () =>
               deleteComment(commentDiv, parentItem, index)
+            );
+
+            const editBtn = commentDiv.querySelector(
+              ".comment__container--edit"
+            );
+            editBtn.addEventListener("click", () =>
+              editComment(commentDiv, item)
             );
           }
 
@@ -182,6 +229,13 @@ document.addEventListener("DOMContentLoaded", () => {
                       parentItem.replies.length - 1
                     )
                   );
+
+                  const editBtn = replyDiv.querySelector(
+                    ".comment__replies__container--edit"
+                  );
+                  editBtn.addEventListener("click", () =>
+                    editComment(replyDiv, newReply)
+                  );
                 }
 
                 replyForm.remove();
@@ -253,6 +307,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 );
                 deleteBtn.addEventListener("click", () =>
                   deleteComment(replyDiv, item.replies, replyIndex)
+                );
+
+                const editBtn = replyDiv.querySelector(
+                  ".comment__replies__container--edit"
+                );
+                editBtn.addEventListener("click", () =>
+                  editComment(replyDiv, reply)
                 );
               }
 
@@ -358,6 +419,11 @@ document.addEventListener("DOMContentLoaded", () => {
           );
           deleteBtn.addEventListener("click", () =>
             deleteComment(commentDiv, data.comments, data.comments.length - 1)
+          );
+
+          const editBtn = commentDiv.querySelector(".comment__container--edit");
+          editBtn.addEventListener("click", () =>
+            editComment(commentDiv, newComment)
           );
 
           document.querySelector(".add-comment__content").value = "";

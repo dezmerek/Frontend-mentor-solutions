@@ -418,6 +418,35 @@ body {
   }
 }
 
+.edit-comment {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  &__content {
+    padding: 0.75rem;
+    padding-left: 1.5rem;
+    padding-bottom: 2.7rem;
+    border-radius: 0.5rem;
+    width: 100%;
+    height: 100%;
+    border: none;
+    font-size: 16px;
+    color: $grayish-blue;
+    resize: none;
+    border: 1px solid $light-grayish-blue;
+  }
+  &__save {
+    color: $white;
+    background-color: $moderate-blue;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+    padding: 0.9rem 2rem;
+    align-self: flex-end;
+  }
+}
+
 .reply-form-container {
   margin-top: 1rem;
 }
