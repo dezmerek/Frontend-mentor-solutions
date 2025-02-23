@@ -1,0 +1,105 @@
+@import "https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;700;800&display=swap";
+
+$neutral-0: hsl(0, 0%, 100%);
+$neutral-300: hsl(252, 6%, 83%);
+$neutral-500: hsl(245, 15%, 58%);
+$neutral-700: hsl(245, 19%, 35%);
+$neutral-900: hsl(248, 70%, 10%);
+$orange-500: hsl(7, 88%, 67%);
+$orange-700: hsl(7, 71%, 60%);
+$gradient: linear-gradient(to right, hsl(7, 86%, 67%), hsl(0, 0%, 100%));
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inconsolata", monospace;
+  background-image: url("./assets/images/pattern-lines.svg"),
+    url("./assets/images/pattern-circle.svg"),
+    url("./assets/images/pattern-squiggly-line-top.svg"),
+    url("./assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg"),
+    url("./assets/images/background-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $neutral-0;
+  background-repeat: no-repeat;
+  background-position: center, bottom right 20%, top 3% right, bottom left,
+    center;
+  background-size: cover, 20%, 30%, 50%, cover;
+  background-attachment: fixed;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @media (min-width: 768px) {
+    background-image: url("./assets/images/background-tablet.png");
+  }
+  @media (min-width: 1024px) {
+    background-image: url("./assets/images/background-desktop.png");
+  }
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 2.1rem;
+  img {
+    width: 168px;
+  }
+  h1 {
+    font-size: 28px;
+    margin-top: 2.5rem;
+    line-height: 1.2;
+  }
+  h3 {
+    color: $neutral-300;
+    margin-top: 1.25rem;
+    font-weight: 400;
+    font-size: 19px;
+    padding: 0 0.5rem;
+    line-height: 1.25;
+  }
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2.6rem;
+  gap: 1rem;
+  &__group {
+    width: 100%;
+    padding: 0 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    text-align: left;
+    label {
+      font-size: 19px;
+    }
+    input {
+      margin-top: 0.8rem;
+      width: 100%;
+      border: 1px solid $neutral-300;
+      border-radius: 0.5rem;
+      background: hsla(0, 0%, 100%, 0.1);
+      padding: 0.75rem;
+      color: $neutral-300;
+      &::placeholder {
+        color: $neutral-300;
+      }
+    }
+  }
+  button {
+    background: $orange-500;
+    color: $neutral-900;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 0.5rem;
+    margin: 0 1rem;
+    border: none;
+    border-radius: 0.5rem;
+  }
+}
