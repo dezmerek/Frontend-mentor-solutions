@@ -20,13 +20,28 @@
     </div>
     <form class="form">
       <div class="form__group">
-        <label for="avatar">Upload Avatar</label>
-        <input
-          type="file"
-          id="avatar"
-          name="avatar"
-          accept="image/jpeg, image/png"
-        />
+        <label>Upload Avatar</label>
+        <div class="form__group__upload">
+          <input
+            type="file"
+            id="avatar"
+            name="avatar"
+            accept="image/jpeg, image/png"
+            style="display: none"
+          />
+          <div class="form__group__upload--area" id="upload-area">
+            <img
+              src="./assets/images/icon-upload.svg"
+              alt="Upload Icon"
+              id="upload-icon"
+            />
+            <p id="upload-text">Drag and drop or click to upload</p>
+          </div>
+          <div id="upload-buttons" style="display: none">
+            <button type="button" id="remove-image"><u>Remove Image</u></button>
+            <button type="button" id="change-image">Change Image</button>
+          </div>
+        </div>
       </div>
       <div class="form__group">
         <label for="name">Full Name</label>
