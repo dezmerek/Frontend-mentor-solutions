@@ -60,11 +60,12 @@ body {
   display: flex;
   flex-direction: column;
   margin-top: 2.6rem;
-  gap: 1rem;
+  gap: 1.5rem;
+  width: 100%;
+  padding: 0 1rem;
 }
 .form__group {
   width: 100%;
-  padding: 0 1rem;
   border: none;
   border-radius: 0.5rem;
   text-align: left;
@@ -78,7 +79,7 @@ body {
   border: 1px solid hsl(252, 6%, 83%);
   border-radius: 0.5rem;
   background: hsla(0, 0%, 100%, 0.1);
-  padding: 0.75rem;
+  padding: 1.2rem;
   color: hsl(252, 6%, 83%);
 }
 .form__group input::placeholder {
@@ -130,15 +131,22 @@ body {
   border-radius: 0.25rem;
   padding: 0.3rem 0.5rem;
 }
+.form__group__info {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 11.5px;
+  margin-top: 0.7rem;
+}
 .form .btn {
   background: hsl(7, 88%, 67%);
   color: hsl(248, 70%, 10%);
   font-weight: 700;
-  font-size: 16px;
-  padding: 0.5rem;
-  margin: 0 1rem;
+  font-size: 17px;
+  padding: 1.1rem;
   border: none;
   border-radius: 0.5rem;
+  cursor: pointer;
+  letter-spacing: 1px;
 }
 
 /*# sourceMappingURL=style.css.map */
